@@ -1,0 +1,42 @@
+// .slider-flight {
+//     .slick-list {
+//         padding: 0px 15px!important;
+//     }
+// }.box-click {
+.slick-slide {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.click-slide--prev {
+    transform: translate(-8%, -50%);
+}
+
+.click-slide-next,
+.click-slide-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 9;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.click-slide-next {
+    right: 0;
+}
+
+.click-slide-prev {
+    left: -17px;
+}
+
+.slick-list {
+    padding-bottom: 10px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}

@@ -1,0 +1,49 @@
+.shadow-1 {
+    box-shadow: $shadow;
+}
+
+.shadow-none {
+    box-shadow: $shadow-none;
+}
+
+.shadow-2 {
+    box-shadow: $shadow2;
+}
+
+.shadow-3 {
+    box-shadow: $shadow3;
+}
+
+.shadow-4 {
+    box-shadow: $shadow4;
+}
+
+.shadow-5 {
+    box-shadow: $shadow5;
+}
+
+.shadow-6 {
+    box-shadow: $shadow6;
+}
+
+.shadow-8 {
+    box-shadow: $shadow8;
+}
+
+@include media-breakpoint-down(md) {
+    .shadow-xs-0 {
+        box-shadow: none !important;
+    }
+    .shadow-xs-2 {
+        box-shadow: $shadow2;
+    }
+    .shadow-xs-1 {
+        box-shadow: $shadow1;
+    }
+    .shadow-xs-3 {
+        box-shadow: $shadow3;
+    }
+    .shadow-xs-5 {
+        box-shadow: $shadow5;
+    }
+}

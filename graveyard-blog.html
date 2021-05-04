@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="css/app.css?v=2" />
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="#" target="_self" title="Logo" class="mr-40">
+            <img src="./images/logo.svg" alt="Logo" title="Logo" class="d-none d-lg-block" />
+            <img src="./images/logo-mobile.svg" alt="Logo" title="Logo" class="d-block d-lg-none" />
+        </a>
+        <div class="header-menu-wrapper">
+            <div class="overlay d-lg-none"></div>
+            <div class="header-menu">
+                <div class="bg-secondary px-20 py-30 d-lg-none">
+                    <a href="#" target="_self" title="Sign In" class="text-white text-16">
+                        <img src="./images/icon-user-white.svg" data-src="./images/icon-user-white.svg" alt="User" title="User" class="mr-5 lazyload" />
+                        Sign In
+                    </a>
+                </div>
+                <ul class="header-menu-nav pb-xs-15 mb-0">
+                    <li>
+                        <a href="#" target="_self" title="Flight">
+                            Flight
+                            <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" target="_self" title="Hotels">Hotels <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Tours">Tours <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Deals">Deals <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="FAQs">FAQs <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Contact">Contact <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                </ul>
+                <ul class="d-block d-lg-none mb-50 header-menu-nav border-0">
+                    <li>
+                        <a href="#" target="_self" title="Settings">
+                            Settings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Feedback">
+                            Feedback
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Term and Condition">
+                            Term and Condition
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Privacy Policy">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-right d-none d-lg-block">
+            <ul class="header-nav mr-15">
+                <li class="has-dropdown">
+                    <a href="javascript:void(0)" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="EN" title="EN" class="mr-5" /> EN </a>
+                    <ul class="header-dropdown">
+                        <li>
+                            <a href="#" target="_self" title="VN"> <img src="./images/flag-vn.svg" alt="VN" title="VN" class="mr-5" /> VN </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="UK" title="UK" class="mr-5" /> EN </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="header-nav">
+                <li class="has-dropdown">
+                    <a href="javascript:void(0)" target="_self" title="USD">
+                        USD
+                    </a>
+                    <ul class="header-dropdown">
+                        <li>
+                            <a href="#" target="_self" title="USD">USD </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="VND">VND </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="dropdown d-inline-block ml-20">
+                <a href="javascript:void(0)" id="signin-toggle" target="_self" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-main text-bolder">
+                    Sign in
+                </a>
+                <div class="dropdown-box dropdown-menu dropdown-signin" aria-labelledby="signin-toggle">
+                    <button type="button" class="close" id="close-dropdown">
+                        <img src="./images/icon-close.svg" alt="Close" title="Close" />
+                    </button>
+                    <h2>Sign In or Register</h2>
+                    <p class="mb-30">One click sign-in with</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#" class="btn btn-block btn-smaller btn-outline-facebook" title="Facebook" target="_self">
+                                <img src="./images/sx.svg" data-src="./images/icon-btn-facebook.svg" alt="Facebook" title="Facebook" class="lazyload mr-10" />
+                                <img src="./images/icon-btn-facebook-active.svg" alt="Facebook" title="Facebook" class="active mr-10" />
+                                Facebook
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn btn-block btn-smaller btn-outline-google" title="Google" target="_self">
+                                <img src="./images/sx.svg" data-src="./images/icon-btn-google.svg" alt="Google" title="Google" class="lazyload mr-10" />
+                                <img src="./images/icon-btn-google-active.svg" alt="Google" title="Google" class="active mr-10" />
+                                Google
+                            </a>
+                        </div>
+                    </div>
+                    <div class="divider-text my-20">Or</div>
+                    <div class="form-large form-group">
+                        <input type="text" placeholder="Enter Email Address" class="form-control" />
+                    </div>
+                    <a href="#" target="_self" title="Next" class="btn btn-block btn-outline-secondary">Next</a>
+                </div>
+            </div>
+            <a href="#" target="_self" title="Create account" class="btn btn-outline-main ml-20">Create account</a>
+        </div>
+        <a href="javascript:void(0)" target="_self" title="Menu" id="menu-header" class="d-block d-lg-none">
+            <img src="./images/sx.svg" data-src="./images/icon-menu-hamburger.svg" alt="Menu" title="Menu" class="lazyload" />
+        </a>
+    </div>
+</header>
+<main>
+    <div class="row mx-0 max-h-383">
+        <div class="col-lg-4 bg-white px-0 min-h-360 hidden-xs col-md-3">
+            <div class="blog-banner py-lg-40">
+                <h2 class="font-weight-bold">The Taaras Beach and Spa Resort: The hidden star of Redang Island</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <a href="#" title="read more" target="_self" class="btn btn-primary text-white mt-lg-30 rounded-0">READ MORE</a>
+            </div>
+                <div class="bg-black h-64 blog-block-end">
+                    <div class="float-right border-white">
+                        <img src="./images/icon-arrow-up-secondary.svg" alt="arrow up" title="arrow up" class="arrow-up h-100 transform-180 border-r-left-white">
+                    </div>
+                    <div class="float-right">
+                        <img src="./images/icon-arrow-up-secondary.svg" alt="arrow up" title="arrow up" class="arrow-up h-100 transform-180 border-r-left-white">
+                    </div>
+                </div>
+        </div>
+        <div id="tvnBanner" class="carousel slide d-flex d-lg-block col-xs-12 col-md-9 col-lg-8 px-0 h-100 carousel-circle" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#tvnBanner" data-slide-to="0" class="active"></li>
+                <li data-target="#tvnBanner" data-slide-to="1"></li>
+                <li data-target="#tvnBanner" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 h-383" src="./images/banner-home.jpg" alt="First slide" />
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 h-383" src="./images/banner-home.jpg" alt="Second slide" />
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 h-383" src="./images/banner-home.jpg" alt="Third slide" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--blog banner mobile-->
+    <div class="col-12 bg-white px-0 d-lg-none">
+        <div class="py-lg-40 mt-30 mx-xs-15">
+            <h2 class="font-weight-bold">The Taaras Beach and Spa Resort: The hidden star of Redang Island</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="#" title="read more" target="_self" class="btn btn-primary text-white mt-lg-30 rounded-0">READ MORE</a>
+        </div>
+        <div class="bg-black h-64 blog-block-end  mt-xs-30">
+            <div class="float-right border-white">
+                <img src="./images/icon-arrow-up-secondary.svg" alt="arrow up" title="arrow up" class="arrow-up h-100 border-left-white">
+            </div>
+            <div class="float-right">
+                <img src="./images/icon-arrow-up-secondary.svg" alt="arrow up" title="arrow up" class="arrow-up h-100 transform-180 border-r-left-white">
+            </div>
+        </div>
+    </div>
+    <!--end blog banner mobile-->
+    <div class="container mt-30">
+        <div class="row px-0 mx-0">
+            <div class="col-md-8 col-lg-8 col-xs-12 px-0">
+                    <h2 class="text-center">DESTINATIONS</h2>
+                <hr class="max-w-100 mx-0 mb-20 mx-xs-auto">
+                <div class="col-12 p-0 pt-10 mb-20">
+                    <a href="#" target="_self" title="asia">
+                        <img data-src="./images/asia.jpg" alt="aisa" title="aisa" class="lazyload position-relative" src="./images/sx.svg">
+                        <div class="text-center-in-img left-0">
+                            <p class="text-white text-38 font-weight-400 position-absolute left-70">ASIA</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 p-0 pt-10 mb-20">
+                    <a href="#" target="_self" title="asia">
+                        <img data-src="./images/asia.jpg" alt="aisa" title="aisa" class="lazyload position-relative" src="./images/sx.svg">
+                        <div class="text-center-in-img left-0">
+                            <p class="text-white text-38 font-weight-400 position-absolute left-70">TOKYO</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 p-0 pt-10 mb-20">
+                    <a href="#" target="_self" title="asia">
+                        <img data-src="./images/asia.jpg" alt="aisa" title="aisa" class="lazyload position-relative" src="./images/sx.svg">
+                        <div class="text-center-in-img left-0">
+                            <p class="text-white text-38 font-weight-400 position-absolute left-70">TOKYO</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 p-0 pt-10 mb-20">
+                    <a href="#" target="_self" title="asia">
+                        <img data-src="./images/asia.jpg" alt="aisa" title="aisa" class="lazyload position-relative" src="./images/sx.svg">
+                        <div class="text-center-in-img left-0">
+                            <p class="text-white text-38 font-weight-400 position-absolute left-70">TOKYO</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 p-0 pt-10 mb-20">
+                    <a href="#" target="_self" title="asia">
+                        <img data-src="./images/asia.jpg" alt="aisa" title="aisa" class="lazyload position-relative" src="./images/sx.svg">
+                        <div class="text-center-in-img left-0">
+                            <p class="text-white text-38 font-weight-400 position-absolute left-70">TOKYO</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xs-12 px-xs-0">
+                <div class="bg-light-gray text-center">
+                    <h2 class="text-main pt-20 mb-10">Recent posts</h2>
+                    <div class="mx-20">
+                        <div class="media pt-20 border-top pb-15">
+                                <img src="./images/icon-aisa.png" alt="asia" title="asia" class="lazyload">
+                                <div class="media-body text-left ml-10">
+                                    <a href="#" title="asia" target="_self" class="text-link text-14 font-weight-bold">Lorem Ipsum is simply dummy text of the printing</a>
+                                    <p class="text-time">July 08, 2019 - posted by Member</p>
+                                </div>
+                        </div>
+                        <div class="media pt-20 border-top pb-15">
+                            <img src="./images/icon-aisa.png" alt="asia" title="asia" class="lazyload">
+                            <div class="media-body text-left ml-10">
+                                <a href="#" title="asia" target="_self" class="text-link text-14 font-weight-bold">Lorem Ipsum is simply dummy text of the printing</a>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </div>
+                        </div>
+                        <div class="media pt-20 border-top pb-15">
+                            <img src="./images/icon-aisa.png" alt="asia" title="asia" class="lazyload">
+                            <div class="media-body text-left ml-10">
+                                <a href="#" title="asia" target="_self" class="text-link text-14 font-weight-bold">Lorem Ipsum is simply dummy text of the printing</a>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light-gray text-center mt-20">
+                    <h2 class="text-main pt-20 mb-10">Recent Comments</h2>
+                    <div class="mx-20">
+                        <div class="media pt-20 border-top pb-15">
+                            <div class="media-body text-left ml-10">
+                                <a href="#" title="asia" target="_self" class="text-link text-14 font-weight-bold">Lorem Ipsum is simply dummy text of the printing</a>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </div>
+                        </div>
+                        <div class="media pt-20 border-top pb-15">
+                            <div class="media-body text-left ml-10">
+                                <a href="#" title="asia" target="_self" class="text-link text-14 font-weight-bold">Lorem Ipsum is simply dummy text of the printing</a>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </div>
+                        </div>
+                        <div class="media pt-20 border-top pb-15">
+                            <div class="media-body text-left ml-10">
+                                <a href="#" title="asia" target="_self" class="text-link text-14 font-weight-bold">Lorem Ipsum is simply dummy text of the printing</a>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex bg-light-gray text-center mt-40 border-bottom">
+            <div class="container">
+                <div class="row px-0 m-0 mx-xs-auto">
+                    <div class="col-12 p-0 my-30 mb-xs-20">
+                        <h2 class="font-weight-bold w-100">TRAVEL</h2>
+                        <hr class="max-w-100 mx-auto">
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xs-6 p-0 max-w-360 text-left max-w-xs-165 mx-xs-auto">
+                        <div class="virtual-vacation-box">
+                            <a href="#" target="_self" title="" class="d-block text-link">
+                                <img src="./images/sx.svg" data-src="./images/travel.png" alt="London" title="London" class="lazyload" />
+                                <h3 class="mb-5 mt-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xs-6 p-0 max-w-360 text-left mx-auto max-w-xs-165">
+                        <div class="virtual-vacation-box">
+                            <a href="#" target="_self" title="" class="d-block text-link">
+                                <img src="./images/sx.svg" data-src="./images/travel.png" alt="London" title="London" class="lazyload" />
+                                <h3 class="mb-5 mt-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xs-6 p-0 max-w-360 text-left max-w-xs-165 mx-xs-auto">
+                        <div class="virtual-vacation-box">
+                            <a href="#" target="_self" title="" class="d-block text-link">
+                                <img src="./images/sx.svg" data-src="./images/travel.png" alt="London" title="London" class="lazyload" />
+                                <h3 class="mb-5 mt-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </a>
+                        </div>
+                    </div>
+                <!--</div>
+                <div class="row px-0 m-0 py-30">-->
+                    <div class="col-md-4 col-lg-4 col-xs-6 p-0 max-w-360 text-left max-w-xs-165 mx-xs-auto">
+                        <div class="virtual-vacation-box">
+                            <a href="#" target="_self" title="" class="d-block text-link">
+                                <img src="./images/sx.svg" data-src="./images/travel.png" alt="London" title="London" class="lazyload" />
+                                <h3 class="mb-5 mt-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xs-6 p-0 max-w-360 text-left mx-auto max-w-xs-165">
+                        <div class="virtual-vacation-box">
+                            <a href="#" target="_self" title="" class="d-block text-link">
+                                <img src="./images/sx.svg" data-src="./images/travel.png" alt="London" title="London" class="lazyload" />
+                                <h3 class="mb-5 mt-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xs-6 p-0 max-w-360 text-left max-w-xs-165 mx-xs-auto">
+                        <div class="virtual-vacation-box">
+                            <a href="#" target="_self" title="" class="d-block text-link">
+                                <img src="./images/sx.svg" data-src="./images/travel.png" alt="London" title="London" class="lazyload" />
+                                <h3 class="mb-5 mt-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                                <p class="text-time">July 08, 2019 - posted by Member</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+<footer>
+    <div class="top-footer d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a href="tel:+61280113917" target="_blank" title="+61 280 113 917" class="text-link text-18 text-bolder">
+                        <img src="./images/sx.svg" data-src="./images/icon-phone-circle-red.svg" alt="Phone" title="Phone" class="lazyload mr-10" />
+                        +61 280 113 917
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="mailto:support@travelner.com" target="_blank" title="Support@Travelner.com" class="text-link text-18 text-bolder">
+                        <img src="./images/sx.svg" data-src="./images/icon-mail-circle-red.svg" alt="Mail" title="Mail" class="lazyload mr-10" />
+                        Support@Travelner.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-footer">
+        <div class="container">
+            <div class="text-center d-block d-lg-none mb-30">
+                <a href="#" target="_self" title="Logo">
+                    <img src="./images/logo-white.svg" data-src="./images/logo-white.svg" alt="Logo" title="Logo" class="lazyload" />
+                </a>
+            </div>
+            <div class="row">
+                <div class="col-6 col-lg-3 d-none d-lg-block mb-xs-15">
+                    <h3 class="footer-title mb-10">USA - HEAD OFFICE (Travelner, LLC)</h3>
+                    <ul class="footer-nav-info text-medium">
+                        <li>
+                            <a href="mailto:support@travelner.com" target="_blank" title="support@travelner.com" class="text-link">
+                                <img src="./images/sx.svg" data-src="./images/icon-mail-blue.svg" alt="Mail" title="Mail" class="lazyload mr-10" />
+                                support@travelner.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+6562406830" target="_blank" title="+65 6240 6830" class="text-link">
+                                <img src="./images/sx.svg" data-src="./images/icon-phone-blue.svg" alt="Phone" title="Phone" class="lazyload mr-10" />
+                                +65 6240 6830
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <img src="./images/sx.svg" data-src="./images/icon-address-blue.svg" alt="Address" title="Address" class="lazyload mr-10" />
+                            19900 MacArthur Boulevard, Suite 1190, Irvine, CA 92612.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 mb-xs-15">
+                    <h3 class="footer-title">ABOUT US</h3>
+                    <ul class="footer-nav mb-0">
+                        <li>
+                            <a href="#" target="_self" title="About Travelner">
+                                About Travelner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Our vision, mission and values">
+                                Our vision, mission and values
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Why Us">
+                                Why Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Blog">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 mb-xs-15">
+                    <h3 class="footer-title">HELP</h3>
+                    <ul class="footer-nav mb-0">
+                        <li>
+                            <a href="#" target="_self" title="FAQs">
+                                FAQs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Payment Guidelines">
+                                Payment Guidelines
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Service Fees">
+                                Service Fees
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Contact Us">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Make a Payment">
+                                Make a Payment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 mb-xs-15">
+                    <h3 class="footer-title">TERM OF USE</h3>
+                    <ul class="footer-nav mb-0">
+                        <li>
+                            <a href="#" target="_self" title="Disclamer">
+                                Disclamer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Legal Agreements">
+                                Legal Agreements
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Privacy Policy">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Refund Policy">
+                                Refund Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Universal Term of Services">
+                                Universal Term of Services
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 d-none d-lg-block mb-xs-15">
+                    <a href="#" target="_self" title="Find More Travelner Office" class="btn btn-block btn-tiny rounded-pill btn-find-more-ft">
+                        Find More Travelner Office <img src="./images/sx.svg" data-src="./images/icon-arrow-right-blue.svg" alt="Find More Travelner Office" title="Find More Travelner Office" class="lazyload" />
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 mb-xs-15">
+                    <h3 class="footer-title">BEFORE OF FLY</h3>
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="#" target="_self" title="Visa and Passport information">
+                                Visa and Passport information
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 d-block d-lg-none mb-xs-15 mt-xs-15">
+                    <h3 class="footer-title">SINGAPORE OFFICE</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-5">
+                            <a href="mailto:support@travelner.com" target="_blank" title="Email: support@travelner.com">
+                                Email: support@travelner.com
+                            </a>
+                        </li>
+                        <li class="mb-5">
+                            <a href="tel:+6562406830" target="_blank" title="Hotline: +65 6240 6830">
+                                Hotline: +65 6240 6830
+                            </a>
+                        </li>
+                        <li class="mb-5">
+                            Address: #14-02 The Arcade, 11 Collyer Quay, Singapore, 049317.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 d-block d-lg-none mb-xs-15 mt-xs-15">
+                    <h3 class="footer-title">HONG KONG OFFICE</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-5">
+                            <a href="mailto:support@travelner.com" target="_blank" title="Email: support@travelner.com">
+                                Email: support@travelner.com
+                            </a>
+                        </li>
+                        <li class="mb-5">
+                            <a href="tel:+85281990206" target="_blank" title="Hotline: +852 8199 0206">
+                                Hotline: +852 8199 0206
+                            </a>
+                        </li>
+                        <li class="mb-5">
+                            Address: Unit 1411, 14/Floor, Cosco Tower, 183 Queen's Road Central, Sheung Wan, Hong Kong.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="text-xs-white text-xs-12">
+                        Prices are for online bookings, in USD and subject to availability. Additional booking fees may apply to bookings. Airfares change regularly and each fare has specific terms and conditions set by the airline
+                        such as refund and cancellation rules which affect the price. Fares are not guaranteed until Flights Ticket Vip confirms your booking and payment is made in full.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-xs-white text-xs-12">
+                        This website is not, neither does it intend to be, for persons subject to the laws or regulations of the United States and/or Canada. The information contained in this website are published in English and in
+                        dollars because that meets international standards.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-20">
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/visa.svg" alt="Visa" title="Visa" class="lazyload" />
+                </a>
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/master-card.svg" alt="Master Card" title="Master Card" class="lazyload" />
+                </a>
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/amex.svg" alt="American Express" title="American Express" class="lazyload" />
+                </a>
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/paypal.svg" alt="Paypal" title="Paypal" class="lazyload" />
+                </a>
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/shopper-approved.svg" alt="Shopper Approved" title="Shopper Approved" class="lazyload" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        <div class="container">
+            <p class="mb-0 text-xs-12 text-xs-center w-xs-100">
+                Copyright ©1997 - 2019 <a href="https://www.travelner.com" target="_self" title="www.travelner.com" class="text-link">www.travelner.com</a>.<br class="d-block d-lg-none" />
+                All Rights Reserved.
+            </p>
+            <div class="footer-right d-none d-lg-block">
+                <div class="ft-dropdown-wrapper d-inline-block mr-5">
+                    <div class="has-dropdown">
+                        <a href="javascript:void(0)" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="EN" title="EN" class="mr-5" /> EN </a>
+                        <ul class="ft-dropdown mb-0">
+                            <li>
+                                <a href="#" target="_self" title="VN"> <img src="./images/flag-vn.svg" alt="VN" title="VN" class="mr-5" /> VN </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="UK" title="UK" class="mr-5" /> EN </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ft-dropdown-wrapper d-inline-block">
+                    <div class="has-dropdown">
+                        <a href="javascript:void(0)" target="_self" title="USD">
+                            USD
+                        </a>
+                        <ul class="ft-dropdown mb-0">
+                            <li>
+                                <a href="#" target="_self" title="USD">USD </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="VND">VND </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.5.min.js"></script>
+<script src="js/select2/select2.min.js"></script>
+<script src="js/lazysizes.min.js"></script>
+<script src="js/ls.bgset.min.js"></script>
+<script src="js/typeahead.bundle.js"></script>
+
+<script src="js/jquery.plugin.min.js"></script>
+<script src="js/jquery.datepick.js"></script>
+<script src="js/style.js?v=1"></script>
+<script type="text/javascript">
+    $(function () {
+        $(document).on("click", ".dropdown-menu", function (e) {
+            e.stopPropagation();
+        });
+    });
+</script>
+</body>
+</html>

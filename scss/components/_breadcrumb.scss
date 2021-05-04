@@ -1,0 +1,43 @@
+.breadcrumb {
+    background: transparent;
+    padding: 6px 0;
+    border-radius: 0;
+    color: #fff;
+    margin-bottom: 0;
+    font-size: $font-size;
+    &.absolute {
+        position: absolute;
+        top: 0;
+    }
+    .breadcrumb-item {
+        color: $white;
+        font-size: 13px;
+        &.active {
+            color: $text-base;
+        }
+        &:first-child:before {
+            content: url("../images/icon-home-breadcrumb.svg");
+            margin-right: 6px;
+        }
+        &+.breadcrumb-item:before {
+            content: url("../images/icon-arrow-right-white.svg");
+            color: $text-base;
+        }
+        a:hover {
+            color: inherit;
+        }
+        &:hover {
+            color: $primary-color !important;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.breadcrumb-bg {
+    background-color: rgba(0, 36, 60, 0.4);
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my trip</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/app.css?v=2" />
+</head>
+
+<body>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+    <header>
+        <div class="container">
+            <a href="#" target="_self" title="Logo" class="mr-40">
+                <img src="./images/logo.svg" alt="Logo" title="Logo" class="d-none d-lg-block" />
+                <img src="./images/logo-mobile.svg" alt="Logo" title="Logo" class="d-block d-lg-none" />
+            </a>
+            <div class="header-menu-wrapper">
+                <div class="overlay d-lg-none"></div>
+                <div class="header-menu">
+                    <div class="bg-secondary px-20 py-30 d-lg-none">
+                        <a href="#" target="_self" title="Sign In" class="text-white text-16">
+                            <img src="./images/icon-user-white.svg" data-src="./images/icon-user-white.svg" alt="User" title="User" class="mr-5 lazyload" /> Sign In
+                        </a>
+                    </div>
+                    <ul class="header-menu-nav pb-xs-15 mb-0">
+                        <li>
+                            <a href="#" target="_self" title="Flight">
+                                    Flight
+                                    <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span>
+                                </a>
+                        </li>
+                        <li class="active">
+                            <a href="#" target="_self" title="Hotels">Hotels <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Tours">Tours <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Deals">Deals <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="FAQs">FAQs <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Contact">Contact <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                    </ul>
+                    <ul class="d-block d-lg-none mb-50 header-menu-nav border-0">
+                        <li>
+                            <a href="#" target="_self" title="Settings">
+                                    Settings
+                                </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Feedback">
+                                    Feedback
+                                </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Term and Condition">
+                                    Term and Condition
+                                </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Privacy Policy">
+                                    Privacy Policy
+                                </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-right d-none d-lg-block">
+                <ul class="header-nav mr-15">
+                    <li class="has-dropdown">
+                        <a href="javascript:void(0)" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="EN" title="EN" class="mr-5" /> EN </a>
+                        <ul class="header-dropdown">
+                            <li>
+                                <a href="#" target="_self" title="VN"> <img src="./images/flag-vn.svg" alt="VN" title="VN" class="mr-5" /> VN </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="UK" title="UK" class="mr-5" /> EN </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="header-nav">
+                    <li class="has-dropdown">
+                        <a href="javascript:void(0)" target="_self" title="USD">
+                                USD
+                            </a>
+                        <ul class="header-dropdown">
+                            <li>
+                                <a href="#" target="_self" title="USD">USD </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="VND">VND </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="dropdown d-inline-block ml-20">
+                    <a href="javascript:void(0)" id="signin-toggle" target="_self" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-main text-bolder">
+                            Sign in
+                        </a>
+                    <div class="dropdown-box dropdown-menu dropdown-signin" aria-labelledby="signin-toggle">
+                        <button type="button" class="close" id="close-dropdown">
+                                <img src="./images/icon-close.svg" alt="Close" title="Close">
+                            </button>
+                        <h2>Sign In or Register</h2>
+                        <p class="mb-30">One click sign-in with</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#" class="btn btn-block btn-smaller btn-outline-facebook" title="Facebook" target="_self">
+                                    <img src="./images/sx.svg" data-src="./images/icon-btn-facebook.svg" alt="Facebook" title="Facebook" class="lazyload mr-10" />
+                                    <img src="./images/icon-btn-facebook-active.svg" alt="Facebook" title="Facebook" class="active mr-10" /> Facebook
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="btn btn-block btn-smaller btn-outline-google" title="Google" target="_self">
+                                    <img src="./images/sx.svg" data-src="./images/icon-btn-google.svg" alt="Google" title="Google" class="lazyload mr-10" />
+                                    <img src="./images/icon-btn-google-active.svg" alt="Google" title="Google" class="active mr-10" /> Google
+                                </a>
+                            </div>
+                        </div>
+                        <div class="divider-text my-20">Or</div>
+                        <div class="form-large form-group">
+                            <input type="text" placeholder="Enter Email Address" class="form-control" />
+                        </div>
+                        <a href="#" target="_self" title="Next" class="btn btn-block btn-outline-secondary">Next</a>
+                    </div>
+                </div>
+                <a href="#" target="_self" title="Create account" class="btn btn-outline-main ml-20">Create account</a>
+            </div>
+            <a href="javascript:void(0)" target="_self" title="Menu" id="menu-header" class="d-block d-lg-none">
+                <img src="./images/sx.svg" data-src="./images/icon-menu-hamburger.svg" alt="Menu" title="Menu" class="lazyload" />
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="padding-block bg-gray px-10  position-fixed w-100  h-100">
+            <div class="bg-white notification border-radius-4 p-20 d-flex flex-column justify-content-center">
+                <strong class="mb-15 text-18">
+                    Session has expired
+                </strong>
+
+                <span class="text-gray ">Your session has expired.</span>
+                <span class="text-gray">
+                    Please sign in to reactivate your session
+                </span>
+                <div class="click text-right mt-20">
+                    <a href="#" target="_blank" title="login" class="text-uppercase text-16 font-weight-bold text-primary">
+                        CLOSE
+                    </a>
+                    <a href="#" target="_blank" title="login" class="text-uppercase text-16 font-weight-bold text-primary ml-3">
+                      SIGN IN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.5.min.js"></script>
+    <script src="js/select2/select2.min.js"></script>
+    <script src="js/lazysizes.min.js"></script>
+    <script src="js/ls.bgset.min.js"></script>
+    <script src="js/typeahead.bundle.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.plugin.min.js"></script>
+    <script src="js/jquery.datepick.js"></script>
+    <script src="js/style.js?v=1"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(document).on("click", ".dropdown-menu", function(e) {
+                e.stopPropagation();
+            });
+            var profileTel = $("input[name=txtPhone]");
+            profileTel.intlTelInput({
+                autoPlaceholder: "on",
+                initialCountry: "vn",
+                formatOnDisplay: true,
+                utilsScript: "js/utils.min.js",
+            });
+            $('#fromCalendar').daterangepicker({
+                singleDatePicker: true
+            });
+            let datepickerBegin = null;
+            let Daybegin = null;
+            $('#fromCalendar').on('hide.daterangepicker', function(ev, picker) {
+                Daybegin = picker.startDate.format('YYYY-MM-DD');
+                datepickerBegin = new Date('"' + Daybegin + '"');
+                let d = new Date('"' + Daybegin + '"').getDay();
+                let arrd = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                let drpt = arrd.find((item, index) => index == d);
+                $("#lb-from-day").html(drpt);
+                console.log(datepickerBegin)
+                console.log(Daybegin)
+            });
+            var substringMatcher = function(strs) {
+                return function findMatches(q, cb) {
+                    var matches, substringRegex;
+
+                    matches = [];
+
+                    substrRegex = new RegExp(q, "i");
+
+                    $.each(strs, function(i, str) {
+                        if (substrRegex.test(str)) {
+                            matches.push(str);
+                        }
+                    });
+
+                    cb(matches);
+                };
+            };
+            var drp = $()
+            $('#fromCalendar-mobile').daterangepicker();
+            var substringMatcher = function(strs) {
+                return function findMatches(q, cb) {
+                    var matches, substringRegex;
+
+                    matches = [];
+
+                    substrRegex = new RegExp(q, "i");
+
+                    $.each(strs, function(i, str) {
+                        if (substrRegex.test(str)) {
+                            matches.push(str);
+                        }
+                    });
+
+                    cb(matches);
+                };
+            };
+            $('#toCalendar').daterangepicker({
+                singleDatePicker: true
+            });
+            $('#toCalendar').on('hide.daterangepicker', function(ev, picker) {
+                var Dayend = picker.startDate.format('YYYY-MM-DD');
+                console.log(Daybegin)
+                let datepickerEnd = new Date('"' + Dayend + '"');
+                let d = new Date('"' + Dayend + '"').getDay();
+                let arrd = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                let drpt = arrd.find((item, index) => index == d);
+                $("#lb-to-day").html(drpt);
+                var diffrence = (datepickerEnd - datepickerBegin) / 86400000
+                let setBegin = new Date(Daybegin);
+                let dateformat = ((setBegin.getMonth() + 1 < 10) ? "0" + (1 + setBegin.getMonth()) : setBegin.getMonth() + 1) + "/" + (setBegin.getDate()) + "/" + setBegin.getFullYear();
+                if (diffrence < 1) {
+                    alert("Please select a date of arrival that is greater than the date of departure")
+                    $('#toCalendar').val(dateformat)
+                }
+
+            });
+            var locations = ["Alabama Alabama Alabama Alabama Alabama Alabama Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+
+            $("#selectFromLocation .typeahead").typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1
+            }, {
+                name: "locations",
+                source: substringMatcher(locations),
+                templates: {
+                    header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
+                }
+            });
+
+            $("#selectToLocation .typeahead").typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1,
+            }, {
+                name: "locations",
+                source: substringMatcher(locations),
+                templates: {
+                    header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
+                }
+            });
+
+            $('#selectFromLocation .typeahead').bind('typeahead:render', function(ev, suggestion) {
+                $("#selectFromLocation .typeahead-title").html('Matching With ' + $("#selectFromLocation .tt-input").next().html())
+            });
+            $('#selectToLocation .typeahead').bind('typeahead:render', function(ev, suggestion) {
+                $("#selectToLocation .typeahead-title").html('Matching With ' + $("#selectToLocation .tt-input").next().html())
+            });
+
+            $("#selectFromLocation-mobile .typeahead-mobile").typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1
+            }, {
+                name: "locations",
+                source: substringMatcher(locations),
+                templates: {
+                    header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
+                }
+            });
+            $("#selectToLocation-mobile .typeahead-mobile").typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1
+            }, {
+                name: "locations",
+                source: substringMatcher(locations),
+                templates: {
+                    header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
+                }
+            });
+            $('#selectFromLocation-mobile .typeahead-mobile').bind('typeahead:render', function(ev, suggestion) {
+                $("#selectFromLocation-mobile .typeahead-title").html('Matching With ' + $("#selectFromLocation-mobile .tt-input").next().html())
+            });
+            $('#selectToLocation-mobile .typeahead-mobile').bind('typeahead:render', function(ev, suggestion) {
+                $("#selectToLocation-mobile .typeahead-title").html('Matching With ' + $("#selectToLocation-mobile .tt-input").next().html())
+            });
+            $(".selectCategory").select2({
+                placeholder: "Please select",
+            });
+            $('#traveller').click(function() {
+                $('.box-traveller').toggle();
+            })
+            $('#done').click(function() {
+                $('.box-traveller').hide();
+            })
+            $(document).on('click', function(e) {
+                if ($(e.target).closest("#traveller").length === 0 && $(e.target).closest("#box-traveller").length === 0) {
+                    $("#box-traveller").hide();
+                }
+            });
+            let total = $('.input-number-wrapper input[type=number]').val();
+            $('#done').click(function() {
+                let sum = 0;
+                $('.input-number-wrapper input[type=number]').each(function(index, ele) {
+                    $(ele).val(function(index, currentValue) {
+                        sum += +currentValue;
+                        return currentValue;
+                    })
+                })
+                $("#total-travel").html(sum + " Traveller (s)");
+
+                event.preventDefault();
+                var title = $(".select2-selection__rendered").attr('title');
+                $('#info-class').text(title)
+
+            })
+            $(".input-number-wrapper").not(".disabled")
+                .find(".sub")
+                .click(function() {
+                    $(this)
+                        .next("input")
+                        .val(function(index, currentValue) {
+                            if (parseInt(currentValue) > 0) {
+                                return parseInt(currentValue) - 1;
+                            } else return currentValue;
+                        });
+                });
+            $(".input-number-wrapper").not(".disabled")
+                .find(".plus")
+                .click(function() {
+                    $(this)
+                        .prev("input")
+                        .val(function(index, currentValue) {
+                            return parseInt(currentValue) + 1;
+                        });
+                });
+        });
+    </script>
+</body>
+
+</html>

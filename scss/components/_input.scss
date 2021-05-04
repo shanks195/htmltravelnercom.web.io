@@ -1,0 +1,134 @@
+input.form-control {
+    &:focus {
+        border-color: $primary-color !important;
+    }
+}
+input.form-control.apply {
+    &:focus {
+       box-shadow: none;
+        border-color: #EBEBEC !important;
+    }
+} 
+.form-input input:focus,
+.form-input input:valid,
+.form-input textarea:focus,
+.form-input textarea:valid {
+    border-bottom: 2px solid $primary-color!important;
+}
+
+.form-input input:focus+.placeholder,
+.form-input input:valid+.placeholder,
+.form-input textarea:focus+.placeholder,
+.form-input textarea:valid+.placeholder {
+    top: 0;
+    cursor: inherit;
+    font-size: 14px;
+    color: $primary-color!important;
+    ;
+}
+
+textarea {
+    &.form-control {
+        height: 96px !important;
+        resize: none;
+    }
+    &.height-input {
+        height: 48px !important;
+        line-height: 34px;
+    }
+}
+
+.input-number-wrapper {
+    display: flex;
+    border:none;
+    align-items: center;
+    .form-control[readonly]{
+        background-color: $white;
+    }
+    input.form-control {
+        text-align: center;
+        width: 50px;
+        border-radius: 6px;
+        z-index: 2;
+        border:none;
+    }
+    .plus , .sub {
+        background-color: $white;
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        transition: 0.3s;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .plus {
+        margin-left: 10px;
+        background-image: url(../images/icon-plus.svg);
+    }
+    .sub {
+        margin-right: 10px;
+        background-image: url(../images/icon-sub.svg);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-group .input-card{
+    padding-left: 35px !important;
+}
+.icon-card{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+}
+.input-name{
+    padding: 0 0 0 2px;
+    font-size: 13px !important;
+    border: none;
+    height: 40px;
+    font-weight: 500;
+    &:focus{
+        box-shadow: none !important;
+    }
+}
+.title-input{
+    position: absolute;
+    font-size: 16px;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    &.active{
+        top: 0 !important;
+        transform: translateY(0);
+        font-size: 10px !important;
+    }
+}
+.input-name:focus + .title-input{
+    transition: all .3s;
+    top: 0;
+    transform: translateY(0);
+    font-size: 10px;
+}
+.credit-card{
+    background-image: url(../images/icon-credit-card.svg);
+    background-repeat: no-repeat;
+    background-position-x: 65px;
+    background-position-y: center;
+}
+.input-credit-card{
+    border: none;
+    padding:6px 4px;
+    width: 40%;
+    &:focus{
+        box-shadow: none !important;
+    }
+}

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Detail</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="css/app.css?v=2" />
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="#" target="_self" title="Logo" class="mr-40">
+            <img src="./images/logo.svg" alt="Logo" title="Logo" class="d-none d-lg-block" />
+            <img src="./images/logo-mobile.svg" alt="Logo" title="Logo" class="d-block d-lg-none" />
+        </a>
+        <div class="header-menu-wrapper">
+            <div class="overlay d-lg-none"></div>
+            <div class="header-menu">
+                <div class="bg-secondary px-20 py-30 d-lg-none">
+                    <a href="#" target="_self" title="Sign In" class="text-white text-16">
+                        <img src="./images/icon-user-white.svg" data-src="./images/icon-user-white.svg" alt="User" title="User" class="mr-5 lazyload" />
+                        Sign In
+                    </a>
+                </div>
+                <ul class="header-menu-nav pb-xs-15 mb-0">
+                    <li>
+                        <a href="#" target="_self" title="Flight">
+                            Flight
+                            <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" target="_self" title="Hotels">Hotels <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Tours">Tours <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Deals">Deals <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="FAQs">FAQs <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Contact">Contact <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                    </li>
+                </ul>
+                <ul class="d-block d-lg-none mb-50 header-menu-nav border-0">
+                    <li>
+                        <a href="#" target="_self" title="Settings">
+                            Settings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Feedback">
+                            Feedback
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Term and Condition">
+                            Term and Condition
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_self" title="Privacy Policy">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-right d-none d-lg-block">
+            <ul class="header-nav mr-15">
+                <li class="has-dropdown">
+                    <a href="javascript:void(0)" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="EN" title="EN" class="mr-5" /> EN </a>
+                    <ul class="header-dropdown">
+                        <li>
+                            <a href="#" target="_self" title="VN"> <img src="./images/flag-vn.svg" alt="VN" title="VN" class="mr-5" /> VN </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="UK" title="UK" class="mr-5" /> EN </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="header-nav">
+                <li class="has-dropdown">
+                    <a href="javascript:void(0)" target="_self" title="USD">
+                        USD
+                    </a>
+                    <ul class="header-dropdown">
+                        <li>
+                            <a href="#" target="_self" title="USD">USD </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="VND">VND </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="dropdown d-inline-block ml-20">
+                <a href="javascript:void(0)" id="signin-toggle" target="_self" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-main text-bolder">
+                    Sign in
+                </a>
+                <div class="dropdown-box dropdown-menu dropdown-signin" aria-labelledby="signin-toggle">
+                    <button type="button" class="close" id="close-dropdown">
+                        <img src="./images/icon-close.svg" alt="Close" title="Close" />
+                    </button>
+                    <h2>Sign In or Register</h2>
+                    <p class="mb-30">One click sign-in with</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#" class="btn btn-block btn-smaller btn-outline-facebook" title="Facebook" target="_self">
+                                <img src="./images/sx.svg" data-src="./images/icon-btn-facebook.svg" alt="Facebook" title="Facebook" class="lazyload mr-10" />
+                                <img src="./images/icon-btn-facebook-active.svg" alt="Facebook" title="Facebook" class="active mr-10" />
+                                Facebook
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn btn-block btn-smaller btn-outline-google" title="Google" target="_self">
+                                <img src="./images/sx.svg" data-src="./images/icon-btn-google.svg" alt="Google" title="Google" class="lazyload mr-10" />
+                                <img src="./images/icon-btn-google-active.svg" alt="Google" title="Google" class="active mr-10" />
+                                Google
+                            </a>
+                        </div>
+                    </div>
+                    <div class="divider-text my-20">Or</div>
+                    <div class="form-large form-group">
+                        <input type="text" placeholder="Enter Email Address" class="form-control" />
+                    </div>
+                    <a href="#" target="_self" title="Next" class="btn btn-block btn-outline-secondary">Next</a>
+                </div>
+            </div>
+            <a href="#" target="_self" title="Create account" class="btn btn-outline-main ml-20">Create account</a>
+        </div>
+        <a href="javascript:void(0)" target="_self" title="Menu" id="menu-header" class="d-block d-lg-none">
+            <img src="./images/sx.svg" data-src="./images/icon-menu-hamburger.svg" alt="Menu" title="Menu" class="lazyload" />
+        </a>
+    </div>
+</header>
+<main>
+    <nav class="breadcrumb-bg w-100 hidden-xs position-absolute z-index-999">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#Home" target="_self" title="Home">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#" target="_self" title="Blog">Blog</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#" target="_self" title="Article">Article</a>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+    <div id="tvnBanner" class="carousel slide d-flex d-lg-block" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="./images/banner-home.jpg" alt="First slide" />
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/banner-home.jpg" alt="Second slide" />
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/banner-home.jpg" alt="Third slide" />
+                </div>
+            </div>
+        </div>
+    <div class="bg-light-gray border-bottom">
+        <ul class="container tab-menu d-flex align-items-center mb-0 py-10">
+            <li class="tab-menu-item ml-auto">
+                <a href="#" title="Get a Quote" target="_self" class="text-medium text-16 tab-link rounded" role="button">
+                    Get a Quote
+                </a></li>
+            <li class="tab-menu-item">
+                <a href="#" title="Processing" target="_self" class="text-medium text-16 tab-link rounded" role="button">
+                    Processings
+                </a></li>
+            <li class="tab-menu-item">
+                <a href="#" title="FAQs" target="_self" class="text-medium text-16 tab-link rounded active" role="button">
+                    FAQs
+                </a></li>
+            <li class="tab-menu-item mr-auto mr-lg-0">
+                <a href="#" title="Blogs" target="_self" class="text-medium text-16 tab-link rounded" role="button">
+                    Blogs
+                </a></li>
+            <li class="tab-menu-item mr-auto d-none d-lg-block">
+                <a href="#" title="Book Flights" class="d-flex align-items-center justify-content-center px-20 py-12 text-white rounded tab-btn btn-secondary">
+                    <img src="./images/icon-flight.svg" alt="flight" title="flight" class="mr-5"> Book Flights
+                </a></li>
+        </ul>
+    </div>
+    <div class="bg-light-gray padding-block pb-0">
+        <div class="container d-flex px-xs-0 bg-white rounded shadow px-lg-0">
+            <div class="row col-xs-12 mx-lg-20 mt-xs-0 bg-xs-white pt-xs-15 p-lg-30 border-bottom mx-xs-15 mx-lg-0">
+                <div class="mb-lg-40 mt-xs-30">
+                    <h1>All-Inclusive Holidays: 5 Asian Wellness Retreats & Resort Spas</h1>
+                    <p class="text-grey-3 mt-xs-10 mb-xs-20">29 July, 2020</p>
+                    <div class="form-group form-large pt-15 mb-0 d-flex">
+                        <h3 class="mr-lg-20 my-auto hidden-xs">Share post on</h3>
+                        <ul class="d-flex blog-follow-box-detail mb-0">
+                            <li class="mr-15">
+                                <a href="#" target="_blank" title="Facebook">
+                                    <img data-src="./images/facebook.png" src="./images/sx.svg" alt="Facebook" title="Facebook" class="lazyload" />
+                                    <img data-src="./images/icon-facebook-active.svg" src="./images/sx.svg" alt="Facebook" title="Facebook" class="lazyload active" />
+                                </a>
+                            </li>
+                            <li class="mr-15">
+                                <a href="#" target="_blank" title="Instagram">
+                                    <img data-src="./images/instagram.png" src="./images/sx.svg" alt="Instagram" title="Instagram" class="lazyload" />
+                                    <img data-src="./images/icon-instargram-active.png" src="./images/sx.svg" alt="Instagram" title="Instagram" class="lazyload active" />
+                                </a>
+                            </li>
+                            <li class="mr-15">
+                                <a href="#" target="_blank" title="Twitter">
+                                    <img data-src="./images/twitter.png" src="./images/sx.svg" alt="twitter" title="twitter" class="lazyload" />
+                                    <img data-src="./images/icon-twitter-active.png" src="./images/sx.svg" alt="twitter" title="twitter" class="lazyload active" />
+                                </a>
+                            </li>
+                            <li class="mr-15">
+                                <a href="#" target="_blank" title="linkedin">
+                                    <img data-src="./images/linkedin.png" src="./images/sx.svg" alt="linkedin" title="linkedin" class="lazyload" />
+                                    <img data-src="./images/icon-linkedin-active.svg" src="./images/sx.svg" alt="linkedin" title="linkedin" class="lazyload active" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row px-0 mx-0 mb-30 border-bottom mt-xs-20">
+                    <div class="col-md-12 col-xs-12 px-0">
+                        <div class="bg-white pb-30">
+                            <a href="#" target="_self" title="" class="d-block text-link">
+                                <img src="./images/sx.svg" data-src="./images/content-detail.png" alt="London" title="London" class="lazyload w-100" />
+                                <p class="mt-lg-30 mt-xs-20">Fit for families, backpackers and honeymooners, all-inclusive holidays take the strain out of any getaway. Instead of wasting precious vacay time planning activities one-by-one, bundle up on everything from brunches to jungle treks, and be ready to roll before you go!</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-0 mx-0">
+                    <div class="col-md-12 col-xs-12 px-0 border-bottom blog-detail-content">
+                        <h2>1. <span class="text-accent">TANJONG JARA RESORT</span> | Dungun, Malaysia</h2>
+                        <img src="./images/sx.svg" data-src="./images/aia-resort.png" alt="London" title="London" class="lazyload w-100 mb-lg-30 mb-xs-20" />
+                        <p >Fit for families, backpackers and honeymooners, all-inclusive holidays take the strain out of any getaway. Instead of wasting precious vacay time planning activities one-by-one, bundle up on everything from brunches to jungle treks, and be ready to roll before you go!</p>
+                        <h3 >Check In to <span class="text-accent">Tanjong Jara resort</span>, Step Out to <span class="text-accent">Dungun, Malaysia</span></h3>
+                        <img src="./images/sx.svg" data-src="./images/aia-resort.png" alt="London" title="London" class="lazyload w-100 mb-lg-30 mb-xs-20 " />
+                        <a class="d-block btn-blog-find-room text-center mb-30 btn-secondary mx-auto" href="#" title="button" target="_self">
+                            FIND GUEST HOUSES & RESORTS IN
+                            DUNGUN
+                        </a>
+                    </div>
+                    <div class="col-md-12 col-xs-12 px-0 mt-30 blog-detail-content">
+                        <h2 >2. <span class="text-accent">TANJONG JARA RESORT</span> | Dungun, Malaysia</h2>
+                        <img src="./images/sx.svg" data-src="./images/aia-resort.png" alt="London" title="London" class="lazyload w-100 mb-lg-30 mb-xs-20" />
+                        <p >Fit for families, backpackers and honeymooners, all-inclusive holidays take the strain out of any getaway. Instead of wasting precious vacay time planning activities one-by-one, bundle up on everything from brunches to jungle treks, and be ready to roll before you go!</p>
+                        <h3 >Check In to <span class="text-accent">Tanjong Jara resort</span>, Step Out to <span class="text-accent">Dungun, Malaysia</span></h3>
+                        <img src="./images/sx.svg" data-src="./images/aia-resort.png" alt="London" title="London" class="lazyload w-100 mb-lg-30 mb-xs-20" />
+                        <a class="d-block btn-blog-find-room text-center mb-30 btn-secondary mx-auto" href="#" title="button" target="_self">
+                           FIND GUEST HOUSES & RESORTS IN
+                                DUNGUN
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-0 mx-0 bg-white padding-block shadow">
+            <div class="container d-flex px-xs-0">
+                <div class="row mx-0 w-xs-100">
+                    <div class="col-12 mt-xs-10 related-blog-mobile">
+                        <h2>Related Blog</h2>
+                        <a href="#" target="_self" title="room" class="text-link">
+                            <div class="media py-lg-30 mb-xs-70">
+                                <img src="./images/icon-user-white.svg" data-src="./images/hotel.png" title="hotel" class="lazyload">
+                                <div class="media-body ml-lg-20 px-xs-10">
+                                    <h3>Top 10 Hotels: Rating by Wonder Tour Travel Experts</h3>
+                                    <p>29 July, 2020</p>
+                                    <p>Home-sharing’s challenges aren’t only about social distancing and hygiene. Overtourism, racial bias, fee transparency and controlling the party crowd are also in the mix.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" target="_self" title="room" class="text-link">
+                            <div class="media py-lg-30 mb-xs-70">
+                                <img src="./images/icon-user-white.svg" data-src="./images/hotel.png" title="hotel" class="lazyload">
+                                <div class="media-body ml-lg-20 px-xs-10">
+                                    <h3>Top 10 Hotels: Rating by Wonder Tour Travel Experts</h3>
+                                    <p >29 July, 2020</p>
+                                    <p >Home-sharing’s challenges aren’t only about social distancing and hygiene. Overtourism, racial bias, fee transparency and controlling the party crowd are also in the mix.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" target="_self" title="room" class="text-link">
+                            <div class="media py-lg-30 mb-xs-70">
+                                <img src="./images/icon-user-white.svg" data-src="./images/hotel.png" title="hotel" class="lazyload">
+                                <div class="media-body ml-lg-20 px-xs-10">
+                                    <h3 >Top 10 Hotels: Rating by Wonder Tour Travel Experts</h3>
+                                    <p >29 July, 2020</p>
+                                    <p >Home-sharing’s challenges aren’t only about social distancing and hygiene. Overtourism, racial bias, fee transparency and controlling the party crowd are also in the mix.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg padding-block d-flex align-items-center text-center text-white pt-lg-50" style="background-image: url(images/mask-group.png);">
+        <div class="container">
+            <h2>Don't Miss Our Offers!</h2>
+            <p class="text-white">Sign up today and get your amazing deal with Travelner</p>
+            <div class="form-group-search bg-white rounded d-flex align-items-center mb-0 max-w-600 mx-auto w-xs-100">
+                <div class="form-group mb-0 p-0">
+                    <input type="text" placeholder="Joins Us - Get Notification" class="form-control border-0">
+                </div>
+                <button class="btn btn-secondary btn-search ml-auto py-10 px-20"><span class="d-none d-lg-inline-block mw-lg-100">Search</span><img src="./images/arrow-right-white-mobile.svg" alt="arrow right" title="arrow right" class="d-block d-lg-none"></button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-mobile ">
+        <div class="top-footer-mobile d-block d-lg-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12  mb-14-mobile p-0">
+                        <a href="tel:+61280113917" target="_blank" title="+61 280 113 917" class="text-link text-18 text-bolder">
+                            <img src="./images/sx.svg" data-src="./images/icon-phone-mobile.svg" alt="Phone" title="Phone" class="lazyload mr-10" /> Call Us: +61 280 113 917
+                        </a>
+                    </div>
+                    <div class="col-sm-12 mb-20-mobile p-0">
+                        <a href="mailto:support@travelner.com" target="_blank" title="Support@Travelner.com" class="text-link text-18 text-bolder">
+                            <img src="./images/sx.svg" data-src="./images/icon-mail-mobile.jpg" alt="Mail" title="Mail" class="lazyload mr-10" /> Email Us: support@travelner.com
+                        </a>
+                    </div>
+                    <div class="col-sm-12   input-newsletter p-0">
+                        <form action="#" class="d-flex">
+                            <input type="text" placeholder="Get exclusive offers. Subscribe To Our Newsletter" class="form-control form-newsletter">
+                            <button type="submit" class="btn-gradient">SUBMIT</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="top-footer d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <a href="tel:+61280113917" target="_blank" title="+61 280 113 917" class="text-link text-18 text-bolder">
+                        <img src="./images/sx.svg" data-src="./images/icon-phone-circle-red.svg" alt="Phone" title="Phone" class="lazyload mr-10" />
+                        +61 280 113 917
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="mailto:support@travelner.com" target="_blank" title="Support@Travelner.com" class="text-link text-18 text-bolder">
+                        <img src="./images/sx.svg" data-src="./images/icon-mail-circle-red.svg" alt="Mail" title="Mail" class="lazyload mr-10" />
+                        Support@Travelner.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-footer">
+        <div class="container">
+            <div class="text-center d-block d-lg-none mb-30">
+                <a href="#" target="_self" title="Logo">
+                    <img src="./images/logo-white.svg" data-src="./images/logo-white.svg" alt="Logo" title="Logo" class="lazyload" />
+                </a>
+            </div>
+            <div class="row">
+                <div class="col-6 col-lg-3 d-none d-lg-block mb-xs-15">
+                    <h3 class="footer-title mb-10">USA - HEAD OFFICE (Travelner, LLC)</h3>
+                    <ul class="footer-nav-info text-medium">
+                        <li>
+                            <a href="mailto:support@travelner.com" target="_blank" title="support@travelner.com" class="text-link">
+                                <img src="./images/sx.svg" data-src="./images/icon-mail-blue.svg" alt="Mail" title="Mail" class="lazyload mr-10" />
+                                support@travelner.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+6562406830" target="_blank" title="+65 6240 6830" class="text-link">
+                                <img src="./images/sx.svg" data-src="./images/icon-phone-blue.svg" alt="Phone" title="Phone" class="lazyload mr-10" />
+                                +65 6240 6830
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <img src="./images/sx.svg" data-src="./images/icon-address-blue.svg" alt="Address" title="Address" class="lazyload mr-10" />
+                            19900 MacArthur Boulevard, Suite 1190, Irvine, CA 92612.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 mb-xs-15">
+                    <h3 class="footer-title">ABOUT US</h3>
+                    <ul class="footer-nav mb-0">
+                        <li>
+                            <a href="#" target="_self" title="About Travelner">
+                                About Travelner
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Our vision, mission and values">
+                                Our vision, mission and values
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Why Us">
+                                Why Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Blog">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 mb-xs-15">
+                    <h3 class="footer-title">HELP</h3>
+                    <ul class="footer-nav mb-0">
+                        <li>
+                            <a href="#" target="_self" title="FAQs">
+                                FAQs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Payment Guidelines">
+                                Payment Guidelines
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Service Fees">
+                                Service Fees
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Contact Us">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Make a Payment">
+                                Make a Payment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 mb-xs-15">
+                    <h3 class="footer-title">TERM OF USE</h3>
+                    <ul class="footer-nav mb-0">
+                        <li>
+                            <a href="#" target="_self" title="Disclamer">
+                                Disclamer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Legal Agreements">
+                                Legal Agreements
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Privacy Policy">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Refund Policy">
+                                Refund Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Universal Term of Services">
+                                Universal Term of Services
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 d-none d-lg-block mb-xs-15">
+                    <a href="#" target="_self" title="Find More Travelner Office" class="btn btn-block btn-tiny rounded-pill btn-find-more-ft">
+                        Find More Travelner Office <img src="./images/sx.svg" data-src="./images/icon-arrow-right-blue.svg" alt="Find More Travelner Office" title="Find More Travelner Office" class="lazyload" />
+                    </a>
+                </div>
+                <div class="col-6 col-lg-3 mb-xs-15">
+                    <h3 class="footer-title">BEFORE OF FLY</h3>
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="#" target="_self" title="Visa and Passport information">
+                                Visa and Passport information
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 d-block d-lg-none mb-xs-15 mt-xs-15">
+                    <h3 class="footer-title">SINGAPORE OFFICE</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-5">
+                            <a href="mailto:support@travelner.com" target="_blank" title="Email: support@travelner.com">
+                                Email: support@travelner.com
+                            </a>
+                        </li>
+                        <li class="mb-5">
+                            <a href="tel:+6562406830" target="_blank" title="Hotline: +65 6240 6830">
+                                Hotline: +65 6240 6830
+                            </a>
+                        </li>
+                        <li class="mb-5">
+                            Address: #14-02 The Arcade, 11 Collyer Quay, Singapore, 049317.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 d-block d-lg-none mb-xs-15 mt-xs-15">
+                    <h3 class="footer-title">HONG KONG OFFICE</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-5">
+                            <a href="mailto:support@travelner.com" target="_blank" title="Email: support@travelner.com">
+                                Email: support@travelner.com
+                            </a>
+                        </li>
+                        <li class="mb-5">
+                            <a href="tel:+85281990206" target="_blank" title="Hotline: +852 8199 0206">
+                                Hotline: +852 8199 0206
+                            </a>
+                        </li>
+                        <li class="mb-5">
+                            Address: Unit 1411, 14/Floor, Cosco Tower, 183 Queen's Road Central, Sheung Wan, Hong Kong.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="text-xs-white text-xs-12">
+                        Prices are for online bookings, in USD and subject to availability. Additional booking fees may apply to bookings. Airfares change regularly and each fare has specific terms and conditions set by the airline
+                        such as refund and cancellation rules which affect the price. Fares are not guaranteed until Flights Ticket Vip confirms your booking and payment is made in full.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-xs-white text-xs-12">
+                        This website is not, neither does it intend to be, for persons subject to the laws or regulations of the United States and/or Canada. The information contained in this website are published in English and in
+                        dollars because that meets international standards.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-20">
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/visa.svg" alt="Visa" title="Visa" class="lazyload" />
+                </a>
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/master-card.svg" alt="Master Card" title="Master Card" class="lazyload" />
+                </a>
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/amex.svg" alt="American Express" title="American Express" class="lazyload" />
+                </a>
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/paypal.svg" alt="Paypal" title="Paypal" class="lazyload" />
+                </a>
+                <a href="#" target="_self" title="" class="d-inline-block my-5">
+                    <img src="./images/sx.svg" data-src="./images/shopper-approved.svg" alt="Shopper Approved" title="Shopper Approved" class="lazyload" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        <div class="container">
+            <p class="mb-0 text-xs-12 text-xs-center w-xs-100">
+                Copyright ©1997 - 2019 <a href="https://www.travelner.com" target="_self" title="www.travelner.com" class="text-link">www.travelner.com</a>.<br class="d-block d-lg-none" />
+                All Rights Reserved.
+            </p>
+            <div class="footer-right d-none d-lg-block">
+                <div class="ft-dropdown-wrapper d-inline-block mr-5">
+                    <div class="has-dropdown">
+                        <a href="javascript:void(0)" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="EN" title="EN" class="mr-5" /> EN </a>
+                        <ul class="ft-dropdown mb-0">
+                            <li>
+                                <a href="#" target="_self" title="VN"> <img src="./images/flag-vn.svg" alt="VN" title="VN" class="mr-5" /> VN </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="UK" title="UK" class="mr-5" /> EN </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ft-dropdown-wrapper d-inline-block">
+                    <div class="has-dropdown">
+                        <a href="javascript:void(0)" target="_self" title="USD">
+                            USD
+                        </a>
+                        <ul class="ft-dropdown mb-0">
+                            <li>
+                                <a href="#" target="_self" title="USD">USD </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="VND">VND </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.5.min.js"></script>
+<script src="js/select2/select2.min.js"></script>
+<script src="js/lazysizes.min.js"></script>
+<script src="js/ls.bgset.min.js"></script>
+<script src="js/typeahead.bundle.js"></script>
+
+<script src="js/jquery.plugin.min.js"></script>
+<script src="js/jquery.datepick.js"></script>
+<script src="js/style.js?v=1"></script>
+<script type="text/javascript">
+    $(function () {
+        $(document).on("click", ".dropdown-menu", function (e) {
+            e.stopPropagation();
+        });
+    });
+</script>
+</body>
+</html>

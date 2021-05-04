@@ -1,0 +1,156 @@
+    .bg {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .bg-primary {
+        background-color: $primary-color!important;
+    }
+    .mh-56 {
+        min-height: 56px!important;
+    }
+    .mw-180 {
+        min-width: 180px!important;
+    }
+    .bg-green {
+        background: $green!important;
+    }
+    .bg-green-light-1 {
+        background: #f1fef2 !important;
+    }
+    
+    .bg-transparent {
+        background-color: transparent !important;
+    }
+    
+    .bg-transparent-none {
+        background: transparent !important;
+    }
+    
+    .bg-light-gray {
+        background-color: $light-gray !important;
+    }
+    
+    .bg-trip {
+        background: $bg-trip;
+    }
+    
+    .bg-black {
+        background-color: black !important;
+    }
+    
+    .bg-blue-10 {
+        background-color: rgba(2 44 75 / 53%)!important;
+    }
+    
+    .input-number-wrapper .form-control.bg-white-light[readonly] {
+        background: #f5f5f5;
+    }
+    
+    .bg-gray-6 {
+        background-color: $seccondary-gray;
+    }
+    
+    .bg-white {
+        background-color: white !important;
+    }
+    
+    .bg-blue-white {
+        background-color: #F3FDFF!important;
+    }
+    
+    .bg-blue-dark {
+        background-color: #002D75!important;
+    }
+    
+    .bg-light-gray {
+        background-color: $light-gray;
+    }
+    
+    .bg-gray-light-2 {
+        background-color: $gray-11;
+    }
+    .bg-yellow-1 {
+        background: $yellow-1;
+    }
+    .bg-white-light {
+        background: #f5f5f5;
+    }
+    
+    .bg-gray-contact {
+        background-color: #ECECEC;
+    }
+    
+    .bg-light-dark {
+        background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+    
+    .bg-no-repeat {
+        background: no-repeat !important;
+    }
+    
+    .bg-secondary {
+        background-color: $secondary-color!important;
+    }
+    .bg-secondary-dark {
+        background-color: $secondary-dark!important;
+    }
+    .bg-secondary-light {
+        background-color: $secondary-light!important;
+    }
+    .bg-blue-sky {
+        background-color: #03BFD8 ;
+    }
+    
+    @include media-breakpoint-down(md) {
+        .rounded-xs {
+            border-radius: 4px!important;
+        }
+        .rounded-xs-0 {
+            border-radius: 0px!important;
+        }
+        .bg-xs-gray-11  {
+            background-color:#E3E3E3!important;
+        }
+        
+        .bg-xs-blue-10 {
+            background-color: #00243C!important;
+        }
+        .bg-xs-white {
+            background-color: $white!important;
+        }
+        .bg-xs-transparent {
+            background-color: transparent!important;
+        }
+        .bg-xs-gray-1 {
+            background-color: $gray-1!important;
+        }
+        .bg-xs-primary {
+            background-color: $primary-color!important;
+        }
+        .bg-xs-secondary {
+            background-color: rgb(243, 119, 33, 0.05) !important;
+        }
+        .bg-xs-white-light {
+            background-color: #f5f5f5 !important;
+        }
+    }
+    
+    .bg-blue-payment {
+        background-color: #0048BC;
+    }
+    .input-number-wrapper .right:hover, .input-number-wrapper .left:hover, .input-number-wrapper .plu:hover,.input-number-wrapper .minu:hover {
+        cursor: pointer;
+    }
+    .bg-gray {
+        background-color: #C8CACD;
+    }
+    
+    .bg-green-dark {
+        background-color: #01681E;
+    }
+    
+    .bg-green-light {
+        background-color: #EBFFED;
+    }

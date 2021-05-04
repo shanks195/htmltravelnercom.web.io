@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Booking details payment</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/jquery-ui.min.css" />
+        <link rel="stylesheet" href="js/select2/select2.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="css/intlTelInput.min.css" />
+        <link rel="stylesheet" href="css/app.css?v=2" />
+    </head>
+    <body>
+        <header>
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="javascript:void(0)" target="_self" title="Menu" id="menu-header" class="d-block d-lg-none">
+                    <img src="./images/sx.svg" data-src="./images/icon-menu-hambuger-payment.svg" alt="Menu" title="Menu" class="lazyload" />
+                </a>
+                <div class="header-menu-wrapper d-lg-none">
+                    <div class="overlay d-lg-none"></div>
+                    <div class="header-menu">
+                        <div class="bg-secondary px-20 py-30 d-lg-none">
+                            <a href="#" target="_self" title="Sign In" class="text-white text-16">
+                                <img src="./images/icon-user-white.svg" data-src="./images/icon-user-white.svg" alt="User" title="User" class="mr-5 lazyload" />
+                                Sign In
+                            </a>
+                        </div>
+                        <ul class="header-menu-nav pb-xs-15 mb-0">
+                            <li>
+                                <a href="#" target="_self" title="Flight">
+                                    Flight
+                                    <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#" target="_self" title="Hotels">Hotels <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Tours">Tours <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Deals">Deals <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="FAQs">FAQs <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Contact">Contact <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                        </ul>
+                        <ul class="d-block d-lg-none mb-50 header-menu-nav border-0">
+                            <li>
+                                <a href="#" target="_self" title="Settings">
+                                    Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Feedback">
+                                    Feedback
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Term and Condition">
+                                    Term and Condition
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Privacy Policy">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-xs-flex justify-content-center w-xs-100 mt-10 mb-lg-25 mb-10">
+                    <a href="#" target="_self" title="Logo">
+                        <img src="./images/logo.svg" alt="Logo" title="Logo" class="d-none d-lg-block" />
+                        <img src="./images/logo-mobile.svg" alt="Logo" title="Logo" class="d-block d-lg-none" />
+                    </a>
+                </div>
+                <div class="list-step-payment hidden-xs">
+                    <div class="step-payment-item">
+                        <div class="d-flex w-100 justify-content-center">
+                            <div class="circle-payment active">1</div>
+                        </div>
+                        <p class="mt-5 active ">Customer information</p>
+                        <div class="line-step-payment"></div>
+                    </div>
+                    <div class="step-payment-item">
+                        <div class="d-flex w-100 justify-content-center">
+                            <div class="circle-payment">2</div>
+                        </div>
+                        <p class="mt-5">Payment information</p>
+                        <div class="line-step-payment"></div>
+                    </div>
+                    <div class="step-payment-item">
+                        <div class="d-flex w-100 justify-content-center">
+                            <div class="circle-payment">3</div>
+                        </div>
+                        <p class="mt-5">Booking is confirmed!</p>
+                    </div>
+                </div>
+                <div class="dropdown d-inline-block ml-20 hidden-xs">
+                        <a href="javascript:void(0)" id="signin-toggle" target="_self" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-bolder btn btn-outline-secondary btn-signin">
+                            Sign in
+                        </a>
+                        <div class="dropdown-box dropdown-menu dropdown-signin" aria-labelledby="signin-toggle">
+                            <button type="button" class="close" id="close-dropdown">
+                                <img src="./images/icon-close.svg" alt="Close" title="Close">
+                            </button>
+                            <h2>Sign In or Register</h2>
+                            <p class="mb-30">One click sign-in with</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-block btn-smaller btn-outline-facebook" title="Facebook" target="_self">
+                                        <img src="./images/sx.svg" data-src="./images/icon-btn-facebook.svg" alt="Facebook" title="Facebook" class="lazyload mr-10" />
+                                        <img src="./images/icon-btn-facebook-active.svg" alt="Facebook" title="Facebook" class="active mr-10" />
+                                        Facebook
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-block btn-smaller btn-outline-google" title="Google" target="_self">
+                                        <img src="./images/sx.svg" data-src="./images/icon-btn-google.svg" alt="Google" title="Google" class="lazyload mr-10" />
+                                        <img src="./images/icon-btn-google-active.svg" alt="Google" title="Google" class="active mr-10" />
+                                        Google
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="divider-text my-20">Or</div>
+                            <div class="form-large form-group">
+                                <input type="text" placeholder="Enter Email Address" class="form-control" />
+                            </div>
+                            <a href="#" target="_self" title="Next" class="btn btn-block btn-outline-secondary">Next</a>
+                        </div>
+                </div>
+            </div>
+        </header>
+        <main>
+             <!-- Page mobile  bg-white-light-->
+             <div class="d-block d-lg-none">
+                 <!-- step 3 -->
+                 <div class="px-0 pb-50 bg-white step-payment" id="step-payment">
+                    <!-- user avarta -->
+                   <div class="d-flex align-items-center bg-secondary-dark p-15">
+                       <img src="./images/icon-left-white-16x16.svg" alt="back" title="back">
+                       <div class="d-flex align-items-center mx-auto">
+                           <span class="text-white text-14">Speak to an expert now</span>
+                           <div class="user-img-mobile ml-5">
+                               <span class="tick"></span>
+                           </div>
+                       </div>
+                   </div>
+                   <!-- tab processing -->
+                   <div class="d-flex tab-processing">
+                       <p class="process-item d-block flex-grow-1 py-8 text-13 text-center processed">
+                           <img src="./images/icon-checked-blue.svg" alt="checked" title="checked" class="mr-5 img-check">
+                           <span>Details</span>
+                       </p>
+                       <p class="process-item d-block flex-grow-1 py-8 text-13 text-center processed">
+                           <img src="./images/icon-checked-blue.svg" alt="checked" title="checked" class="mr-5 img-check">
+                           <span>Passenger</span>
+                       </p>
+                       <p class="process-item d-block flex-grow-1 py-8 text-13 text-center on-process">
+                           <img src="./images/icon-checked-blue.svg" alt="checked" title="checked" class="mr-5 img-check">
+                           <span>Payment</span>
+                       </p>
+                   </div>
+                   <!--  -->
+                   <div class="padding-block px-15 pt-10 bg-white-light">
+                       <!-- book -->
+                       <div class="p-10 mb-10 bg-secondary-light rounded border-secondary-dark">
+                           <p class="text-13 text-secondary-dark text-center mb-0">
+                            You may book in the next  
+                               <span class="text-medium">
+                                    20 minutes
+                               </span>
+                               as this page will then refresh.
+                               <img src="./images/icon-infor-blue-12.svg" alt="info" title="info">
+                           </p>
+                       </div>
+                       <!-- Payment Options -->
+                       <div class="my-20 rounded-top bg-white pb-20 position-relative">
+                           <!-- title -->
+                            <div class="bg-secondary d-flex align-items-center rounded-top px-10 py-8">
+                                <p class="mb-0 text-white text-13 text-medium">Payment Options</p>
+                                <p class="mb-0 ml-auto d-flex align-items-center text-white text-8 text-medium">
+                                    <img src="/images/icon-lock-10.svg" alt="lock" title="lock" class="mr-5">
+                                    <span>Secured Encrypted Transaction</span>
+                                </p>
+                            </div>
+                            <!--  -->
+                            <p class="my-15 d-flex align-items-center px-10 text-14 text-grey-2 text-medium">
+                                <input type="radio" checked>
+                                <span class="ml-5">Credit or Debit Card</span>
+                            </p>
+                            <!--  -->
+                            <div class="d-flex align-items-center px-10 mb-15">
+                                <img src="./images/icon-card-visa.svg" alt="credit card" title="credit card" class="mr-5">
+                                <img src="./images/icon-card-mastercard.svg" alt="credit card" title="credit card" class="mr-5">
+                                <img src="./images/icon-card-discover.svg" alt="credit card" title="credit card" class="mr-5">
+                                <img src="./images/icon-card-jcb.svg" alt="credit card" title="credit card" class="mr-5">
+                                <img src="./images/icon-card-america.svg" alt="credit card" title="credit card">
+                            </div>
+                            <!-- inputs -->
+                            <div class="px-10 pb-20">
+                                <div class="mb-0 form-group mb-10 d-flex align-items-center">
+                                    <input type="text" class="form-control h-40" placeholder="Fist Name*">
+                                    <label for="" class="mb-0 ml-10 d-block label-cus-2 filled">
+                                        <span class="text-10 text-grey-3 text-top">Last Name *</span>
+                                        <input type="text" placeholder="Last Name *" value="Toan Nguyen" class="form-control form-cus-1 text-13 h-40">
+                                    </label>
+                                </div>
+                                <div class="mb-0 form-group mt-10 d-flex align-items-center">
+                                    <input type="text" class="form-control h-40" placeholder="Name on Card*">
+                                    <label for="cvv-inut" class="mb-0 ml-10 d-block position-relative form-cvv">
+                                        <input type="text" id="cvv-inut" placeholder="" class="form-control form-cus-1 text-13 h-40"
+                                         onblur="this.value === '' ? this.dataset.isValue = 'false' : this.dataset.isValue = 'true'; "
+                                         data-is-value="false"
+                                        >
+                                        <span class="cvv-text text-14">
+                                            CVV
+                                            <span class="text-main">*</span>
+                                        </span>
+                                        <div class="cvv-img">
+                                            <img src="./images/icon-cvv-card.svg" alt="cvv" title="cvv">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Contact Information -->
+                            <p class="contact-info pt-5 pb-5 px-10 text-white bg-secondary text-13 text-medium">
+                                Contact Information
+                            </p>
+                            <div class="mb-0 form-group px-10">
+                                <input type="text" class="form-control h-40" placeholder="Contact Phone Number*">
+                                <div class="mt-10 d-flex align-items-start">
+                                    <input type="checkbox" class="checkbox-20 flex-shrink-0 mr-10">
+                                    <p class="mb-0 text-12 text-grey-3">
+                                        I agree to receive texts and calls at this number, and also to share this contact information with the airline(s) associated with this booking.
+                                    </p>
+                                </div>
+                                <input type="text" class="form-control mb-10 h-40" placeholder="Email Address*" >
+                                <p class="mb-0 text-12 text-grey-3">Booking confirmation will be sent to this email address</p>
+                            </div>
+                            <div class="bg-secondary-light p-10">
+                                <p class="mb-0 text-14 text-grey-2">
+                                    <span class="text-medium">Create an account to manage your trip</span>
+                                    <span class="text-grey-3">(Optional)</span>
+                                </p>
+                                <label for="" class="mb-5 form-group hide-show-pass d-block">
+                                    <input type="password" class="form-control mt-5 mb-5 h-40" placeholder="Password">
+                                    <div class="img-eye"></div>
+                                </label>
+                                <p class="mb-0 text-12 text-grey-3">8-30 characters, at leats 1 number & 1 letter, no space</p>
+                            </div>
+                       </div>
+                       <!-- Travel Protection -->
+                       <div class="my-20 rounded bg-white pb-10 position-relative">
+                           <div class="bg-secondary rounded-top px-10 py-8">
+                               <p class="mb-0 text-white text-13 text-medium">Travel Protection</p>
+                           </div>
+                           <div class="d-flex align-items-center px-10 my-15">
+                               <img src="./images/icon-plane.svg" alt="travel protection" title="travel protection">
+                               <p class="mb-0 ml-10 text-14 text-grey-1">Resons you might need travel protection</p> 
+                           </div>
+                           <ul class="list-unstyled d-flex px-10 mb-10 ul-custom-1 text-13 text-grey-2 flex-wrap">
+                               <li class="w-50 mb-10 d-flex align-items-start">
+                                   <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="mr-5">
+                                   <span>Trip Cancellation</span>
+                               </li>
+                               <li class="w-50 mb-10 d-flex align-items-start">
+                                   <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="mr-5">
+                                   <span>Baggage Delay
+                                   </span>
+                               </li>
+                               <li class="w-50 mb-10 d-flex align-items-start">
+                                   <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="mr-5">
+                                   <span>Trip Delay
+                                   </span>
+                               </li>
+                               <li class="w-50 mb-10 d-flex align-items-start">
+                                   <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="mr-5">
+                                   <span>Inclement
+                                       Weather
+                                       </span>
+                               </li>
+                               <li class="w-50 mb-10 d-flex align-items-start">
+                                   <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="mr-5">
+                                   <span>Trip Interruption
+                                   </span>
+                               </li>
+                               <li class="w-50 mb-10 d-flex align-items-start">
+                                   <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="mr-5">
+                                   <span>Mechanical
+                                       Issues</span>
+                               </li>
+                           </ul>
+                           <a href="javascript:void(0)" target="_self" title="TSA Carry-On Rules" class="d-block mb-10 px-10 text-secondary text-13 text-decoration-underline ">View Plan Summary</a>
+                           <div class="px-10 bd-color-1">
+                               <label for="yes-protection-1" class="radio-container bg-green-light-1 p-10 text-14 text-grey-1 mb-0" role="button">
+                                   <input id="yes-protection-1" type="checkbox" name="yes-protection-1">
+                                   <span class="checkmark-custom mr-10">
+                                       <span class="dot"></span>
+                                   </span>
+                                   <span>Yes, I want travel protection for my trip.</span>
+                               </label>
+                               <label for="no-protection-1" class="radio-container p-10  text-13 text-grey-3 mb-0" role="button">
+                                   <input id="no-protection-1" type="checkbox" name="no-protection-1">
+                                   <span class="checkmark-custom mr-10">
+                                       <span class="dot"></span>
+                                   </span>
+                                   <span>No, I am declincing Travel Protection for this trip.</span>
+                               </label>
+                           </div>
+                           <div class="recommend-label">
+                                <img src="./images/label-recommend-no-text.svg" alt="recommed" title="recommed" class="">
+                                <span class="text-10 text-white text-medium title-label">Recommended</span>
+                           </div>
+                       </div>
+                       <!-- Review Trip Details -->
+                       <div class="my-20 rounded bg-white pb-20 position-relative">
+                            <div class="bg-secondary rounded-top px-10 py-8">
+                                <p class="mb-0 text-white text-13 text-medium">Review Trip Details</p>
+                            </div>
+                            <div class="px-10">
+                                <p class="my-10 text-12 text-grey-2">
+                                    Please confirm that each traveler’s full name is entered as it appears on their passport or government-issued photo ID. Ticket are non-transferable and nam changes are not permitted after booking.
+                                </p>
+                                <div class="d-flex align-items-start mb-10">
+                                    <div>
+                                        <p class="mb-5 text-13 text-grey-1 text-medium">
+                                            1. Toan Nguyen
+                                        </p>
+                                        <p class="mb-0 text-12 text-grey-3">
+                                            May 12, 1996
+                                        </p>
+                                    </div>
+                                    <a href="javascript:void(0)" target="_self" title="Edit Traveler" class="text-secondary text-decoration-underline text-12 ml-auto">Edit Traveler</a>
+                                </div>
+                                <div class="d-flex align-items-start mb-20 pb-20 border-bottom">
+                                    <div>
+                                        <p class="mb-5 text-13 text-grey-1 text-medium">
+                                            1. Toan Nguyen
+                                        </p>
+                                        <p class="mb-0 text-12 text-grey-3">
+                                            May 12, 1996
+                                        </p>
+                                    </div>
+                                    <a href="javascript:void(0)" target="_self" title="Edit Traveler" class="text-secondary text-decoration-underline text-12 ml-auto">Edit Traveler</a>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span class="text-13 text-grey-1 text-medium mr-5">Depart</span>
+                                        <span class="text-12 text-grey-3">Fri Jan 29</span>
+                                    </p>
+                                    <p class="text-grey-2 text-12 mb-0">Vietnam Airlines</p>
+                                    <p class="text-grey-3 text-10 mb-5">2h (Nonstop)</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./images/icon-vn-airline-24x16.svg" alt="vn airline" title="vn airline" class="mr-10">
+                                        <div class="d-flex align-items-center">
+                                            <p class="mb-0">
+                                                <span class="text-12 text-grey-2 mr-10">SGN</span>
+                                                <span class="text-13 text-medium text-grey-1 mr-5">11:05 am</span>
+                                            </p>
+                                            <div class="line-time w-32px">
+                                                <!-- <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div> -->
+                                            </div>
+                                            <p class="mb-0">
+                                                <span class="text-13 text-medium text-grey-1 ml-5">12:00 pm</span>
+                                                <span class="text-12 text-grey-2 ml-10">HAN</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <!-- Price Details (USD) -->
+                       <div class="mt-20 mb-10 rounded bg-white pb-10 position-relative">
+                           <div class="bg-secondary rounded-top px-10 py-8">
+                               <p class="mb-0 text-white text-13 text-medium">Price Details (USD)</p>
+                           </div>
+                           <div class="d-flex align-items-center p-10">
+                               <img src="./images/icon-money-green-16x16.svg" alt="money" title="money" class="mr-10">
+                               <p class="text-12 mb-0 text-green-2 ">
+                                   Great deal backed 
+                                   <span class="text-decoration-underline">Price Match Promise.</span>
+                               </p>
+                           </div>
+                           <div class="border-bottom mb-10"></div>
+                           <ul class="list-unstyled px-10 mb-10">
+                               <li class="text-12 mb-5 text-grey-3 d-flex align-items-center">
+                                   <span class="">Travelner(s)</span>
+                                   <p  class="mb-0 ml-auto text-grey-3">
+                                       <span>Subtotal</span>
+                                       <img src="./images/icon-info-circle-12-grey.svg" alt="info" title="info">
+                                   </p>
+                               </li>
+                               <li class="text-13 mb-10 d-flex align-items-center">
+                                   <span class="text-grey-2">1 x Adult</span>
+                                   <a href="javascript:void(0)" target="_self" title="Add Now" class="d-block ml-auto text-secondary text-decoration-underline ">Add Now</a>
+                               </li>
+                               <li class="text-13 mb-10 d-flex align-items-center">
+                                   <span class="text-grey-2">Travel Protection</span>
+                                   <a href="javascript:void(0)" target="_self" title="Add Now" class="d-block ml-auto text-secondary text-decoration-underline ">Add Now</a>
+                               </li>
+                               <li class="text-13 mb-10 d-flex align-items-center">
+                                   <span class="text-grey-2">Travel Assist Classic</span>
+                                   <a href="javascript:void(0)" target="_self" title="Add Now" class="d-block ml-auto text-secondary text-decoration-underline ">Add Now</a>
+                               </li>
+                               <li class="text-13 mb-10 d-flex align-items-center">
+                                   <span class="text-grey-2">Premium Support</span>
+                                   <a href="javascript:void(0)" target="_self" title="Add Now" class="d-block ml-auto text-secondary text-decoration-underline ">Add Now</a>
+                               </li>
+                               <li class="text-13 mb-10 d-flex align-items-center">
+                                   <span class="text-grey-2">Supreme Support</span>
+                                   <a href="javascript:void(0)" target="_self" title="Add Now" class="d-block ml-auto text-secondary text-decoration-underline ">Add Now</a>
+                               </li>
+                               <li class="text-14 text-grey-1 mb-10 d-flex align-items-center">
+                                   <span>Subtotal</span>
+                                   <p class="mb-0 text-grey-1 ml-auto">
+                                       <span class="text-14">$229</span>
+                                       <sup class="text-10">.92</sup>
+                                   </p>
+                               </li>
+                               <li class="text-14 text-green-2 d-flex align-items-center">
+                                   <span>Discount</span>
+                                   <p class="mb-0 text-green-2 ml-auto">
+                                       <span class="text-14">-$21</span>
+                                       <sup class="text-10">.94</sup>
+                                   </p>
+                               </li>
+                           </ul>
+                           <div class="d-flex align-items-center px-10 mb-10">
+                               <input type="text" class="form-control form-cus-3 h-27 text-12 text-grey-2" placeholder="Enter promo code or gift card number">
+                               <button class="btn btn-outline-secondary h-27 ml-5 text-12">
+                                   Apply
+                               </button>
+                           </div>
+                           <!--  -->
+                           <div class="d-flex align-items-center px-10 mt-10 mb-20">
+                               <p class="text-13 text-grey-1 mb-0 pr-10">Pay with credit from a pevious booking</p>
+                               <img src="./images/icon-arrow-down-16x16.svg" alt="down" title="down" class="ml-auto">
+                           </div>
+                           <div class="d-flex bg-secondary-light align-items-center text-14 text-medium text-secondary px-10 pt-5 pb-5 mt-20">
+                               <span>Total Price</span>
+                               <span class="d-block ml-auto">
+                                   <span>$199</span>
+                                   <sup class="text-10">.98</sup>
+                               </span>
+                           </div>  
+                           <p class="mb-0 mt-10 px-10 text-grey-2 text-12">
+                               <span class="text-medium">Note:</span>
+                                All fares are quoted in USD. Your card may be billed in multiple charges totalling the final total price. Some airlines may charge addtional baggage fees.
+                           </p>
+                       </div>
+                       <!-- Terms & Conditions -->
+                       <div class="mt-45 mb-10 rounded bg-white pb-20 position-relative">
+                            <div class="bg-secondary rounded-top px-10 py-8">
+                                <p class="mb-0 text-white text-13 text-medium">Terms & Conditions</p>
+                            </div>
+                            <div class="px-10 pt-10">
+                                <p class="text-12 text-grey-3">
+                                    Ticket are non-transferable and name changes are not permitted. Total price show includes all applicable 
+                                    <a href="javascript:void(0)" target="_self" title="taxes and fees" class="text-secondary text-decoration-underline">taxes & fees</a>
+                                     and 
+                                     <a href="javascript:void(0)" target="_self" title="our service fees" class="text-secondary text-decoration-underline">our service fees</a>
+                                     . Some airlines may change additional 
+                                     <a href="javascript:void(0)" target="_self" title="baggage fees" class="text-secondary">baggage fees</a>
+                                      or other fees. Fares are not guaranteed unitl ticketed. Tickets and our fees are non-refundable (see 
+                                      <a href="javascript:void(0)" target="_self" title="Fare Rules" class="text-secondary text-decoration-underline">Fare Rules</a>
+                                      ). Tickets can be cancelles for a free, if requested within twenty-four (24) hours from the time of purchase. Date and routing will be subject to airline penalties and 
+                                      <a href="javascript:void(0)" target="_self" title="our fees" class="text-secondary text-decoration-underline">our fees</a>
+                                      <img src="./images/icon-infor-blue-12.svg" alt="info" title="info">.
+                                </p>
+                            </div>
+                        </div>
+                   </div>
+                   <!--  -->
+                   <div class="px-15 pt-15">
+                       <button class="btn btn-green-1 d-block h-72 w-100 btn-nextpage" data-target="#step-complete">
+                           <span class="d-block text-medium text-16">Comfirm & Book</span>
+                            <span class="d-block text-8 text-medium"><img src="./images/icon-lock-10.svg" alt="lock" title="lock"> <span>SECURE PAYMENT</span></span>
+                       </button>
+                   </div>
+                </div>
+             </div>
+        </main>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap-4.5.min.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/lazysizes.min.js"></script>
+        <script src="js/ls.bgset.min.js"></script>
+        <script src="js/typeahead.bundle.js"></script>
+        <script src="js/intlTelInput.min.js"></script>
+        <script src="js/jquery.plugin.min.js"></script>
+        <script src="js/jquery.datepick.js"></script>
+        <script src="js/style.js?v=1"></script>
+        <script type="text/javascript">
+            $(function () {
+                function filledInputSignIn() {
+                    $(".label-cus-1").addClass("filled");
+                }
+                // 
+                $(".hide-show-pass").on("click", function(e){
+                    if(!e.target.classList.contains("img-eye")) return;
+                    if(this.querySelector("input[type='password']")) {
+                        this.querySelector("input[type='password']").setAttribute("type", "text");
+                        return;
+                    }
+                    if(this.querySelector("input[type='text']")) {
+                        this.querySelector("input[type='text']").setAttribute("type", "password");
+                        return;
+                    }
+                });
+
+            });
+        </script>
+    </body>
+</html>

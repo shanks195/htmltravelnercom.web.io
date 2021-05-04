@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Get A Quotes</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/jquery-ui.min.css" />
+        <link rel="stylesheet" href="js/select2/select2.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="css/intlTelInput.min.css" />
+        <link rel="stylesheet" href="css/app.css?v=2" />
+    </head>
+    <body>
+        <header>
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="javascript:void(0)" target="_self" title="Menu" id="menu-header" class="d-block d-lg-none">
+                    <img src="./images/sx.svg" data-src="./images/icon-menu-hambuger-payment.svg" alt="Menu" title="Menu" class="lazyload" />
+                </a>
+                <div class="header-menu-wrapper d-lg-none">
+                    <div class="overlay d-lg-none"></div>
+                    <div class="header-menu">
+                        <div class="bg-secondary px-20 py-30 d-lg-none">
+                            <a href="#" target="_self" title="Sign In" class="text-white text-16">
+                                <img src="./images/icon-user-white.svg" data-src="./images/icon-user-white.svg" alt="User" title="User" class="mr-5 lazyload" />
+                                Sign In
+                            </a>
+                        </div>
+                        <ul class="header-menu-nav pb-xs-15 mb-0">
+                            <li>
+                                <a href="#" target="_self" title="Flight">
+                                    Flight
+                                    <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#" target="_self" title="Hotels">Hotels <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Tours">Tours <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Deals">Deals <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="FAQs">FAQs <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Contact">Contact <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                            </li>
+                        </ul>
+                        <ul class="d-block d-lg-none mb-50 header-menu-nav border-0">
+                            <li>
+                                <a href="#" target="_self" title="Settings">
+                                    Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Feedback">
+                                    Feedback
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Term and Condition">
+                                    Term and Condition
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Privacy Policy">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-xs-flex justify-content-center w-xs-100 mt-10 mb-lg-25 mb-10">
+                    <a href="#" target="_self" title="Logo">
+                        <img src="./images/logo.svg" alt="Logo" title="Logo" class="d-none d-lg-block" />
+                        <img src="./images/logo-mobile.svg" alt="Logo" title="Logo" class="d-block d-lg-none" />
+                    </a>
+                </div>
+                <div class="list-step-payment hidden-xs">
+                    <div class="step-payment-item">
+                        <div class="d-flex w-100 justify-content-center">
+                            <div class="circle-payment active">1</div>
+                        </div>
+                        <p class="mt-5 active ">Customer information</p>
+                        <div class="line-step-payment"></div>
+                    </div>
+                    <div class="step-payment-item">
+                        <div class="d-flex w-100 justify-content-center">
+                            <div class="circle-payment">2</div>
+                        </div>
+                        <p class="mt-5">Payment information</p>
+                        <div class="line-step-payment"></div>
+                    </div>
+                    <div class="step-payment-item">
+                        <div class="d-flex w-100 justify-content-center">
+                            <div class="circle-payment">3</div>
+                        </div>
+                        <p class="mt-5">Booking is confirmed!</p>
+                    </div>
+                </div>
+                <div class="dropdown d-inline-block ml-20 hidden-xs">
+                        <a href="javascript:void(0)" id="signin-toggle" target="_self" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-bolder btn btn-outline-secondary px-30 text-medium-light">
+                            Sign in
+                        </a>
+                        <div class="dropdown-box dropdown-menu dropdown-signin" aria-labelledby="signin-toggle">
+                            <button type="button" class="close" id="close-dropdown">
+                                <img src="./images/icon-close.svg" alt="Close" title="Close">
+                            </button>
+                            <h2>Sign In or Register</h2>
+                            <p class="mb-30">One click sign-in with</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-block btn-smaller btn-outline-facebook" title="Facebook" target="_self">
+                                        <img src="./images/sx.svg" data-src="./images/icon-btn-facebook.svg" alt="Facebook" title="Facebook" class="lazyload mr-10" />
+                                        <img src="./images/icon-btn-facebook-active.svg" alt="Facebook" title="Facebook" class="active mr-10" />
+                                        Facebook
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-block btn-smaller btn-outline-google" title="Google" target="_self">
+                                        <img src="./images/sx.svg" data-src="./images/icon-btn-google.svg" alt="Google" title="Google" class="lazyload mr-10" />
+                                        <img src="./images/icon-btn-google-active.svg" alt="Google" title="Google" class="active mr-10" />
+                                        Google
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="divider-text my-20">Or</div>
+                            <div class="form-large form-group">
+                                <input type="text" placeholder="Enter Email Address" class="form-control" />
+                            </div>
+                            <a href="#" target="_self" title="Next" class="btn btn-block btn-outline-secondary">Next</a>
+                        </div>
+                </div>
+            </div>
+        </header>
+        <main>
+           <div class="container mt-lg-60 pb-lg-60">
+               <div class="d-flex justify-content-between hidden-xs">
+                   <div class="w-30 pl-0 mr-25 box-content-left">
+                      <div class="border-secondary-light rounded">
+                          <div class="box-payment-title border-secondary-light-bottom">
+                            <h3 class="mb-0 text-16">Your booking details</h3>
+                          </div>
+                          <div class="d-flex px-10 pt-10 pb-20">
+                            <div class="d-flex flex-column text-14">
+                                <span class="mb-10">Check-in</span>
+                                <span class="text-medium mb-10" id="room-check-in">Tue, Jan12 , 2021</span>
+                                <span class="text-grey-3">12:00 PM - 6:00 PM</span>
+                            </div>
+                            <div class="d-flex flex-column ml-40 text-14">
+                                <span class="mb-10">Check-out</span>
+                                <span class="text-medium mb-10" id="room-check-out">Thu, Jan 14 , 2021</span>
+                                <span class="text-grey-3">Until 12:00 PM</span>
+                              </div>
+                          </div>
+                          <div class="px-10 d-flex flex-column border-secondary-light-bottom pb-20 text-14">
+                            <span class="mb-10">Total length of stay:</span>
+                            <span class="text-medium mb-20" id="total-length">2 nights</span>
+                            <a href="#" title="" target="_self" class="text-three" data-toggle="modal" data-target="#ChangeDate">Traveling on different dates?</a>
+                          </div>
+                          <div class="px-10 py-20 d-flex flex-column text-14">
+                            <span class="text-medium mb-10">You selected</span>
+                            <span class="mb-10">Deluxe King Room</span>
+                            <a href="#" title="" target="_self" class="text-three text-12">Change your selection</a>
+                          </div>
+                      </div> 
+                        <div class="border-secondary-light rounded mt-20">
+                            <div class="box-payment-title border-secondary-light-bottom">
+                                <h3 class="mb-0 text-16">Your price summary</h3>
+                            </div>
+                            <div class="d-flex px-10 pt-10 pb-20 justify-content-between border-secondary-light-bottom text-14 text-grey-2">
+                                <div class="d-flex flex-column w-60">
+                                    <span class="mb-10">Deluxe King Room</span>
+                                    <span class="mb-10">6 % VAT</span>
+                                    <span>10 % Property service charge</span>
+                                </div>
+                                <div class="d-flex flex-column w-40 text-right text-14 text-grey-2">
+                                    <span class="mb-10">VND 2,353,424</span>
+                                    <span class="mb-10">VND 141,205</span>
+                                    <span>VND 253,542</span>
+                                </div>
+                            </div>
+                            <div class="px-10 py-10 d-flex flex-column box-payment-title text-14 text-grey-2">
+                                <div class="d-flex justify-content-between">
+                                    <p class="text-18 mb-0">Price</p>
+                                    <p class="text-18 mb-0">VND 2,748,171</p>
+                                </div>
+                                <p class="text-12 mb-0">(your currency)</p>
+                            </div>
+                        </div> 
+                        <div class="border-secondary-light rounded mt-20">
+                            <div class="box-payment-title border-secondary-light-bottom">
+                                <h3 class="mb-0 text-16">Your payment schedule</h3>
+                            </div>
+                            <div class="px-10 py-10">
+                                <div class="d-flex justify-content-between text-14">
+                                    <span>After October 15 you’ll pay</span>
+                                    <span>VND 2,748,171</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-secondary-light rounded mt-20">
+                            <div class="box-payment-title border-secondary-light-bottom">
+                                <h3 class="mb-0 text-16">How much will it cost to cancel?</h3>
+                            </div>
+                            <div class="px-10 py-10 text-14">
+                                <span class="text-green-1">FREE cancellation until 11:59 PM on Oct 14</span>
+                                <div class="d-flex justify-content-between mt-10 text-14">
+                                    <span>From 12:00 PM on OCT 15</span>
+                                    <span>VND 2,748,171</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-secondary-light rounded mt-20">
+                            <div class="box-payment-title border-secondary-light-bottom">
+                                <h3 class="mb-0 text-16">Your booking includes</h3>
+                            </div>
+                            <div class="px-10 pt-10">
+                                <div class="d-flex flex-column text-green-1 text-14">
+                                    <span class="mb-10">Free WiFi</span>
+                                    <span class="mb-10">Free Parking</span>
+                                    <span class="mb-10">Free Breakfast</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-secondary-light rounded mt-20">
+                            <div class="box-payment-title border-secondary-light-bottom">
+                                <h3 class="mb-0 text-16">Do you have a promo code?</h3>
+                            </div>
+                            <div class="px-10 pt-10">
+                                <div class="d-flex flex-column text-14">
+                                    <span class="mb-10">Enter your promo code</span>
+                                   <form action="">
+                                    <div class="form-group w-100">
+                                        <input type="text" class="form-control w-100 border-gray px-20 mb-10">
+                                        <button href="javascript:void(0)" id="signin-toggle" target="_self" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-bolder btn btn-outline-secondary px-30 text-medium-light">
+                                            Apply
+                                        </button>
+                                    </div>
+                                   </form>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="w-70">
+                       <div class="row mx-0">
+                           <div class="col-lg-3 pl-0">
+                                <img src="./images/sx.svg" data-src="./images/detail-room-hotel.jpg" alt="" title="" class="lazyload mr-10" />
+                           </div>
+                           <div class="col-lg-9">
+                               <div class="d-flex align-items-center">
+                                    <p class="mb-0 py-1 px-15 d-inline-block text-16 bg-blue-payment rounded text-white">Hotel</p>
+                                    <h1 class="ml-10 mb-0 text-24 text-secondary">Vanke Narada Grand Hotel Wuhan</h1>
+                               </div>
+                               <div class="rating-wrapper-large mt-2" >
+                                    <div class="rating-fill" style="width: 86%;"></div>
+                                </div>
+                               <div class="d-flex align-items-center mt-10">
+                                    <img src="./images/sx.svg" data-src="./images/icon-location.svg" alt="" title="" class="lazyload" />
+                                    <p class="text-14 text-grey-2 mb-0">No.177 Chang qing Road, Hankou Railway Station, Wuhan, China, 430024</p>
+                               </div>
+                               <p class="text-14 text-green-1 mt-10"><span class="text-medium">FREE cancellation</span> before 11:59 PM on October 26, 2020</p>
+                           </div>
+                           <div class="mt-30 d-flex align-items-center w-100 py-15 px-20 box-payment-success">
+                            <img src="./images/sx.svg" data-src="./images/icon-check-circle-green.svg" alt="" title="" class="lazyload" />
+                               <p class="text-14 ml-20 mb-0"><span class="text-medium">Nopayment needed today</span>. You’ll pay when you stay.</p>
+                           </div>
+                       </div>
+                       <div class="mt-30">
+                            <h2 class="text-18">Enter your details</h2>
+                            <div class="border-secondary-light">
+                                <div class="box-payment-title d-flex align-items-center px-20">
+                                    <img src="./images/sx.svg" data-src="./images/icon-person-secondary.svg" alt="" title="" class="lazyload" />
+                                    <p class="text-14 mb-0 ml-10"><a href="#" title="" target="_self" class="text-secondary text-medium"><u>Sign in</u></a> to book with your saved details or <a href="#" title="" target="_self" class="text-secondary text-medium"><u>register</u></a> to manage your booking on the go!</p>
+                                </div>
+                                <div class="px-30 py-30">
+                                    <form action="">
+                                        <p class="text-14 text-grey-2 text-medium">Are you traveling for work?</p>
+                                        <div class="mt-25 w-30 d-flex justify-content-between">
+                                            <div class="checkbox-quotes">
+                                                <label for="checkbox-1">
+                                                    <input type="radio" id="checkbox-1" name="traveling">
+                                                    <span class="checkmark-quotes-small circle"></span>
+                                                    <span class="text-lg-16 text-14">Yes</span>
+                                                </label>
+                                            </div>
+                                            <div class="checkbox-quotes">
+                                                <label for="checkbox-2">
+                                                    <input type="radio" id="checkbox-2" name="traveling">
+                                                    <span class="checkmark-quotes-small circle"></span>
+                                                    <span class="text-lg-16 text-14">No</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group w-100 mb-0 mr-10 mt-20">
+                                            <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Full name *">
+                                        </div>
+                                        <div class="form-group w-100 mb-0 mr-10 mt-20">
+                                            <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Email Address *">
+                                        </div>
+                                        <div class="form-group w-100 mb-0 mr-10 mt-20">
+                                            <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Confirm Email Address *">
+                                        </div>
+                                        <p class="text-14 text-grey-2 text-medium mt-20">Who are you booking for?</p>
+                                        <div class="mt-25">
+                                            <div class="checkbox-quotes d-flex">
+                                                <label for="checkbox-3">
+                                                    <input type="radio" id="checkbox-3" name="booking">
+                                                    <span class="checkmark-quotes-small circle"></span>
+                                                    <span class="text-lg-16 text-14">I'm the main guest</span>
+                                                </label>
+                                            </div>
+                                            <div class="checkbox-quotes d-flex mt-25">
+                                                <label for="checkbox-4">
+                                                    <input type="radio" id="checkbox-4" name="booking">
+                                                    <span class="checkmark-quotes-small circle"></span>
+                                                    <span class="text-lg-16 text-14">I'm booking for someone else</span>
+                                                </label>
+                                            </div>
+                                            <div class="mt-30 box-grey-hotel">
+                                                <h2>Deluxe King Room</h2>
+                                                <p class="text-green-1 text-medium">FREE cancellation</p>
+                                                <p class="text-14 text-green-1">before 11:59 PM on October 26, 2020</p>
+                                                <p class="text-14 text-green-1">You can easily cancel or change your booking for free! Just follow the link from your confirmation email.</p>
+                                                <p class="text-medium">Guests:</p>
+                                                <img src="./images/sx.svg" data-src="./images/icon-user.svg" alt="" title="" class="lazyload" />
+                                                <img src="./images/sx.svg" data-src="./images/icon-user.svg" alt="" title="" class="lazyload" />
+                                                <span class="text-medium ml-10 mr-10">+</span>
+                                                <img src="./images/sx.svg" data-src="./images/icon-user-small.svg" alt="" title="" class="lazyload" />
+                                                <img src="./images/sx.svg" data-src="./images/icon-user-small.svg" alt="" title="" class="lazyload" />
+                                                <span class="ml-10">(up to 5 years of age)</span>
+                                                <div class="form-group w-60 mb-0 mr-10 mt-20">
+                                                    <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Full name *">
+                                                </div>
+                                                <div class="mt-15 d-flex align-items-baseline">
+                                                    <img src="./images/sx.svg" data-src="./images/icon-checkbox-green.svg" alt="" title="" class="lazyload mr-10" />
+                                                    <span class="box-include-green">INCLUDE</span>
+                                                    <div class="ml-10">
+                                                        <span class="text-medium">Breakfast</span>
+                                                        <p class="text-12 text-grey-2">Yes, we’d like breakfast during our stay at no additional cost.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-15 d-flex align-items-baseline">
+                                                    <img src="./images/sx.svg" data-src="./images/icon-checkbox-green.svg" alt="" title="" class="lazyload mr-10" />
+                                                    <span class="box-include-green">INCLUDE</span>
+                                                    <div class="ml-10">
+                                                        <span class="text-medium">Make changes online to your booking</span>
+                                                        <p class="text-12 text-grey-2">Make changes or cancel this booking online before October 26, 2020, 11:59 PM (Wuhan time), for <span class="text-medium">VND 0</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h2 class="mt-30">Ask a question</h2>
+                                            <div class="box-grey-hotel">
+                                                <h3>Special Requests</h3>
+                                                <p class="text-grey-1 text-14">Please write your requests in English or Chinese.</p>
+                                                <p class="text-grey-1 text-14">Special requests cannot be guaranteed – but the property will do its best to meet your needs.</p>
+                                                <p class="text-grey-1 text-14">You can always make a special request after your booking is complete!</p>
+                                                <div class="w-100">
+                                                    <textarea name="" rows="5" class="box-note border-gray w-100"></textarea>
+                                                </div>
+                                               <div class="d-flex flex-column">
+                                                    <div class="checkbox-hotel-small mt-10">
+                                                        <label for="checkbox-5">
+                                                            <input type="checkbox" id="checkbox-5" name="contact-preference">
+                                                            <span class="checkmark-hotel-small"></span>
+                                                            <span class="text-lg-16 text-14">I'd like a quiet room</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-hotel-small mt-10">
+                                                        <label for="checkbox-6">
+                                                            <input type="checkbox" id="checkbox-6" name="contact-preference">
+                                                            <span class="checkmark-hotel-small"></span>
+                                                            <span class="text-lg-16 text-14">I'd like free private parking on site</span>
+                                                        </label>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mt-20">
+                                <button class="btn-hotel btn w-25 mt-15 mt-lg-0 mw-300" type="submit">
+                                    <span class="text-18 text-normal">Next step</span>
+                                 </button>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+            <!-- Page mobile -->
+            <div class="container d-lg-none px-0 pb-50 bg-white-light">
+                <div class="bg-white pb-15">
+                    <div class="px-15">
+                        <div class="py-15 d-lg-none">
+                            <div class="list-step-payment">
+                                <div class="step-payment-item">
+                                    <p class="mb-5 text-12">Your Selection</p>
+                                    <div class="d-flex w-100 justify-content-center">
+                                        <div class="circle-payment active"></div>
+                                    </div>
+                                    <div class="line-step-payment active"></div>
+                                </div>
+                                <div class="step-payment-item">
+                                    <p class="mb-5 text-12 active">Your Details</p>
+                                    <div class="d-flex w-100 justify-content-center">
+                                        <div class="circle-payment non-active-step"></div>
+                                    </div>
+                                    <div class="line-step-payment"></div>
+                                </div>
+                                <div class="step-payment-item">
+                                    <p class="mb-5 text-12">Final Step</p>
+                                    <div class="d-flex w-100 justify-content-center">
+                                        <div class="circle-payment non-active"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 d-lg-none">
+                        <img src="./images/sx.svg" data-src="./images/img-hotel-booking.jpg" alt="" title="" class="lazyload w-100 mx-auto" />
+                    </div>
+                    <div class="px-15">
+                        <h2 class="mt-10 text-grey-1 mb-5">Vanke Narada Grand Hotel Wuhan</h2>
+                        <p class="text-12 mb-0">No.177 Chang qing Road, Jianghan District, Wuhan, China</p>
+                        <div class="d-flex flex-wrap align-items-center">
+                            <div class="rating-circle mt-2" >
+                                <div class="rating-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="option-room ml-5 mt-10">
+                                <img src="./images/sx.svg" data-src="./images/icon-check-black-small.svg" alt="" title="" class="lazyload mr-5" />
+                                <span class="text-medium text-12 text-grey-1 mb-0">Refrigerator</span>
+                            </div>
+                            <div class="option-room ml-5 mt-10">
+                                <img src="./images/sx.svg" data-src="./images/icon-check-black-small.svg" alt="" title="" class="lazyload mr-5" />
+                                <span class="text-medium text-12 text-grey-1 mb-0">Fee WiFi</span>
+                            </div>
+                            <div class="option-room ml-5 mt-10">
+                                <img src="./images/sx.svg" data-src="./images/icon-check-black-small.svg" alt="" title="" class="lazyload mr-5" />
+                                <span class="text-medium text-12 text-grey-1 mb-0">City view</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="bt-gray-1 mb-10 mt-20">
+                    <div class="px-15 d-flex justify-content-between align-items-baseline">
+                       <div>
+                            <h3 class="text-14 text-grey-1 mb-5">Guests love the good location!</h3>
+                            <p class="text-12 text-grey-2 mb-0">Score from 118 reviews</p>
+                       </div>
+                       <div class="room-review"><span class="text-12 text-white">9,7</span></div>
+                    </div>
+                    <hr class="bt-gray-1 my-10">
+                    <div class="px-15">
+                        <h3 class="text-14 text-grey-1 mb-5">Swimming pool available</h3>
+                        <p class="text-12 text-grey-2 mb-0">Enjoy the pool at this property</p>
+                    </div>
+                    <hr class="bt-gray-1 my-10">
+                    <div class="px-15 position-relative d-flex justify-content-between">
+                        <div class="w-50">
+                            <p class="text-13 text-medium mb-5">Check-in</p>
+                            <p class="text-14 text-accent text-medium mb-0" id="check-in-mobile">Tue, Jan 12</p>
+                        </div>
+                       <div class="w-50 border-left pl-20">
+                            <p class="text-13 text-medium mb-5">Check-out</p>
+                            <p class="text-14 text-accent text-medium mb-0" id="check-out-mobile">Thu, Jan 14</p>
+                       </div>
+                    </div>
+                    <hr class="bt-gray-1 my-10">
+                    <div class="px-15 d-flex justify-content-between">
+                       <span class="text-13 text-medium" id="total-length-mobile"> 2 night, 1 room</span>
+                       <a href="#" title="" target="_self" class="text-medium text-accent text-13" data-toggle="modal" data-target="#ChangeDate">Change dates</a>
+                    </div>
+                    <hr class="bt-gray-1 mt-10 mb-0">
+                    <div class="px-15 bg-white-light py-10">
+                        <div class="border-bottom">
+                            <p class="text-13 text-green-1">FREE cancellation before 11:59 PM on January 21, 2021</p>
+                        </div>
+                        <div class="mt-10 d-flex justify-content-between">
+                            <p class="text-13 text-medium mb-0">Price due at stay:</p>
+                            <div class="d-flex align-items-center">
+                                <p class="text-12 text-grey-3 mb-0">CNY 550</p>
+                                <p class="text-13 text-medium mb-0 ml-30">USD 100.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-15 pt-10 d-flex justify-content-between">
+                        <p class="text-13 text-grey-1 mb-0">VAT (6%) not included</p>
+                        <p class="text-13 text-grey-1 mb-0">USD 6</p>
+                    </div>
+                    <hr class="bt-gray-1 my-10">
+                    <div class="d-flex justify-content-between px-15">
+                        <p class="text-13 text-grey-1 mb-0">Property service charge (10%) not included</p>
+                        <p class="text-13 text-grey-1 mb-0">USD 10</p>
+                    </div>
+                    <div class="bg-green-dark px-15 py-10 mt-10">
+                        <div class="d-flex justify-content-between">
+                            <p class="text-13 text-white mb-0">Now you’ll pay</p>
+                            <p class="text-13 text-white mb-0">USD 116</p>
+                        </div>
+                        <hr class="my-10">
+                        <p class="text-13 text-white mb-0">No payment needed now. You’ll pat at the property.</p>
+                    </div>
+                    <div class="py-10 px-15">
+                        <p class="text-13 text-grey-1 mb-0">The price in CNY has been converted to show the approximate price in VND.</p>
+                    </div>
+                    <div class="bg-white-light py-10">
+                        <div class="bg-green-light d-flex align-items-start py-10 px-15 border-top-bottom-green">
+                            <img src="./images/icon-success-green-small.svg" alt="" title="">
+                            <p class="text-13 text-grey-1 mb-0 ml-10">Risk Free: You can cancel before January 13, 2012, so lock in this great price today</p>
+                        </div>
+                    </div>
+                    <div class="mt-15 px-15">
+                        <h2 class="mb-0 text-18">Enter Your Details</h2>
+                        <p class="text-14"><span class="text-red">*</span> required field</p>
+                        <form action="">
+                            <div class="form-group w-100 mb-0 mr-10 mt-20">
+                                <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Full name*">
+                            </div>
+                            <div class="form-group w-100 mb-0 mr-10 mt-10">
+                                <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Last Name*">
+                            </div>
+                            <div class="form-group w-100 mb-0 mr-10 mt-10">
+                                <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Email Address*">
+                            </div>
+                        </form>
+                        <div class="d-flex align-items-start py-10 px-15 box-payment-success mt-20">
+                            <img src="./images/icon-success-green-small.svg" alt="" title="">
+                            <p class="text-13 text-grey-1 mb-0 ml-10">Risk Free: You can cancel before January 13, 2012, so lock in this great price today</p>
+                        </div>
+                        <p class="text-14 text-grey-2 text-medium mt-20">Who are you looking for? <span class="text-grey-3 text-12">(optional)</span></p>
+                        <div class="mt-10">
+                            <div class="checkbox-quotes d-flex">
+                                <label for="checkbox-7">
+                                    <input type="radio" id="checkbox-7" name="booking">
+                                    <span class="checkmark-quotes-small circle"></span>
+                                    <span class="text-lg-16 text-14">I'm the main guest</span>
+                                </label>
+                            </div>
+                            <div class="checkbox-quotes d-flex mt-10">
+                                <label for="checkbox-8">
+                                    <input type="radio" id="checkbox-8" name="booking">
+                                    <span class="checkmark-quotes-small circle"></span>
+                                    <span class="text-lg-16 text-14">I'm booking for someone else</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-15">
+                    <div class="px-15">
+                        <h2 class="mb-0 text-18">Enter Your Details</h2>
+                        <div class="d-flex align-items-start py-10 px-15 box-payment-success mt-10">
+                            <img src="./images/icon-success-green-small.svg" alt="" title="">
+                            <p class="text-13 text-grey-1 mb-0 ml-10">Risk Free: You can cancel before January 13, 2012, so lock in this great price today</p>
+                        </div>
+                        <form action="">
+                            <div class="form-group w-100 mb-0 mr-10 mt-20">
+                                <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Full name*">
+                            </div>
+                            <div class="form-group w-100 mb-0 mr-10 mt-10">
+                                <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Last Name*">
+                            </div>
+                            <div class="form-group w-100 mb-0 mr-10 mt-10">
+                                <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="Email Address*">
+                            </div>
+                        </form>
+                    </div>
+                    <hr class="my-15">
+                    <div class="px-15">
+                        <p class="text-14 text-medium">Country/ Region <span class="text-red">*</span></p>
+                        <form action="">
+                            <div class="d-flex">
+                                <div class="area-codes w-50">
+                                    <div class="form-group w-100">
+                                        <div class="position-relative h-48">
+                                            <select class="selectAreacodes">
+                                                    <option></option>
+                                                    <option value="VN +84">VN +84</option>
+                                                    <option value="USA +94">USA +94</option>
+                                                    <option value="CHN +86">CHN +86</option>
+                                                    <option value="AUS +016">AUS +016</option>
+                                                    <option value="JAP +69">JAP +69</option>
+                                                    <option value="IND +11">IND +11</option>
+                                                    <option value="SGP +22">SGP +22</option>
+                                                    <option value="MAL +33">MAL +33</option>
+                                                    <option value="CAM +44">CAM +44</option>
+                                                    <option value="LAO +59">LAO +59</option>
+                                                    <option value="URK +88">URK +88</option>
+                                                    <option value="US-UK +99">US-UK +99</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group w-100 mb-0 ml-10">
+                                    <input type="text" class="form-control h-56 h-xs-40 w-100 border-gray px-20" placeholder="">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="px-15 py-15 mt-10 bg-white">
+                    <h2 class="text-18">Your Room</h2>
+                    <h3 class="text-16">Deluxe King Room</h3>
+                    <div class="d-flex">
+                        <p class="text-13 text-grey-1 mb-0">Price for up to:</p>
+                        <img src="./images/sx.svg" data-src="./images/icon-cus-black-small.svg" alt="" title="" class="lazyload ml-15 mr-5" />
+                        <img src="./images/sx.svg" data-src="./images/icon-cus-black-small.svg" alt="" title="" class="lazyload mr-5" />
+                    </div>
+                    <div class="d-flex">
+                        <p class="text-13 text-grey-1 text-medium mb-0">Bed:</p>
+                        <p class="text-13 text-grey-1 mb-0 ml-5">1 king bed</p>
+                        <img src="./images/sx.svg" data-src="./images/icon-king-bed.svg" alt="" title="" class="lazyload ml-5" />
+                    </div>
+                    <div class="d-flex align-items-center mt-10">
+                        <img src="./images/sx.svg" data-src="./images/icon-check-green.svg" alt="" title="" class="lazyload mr-5" />
+                        <p class="mb-0 text-green text-13 text-medium">FREE cancellation</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-10">
+                        <img src="./images/sx.svg" data-src="./images/icon-check-green.svg" alt="" title="" class="lazyload mr-5" />
+                        <p class="mb-0 text-green text-13 text-medium">No PREPAYMENT NEEDED - pay at the property</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-10">
+                        <img src="./images/sx.svg" data-src="./images/icon-check-green.svg" alt="" title="" class="lazyload mr-5" />
+                        <p class="mb-0 text-green text-13 text-medium">Sparkly clean rooms - 9.2</p>
+                    </div>
+                    <div class="mt-10 d-flex flex-wrap border-bottom pb-15">
+                        <div class="info-room">
+                            <img src="./images/sx.svg" data-src="./images/icon-room.svg" alt="" title="" class="lazyload" />
+                            <span class="text-13 ml-5 text-medium">77 m<sup>2</sup></span>
+                        </div>
+                        <div class="info-room">
+                            <img src="./images/sx.svg" data-src="./images/icon-fridge.svg" alt="" title="" class="lazyload" />
+                            <span class="text-13 ml-5 text-medium">Refrigerator</span>
+                        </div>
+                        <div class="info-room">
+                            <img src="./images/sx.svg" data-src="./images/icon-wifi.svg" alt="" title="" class="lazyload" />
+                            <span class="text-13 ml-5 text-medium">Fee WiFi</span>
+                        </div>
+                        <div class="info-room">
+                            <img src="./images/sx.svg" data-src="./images/icon-buiding.svg" alt="" title="" class="lazyload" />
+                            <span class="text-13 ml-5 text-medium">City view</span>
+                        </div>
+                        <div class="info-room">
+                            <img src="./images/sx.svg" data-src="./images/icon-air.svg" alt="" title="" class="lazyload" />
+                            <span class="text-13 ml-5 text-medium">Air conditioning</span>
+                        </div>
+                        <div class="info-room">
+                            <img src="./images/sx.svg" data-src="./images/icon-mute.svg" alt="" title="" class="lazyload" />
+                            <span class="text-13 ml-5 text-medium">Soundproof</span>
+                        </div>
+                        <div class="info-room">
+                            <img src="./images/sx.svg" data-src="./images/icon-bathtub.svg" alt="" title="" class="lazyload" />
+                            <span class="text-13 ml-5 text-medium">Private Bathroom</span>
+                        </div>
+                    </div>
+                    <div class="mt-15">
+                        <p class="text-14 text-medium">Select number of guests</p>
+                        <div class="mt-10">
+                            <div class="checkbox-quotes d-flex">
+                                <label for="checkbox-9">
+                                    <input type="radio" id="checkbox-9" name="booking">
+                                    <span class="checkmark-quotes-small circle"></span>
+                                    <img src="./images/sx.svg" data-src="./images/icon-cus-black.svg" alt="" title="" class="lazyload mr-5" />
+                                </label>
+                            </div>
+                            <div class="checkbox-quotes d-flex mt-10">
+                                <label for="checkbox-10">
+                                    <input type="radio" id="checkbox-10" name="booking">
+                                    <span class="checkmark-quotes-small circle"></span>
+                                    <img src="./images/sx.svg" data-src="./images/icon-cus-black.svg" alt="" title="" class="lazyload mr-5" />
+                                    <img src="./images/sx.svg" data-src="./images/icon-cus-black.svg" alt="" title="" class="lazyload mr-5" />
+                                </label>
+                            </div>
+                            <div class="d-flex mt-5">
+                                <p class="text-13 text-grey-1 mb-0">1 king bed</p>
+                                <img src="./images/sx.svg" data-src="./images/icon-king-bed.svg" alt="" title="" class="lazyload ml-5" />  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-15 py-10 mt-10 bg-white">
+                    <h3 class="text-18">Add Your Arrival Time</h3>
+                    <form action="">
+                        <div class="time-arrival">
+                            <div class="form-group w-100 mb-0">
+                                <div class="position-relative h-48">
+                                    <select class="selectTime">
+                                            <option value="I don't know">I don't know</option>
+                                            <option value="1 PM">1 PM</option>
+                                            <option value="2 PM">2 PM</option>
+                                            <option value="3 PM">3 PM</option>
+                                            <option value="4 PM">4 PM</option>
+                                            <option value="5 PM">5 PM</option>
+                                            <option value="6 PM">6 PM</option>
+                                            <option value="7 PM">7 PM</option>
+                                            <option value="8 PM">8 PM</option>
+                                            <option value="9 PM">9 PM</option>
+                                            <option value="10 PM">10 PM</option>
+                                            <option value="11 PM">11 PM</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-13 text-grey-3 mb-5">Your room will be ready for check-in at 3:00 PM</p>
+                        <p class="text-13 text-grey-3 mb-0">24-hour font desk - arrive anytime you like!</p>
+                    </form>
+                </div>
+                <div class="px-15 py-10 mt-10 bg-white">
+                    <h3 class="text-18">Are you traveling for work?</h3>
+                    <div class="mt-10">
+                        <div class="checkbox-quotes d-flex">
+                            <label for="checkbox-11">
+                                <input type="radio" id="checkbox-11" name="booking">
+                                <span class="checkmark-quotes-small circle"></span>
+                                <span class="text-lg-16 text-14">Yes</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-quotes d-flex mt-10">
+                            <label for="checkbox-12">
+                                <input type="radio" id="checkbox-12" name="booking">
+                                <span class="checkmark-quotes-small circle"></span>
+                                <span class="text-lg-16 text-14">No</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-15 py-10 mt-10 bg-white">
+                    <h3 class="text-18">Special Requests</h3>
+                    <p class="text-13 mb-5">Please write your request in English or Chinese</p>
+                    <textarea name="" rows="3" class="box-note border-gray w-100" ></textarea>
+                    <p class="text-13">Request aren’t guaranteed and are subject to availability at the property</p>
+                </div>
+                <div class="mt-30 px-15">
+                    <button class="btn-hotel btn w-100 mb-10" type="submit">
+                        <span class="text-18 text-normal">Go to final step</span>
+                        <img src="./images/icon-arrow-right-white-12.svg" alt="" title="" class="ml-10">
+                     </button>
+                     <p class="text-13 text-medium text-center">Review your details and secure your booking</p>
+                </div>
+            </div>
+        </main>
+        <div class="modal fade" id="ChangeDate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document" style="max-width: 650px;">
+              <div class="modal-content">
+                <div class="modal-header pb-0 border-0">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Change Date</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="bg-gray-6 py-20 px-30">
+                        <div class="mx-auto" style="width: 500px;">
+                            <div class="row">
+                                <div class="col-lg-3 d-flex align-items-center"><label class="text-medium mb-0">Check in:</label></div>
+                                <div class="col-lg-9">
+                                    <div class="h-56 d-flex align-items-center">
+                                        <label for="fromCalendar" class="mb-0"><img src="./images/icon-check-in.svg" alt="Check in" title="Check in"></label>
+                                        <div class="ml-10 d-flex align-items-center">
+                                            <input id="fromCalendar" class="calendar p-0 pt-5 calendar-single-modal" type="text" readonly />
+                                            <label class="text-grey-3 mb-0 ml-20" id="lb-from-day">Saturday</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 d-flex align-items-center"><label class="text-medium mb-0">Check out:</label></div>
+                                <div class="col-lg-9">
+                                    <div class="h-56 d-flex align-items-center">
+                                        <label for="toCalendar" class="mb-0"><img src="./images/icon-check-out.svg" alt="Check in" title="Check in"></label>
+                                        <div class="ml-10 d-flex align-items-center">
+                                            <input id="toCalendar" class="calendar p-0 pt-5 calendar-single-modal" type="text" readonly />
+                                            <label class="text-grey-3 mb-0 ml-20" id="lb-to-day">Saturday</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-10">
+                                <div class="row">
+                                    <div class="col-lg-3 hidden-xs"></div>
+                                    <div class="col-lg-9">
+                                        <button class="btn-secondary btn mt-15 mt-lg-0 mr-xs-10 mw-xs-150 h-42 btn-change" type="button" data-dismiss="modal">
+                                            <span class="text-normal">Change</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap-4.5.min.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/lazysizes.min.js"></script>
+        <script src="js/ls.bgset.min.js"></script>
+        <script src="js/typeahead.bundle.js"></script>
+        <script src="js/intlTelInput.min.js"></script>
+        <script src="js/jquery.plugin.min.js"></script>
+        <script src="js/jquery.datepick.js"></script>
+        <script src="js/style.js?v=1"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('.btn-hotel').click(function(){
+                    window.location = 'http://localhost/htmltravelnercom/hotel-payment-step-2.html'
+                })
+                $(".selectAreacodes").select2({
+                    placeholder: "VN +84"
+                })
+                $(".selectTime").select2({
+                    placeholder: "I don't know"
+                })
+                $('#fromCalendar').daterangepicker({
+                    singleDatePicker: true,
+                    autoApply: true,
+                    minDate: new Date(),
+                },function(start){
+                    drptBegin = start.format('dddd, MMM DD, YYYY')
+                });
+                let datepickerBegin = new Date()
+                let datepickerEnd = new Date().setDate(new Date().getDate()+1)
+                let diffrence = (datepickerEnd - datepickerBegin) / 86400000;
+                console.log(diffrence)
+                let d1 =null;
+                let drpt = null;
+                let drptBegin = moment(new Date()).format('ddd, MMM DD, YYYY');
+                $("#lb-from-day").html(moment(new Date()).format("dddd"));
+                $("#lb-to-day").html(moment(new Date().setDate(new Date().getDate() + 1)).format("dddd"));
+                $('#room-check-in').html(moment(new Date()).format("ddd, MMM DD, YYYY"));
+                $('#room-check-out').html(moment(new Date().setDate(new Date().getDate() + 1)).format("ddd, MMM DD, YYYY"));
+                $('#fromCalendar').on('hide.daterangepicker', function(ev, picker) {
+                    Daybegin = picker.startDate.format('YYYY-MM-DD');
+                    datepickerBegin = new Date('"'+Daybegin+'"');
+                    $("#lb-from-day").html(moment(new Date(picker.startDate)).format("dddd"));
+                    $("#lb-to-day").html(moment(new Date(picker.startDate).setDate(new Date(picker.startDate).getDate() + 1)).format("dddd"));
+                    drptBegin = moment(new Date(picker.startDate)).format('ddd, MMM DD, YYYY');
+                    d1 = new Date(Daybegin);
+                    d1.setDate(d1.getDate() + 1);
+                    $('#toCalendar').daterangepicker({
+                    minDate: new Date(d1),
+                    singleDatePicker: true,
+                    autoApply: true
+                    });
+                    $('#toCalendar').on('hide.daterangepicker', function(ev, picker) {
+                        let Dayend = picker.startDate.format('YYYY-MM-DD');
+                        console.log(Dayend)
+                        datepickerEnd = new Date('"'+Dayend+'"');
+                        let drptEnd = moment(new Date(picker.startDate)).format('dddd');
+                        $("#lb-to-day").html(drptEnd);
+                        drpt = moment(new Date(picker.startDate)).format('ddd, MMM DD, YYYY');
+                        d1 = moment(new Date(picker.startDate)).format('ddd, MMM DD, YYYY');
+                        diffrence = (datepickerEnd - datepickerBegin) / 86400000
+                    });
+                });
+                $(".btn-change").on("click", function(e){
+                    $('#room-check-in').html(drptBegin);
+                    $("#room-check-out").html(moment(new Date(d1)).format("ddd, MMM DD, YYYY"));
+                    $('#check-out-mobile').html(moment(new Date(d1)).format("ddd, MMM DD"));
+                    $('#total-length').text(diffrence+" nights");
+                    $('#total-length-mobile').text(diffrence+" night, 1 room")
+                })
+                var substringMatcher = function (strs) {
+                    return function findMatches(q, cb) {
+                        var matches, substringRegex;
+
+                        matches = [];
+
+                        substrRegex = new RegExp(q, "i");
+
+                        $.each(strs, function (i, str) {
+                            if (substrRegex.test(str)) {
+                                matches.push(str);
+                            }
+                        });
+
+                        cb(matches);
+                    };
+                };
+                
+                $('#toCalendar').daterangepicker({
+                    minDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+                    singleDatePicker: true,
+                    autoApply: true,
+                },function(end){
+                    d1 = end.format('dddd, MMM DD, YYYY');
+                    datepickerEnd = new Date(end);
+                    diffrence = Math.ceil((datepickerEnd - datepickerBegin) / 86400000)
+                })
+                
+                var substringMatcher = function (strs) {
+                    return function findMatches(q, cb) {
+                        var matches, substringRegex;
+
+                        matches = [];
+
+                        substrRegex = new RegExp(q, "i");
+
+                        $.each(strs, function (i, str) {
+                            if (substrRegex.test(str)) {
+                                matches.push(str);
+                            }
+                        });
+
+                        cb(matches);
+                    };
+                };
+            });
+        </script>
+    </body>
+</html>

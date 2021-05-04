@@ -1,0 +1,2687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight Booking</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link rel="stylesheet" href="css/app.css?v=1" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#" target="_self" title="Logo" class="mr-40">
+                <img src="./images/logo.svg" alt="Logo" title="Logo" class="d-none d-lg-block" />
+                <img src="./images/logo-mobile.svg" alt="Logo" title="Logo" class="d-block d-lg-none" />
+            </a>
+            <div class="header-menu-wrapper">
+                <div class="overlay d-lg-none"></div>
+                <div class="header-menu">
+                    <div class="bg-secondary px-20 py-30 d-lg-none">
+                        <a href="#" target="_self" title="Sign In" class="text-white text-16">
+                            <img src="./images/icon-user-white.svg" data-src="./images/icon-user-white.svg" alt="User" title="User" class="mr-5 lazyload" /> Sign In
+                        </a>
+                    </div>
+                    <ul class="header-menu-nav pb-xs-15 mb-0">
+                        <li>
+                            <a href="#" target="_self" title="Flight">
+                                    Flight
+                                    <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span>
+                                </a>
+                        </li>
+                        <li class="active">
+                            <a href="#" target="_self" title="Hotels">Hotels <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Tours">Tours <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Deals">Deals <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="FAQs">FAQs <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Contact">Contact <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                    </ul>
+                    <ul class="d-block d-lg-none mb-50 header-menu-nav border-0">
+                        <li>
+                            <a href="#" target="_self" title="Settings">
+                                    Settings
+                                </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Feedback">
+                                    Feedback
+                                </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Term and Condition">
+                                    Term and Condition
+                                </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Privacy Policy">
+                                    Privacy Policy
+                                </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-right d-none d-lg-block">
+                <ul class="header-nav mr-15">
+                    <li class="has-dropdown">
+                        <a href="javascript:void(0)" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="EN" title="EN" class="mr-5" /> EN </a>
+                        <ul class="header-dropdown">
+                            <li>
+                                <a href="#" target="_self" title="VN"> <img src="./images/flag-vn.svg" alt="VN" title="VN" class="mr-5" /> VN </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="UK" title="UK" class="mr-5" /> EN </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="header-nav">
+                    <li class="has-dropdown">
+                        <a href="javascript:void(0)" target="_self" title="USD">
+                                USD
+                            </a>
+                        <ul class="header-dropdown">
+                            <li>
+                                <a href="#" target="_self" title="USD">USD </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="VND">VND </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="dropdown d-inline-block ml-20">
+                    <a href="javascript:void(0)" id="signin-toggle" target="_self" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-main text-bolder">
+                            Sign in
+                        </a>
+                    <div class="dropdown-box dropdown-menu dropdown-signin" aria-labelledby="signin-toggle">
+                        <button type="button" class="close" id="close-dropdown">
+                                <img src="./images/icon-close.svg" alt="Close" title="Close">
+                            </button>
+                        <h2>Sign In or Register</h2>
+                        <p class="mb-30">One click sign-in with</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#" class="btn btn-block btn-smaller btn-outline-facebook" title="Facebook" target="_self">
+                                    <img src="./images/sx.svg" data-src="./images/icon-btn-facebook.svg" alt="Facebook" title="Facebook" class="lazyload mr-10" />
+                                    <img src="./images/icon-btn-facebook-active.svg" alt="Facebook" title="Facebook" class="active mr-10" /> Facebook
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="btn btn-block btn-smaller btn-outline-google" title="Google" target="_self">
+                                    <img src="./images/sx.svg" data-src="./images/icon-btn-google.svg" alt="Google" title="Google" class="lazyload mr-10" />
+                                    <img src="./images/icon-btn-google-active.svg" alt="Google" title="Google" class="active mr-10" /> Google
+                                </a>
+                            </div>
+                        </div>
+                        <div class="divider-text my-20">Or</div>
+                        <div class="form-large form-group">
+                            <input type="text" placeholder="Enter Email Address" class="form-control" />
+                        </div>
+                        <a href="#" target="_self" title="Next" class="btn btn-block btn-outline-secondary">Next</a>
+                    </div>
+                </div>
+                <a href="#" target="_self" title="Create account" class="btn btn-outline-main ml-20">Create account</a>
+            </div>
+            <a href="javascript:void(0)" target="_self" title="Menu" id="menu-header" class="d-block d-lg-none">
+                <img src="./images/sx.svg" data-src="./images/icon-menu-hamburger.svg" alt="Menu" title="Menu" class="lazyload" />
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="main-flight-wrapper">
+            <!-- Desktop -->
+            <div class="d-none d-lg-block">
+                <!-- SEARCH -->
+                <div class="container pt-20 pb-10">
+                    <!-- Search Flights -->
+                    <div class="bg-transparent rounded">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-30">
+                                <label for="round-trip-radio" class="radio-container mb-0 text-white text-16" role="button">
+                                    <input id="round-trip-radio" type="radio" name="typeTicket">
+                                    <span class="checkmark-custom circle white">
+                                        <span class="dot"></span>
+                                    </span>
+                                    Round trip
+                                </label>
+                            </div>
+                            <div class="mr-30">
+                                <label for="one-way-radio" class="radio-container mb-0 text-white text-16" role="button">
+                                    <input id="one-way-radio" type="radio" checked name="typeTicket">
+                                    <span class="checkmark-custom circle white">
+                                        <span class="dot"></span>
+                                    </span>
+                                    One Way
+                                </label>
+                            </div>
+                            <div class="">
+                                <label for="multi-city-radio" class="radio-container mb-0 text-white text-16" role="button">
+                                    <input id="multi-city-radio" type="radio" name="typeTicket">
+                                    <span class="checkmark-custom circle white">
+                                        <span class="dot"></span>
+                                    </span>
+                                    Multi-City
+                                </label>
+                            </div>
+                        </div>
+                        <form action="#" class="mt-10 d-flex">
+                            <!-- flights -->
+                            <div class="w-xs-100 flex-fill">
+                                <!-- flight 1 -->
+                                <div class="d-flex align-items-center mb-10 text-14">
+                                    <div class="pr-5 px-xs-15 mb-xs-15 position-relative flex-fill">
+                                        <div id="selectFromLocation" class="w-100 h-48">
+                                            <input class="typeahead" type="text" placeholder="From where" />
+                                        </div>
+                                        <img src="./images/icon-from-to.svg" / style="position: absolute; top: 8px; right: -17px; z-index:1" class="d-none d-lg-block">
+                                        <img src="./images/icon-from-to-mobile.svg" / style="position: absolute; top: 38px; right: 0px; z-index:1" class="d-block d-lg-none">
+                                    </div>
+                                    <div class="pl-5 px-xs-15 flex-fill">
+                                        <div id="selectToLocation" class="w-100 h-48">
+                                            <input class="typeahead" type="text" placeholder="To where" />
+                                        </div>
+                                    </div>
+                                    <div class="pl-10 pr-0 px-xs-15 mt-xs-15 flex-basic-180 position-relative text-14">
+                                        <div class="d-flex align-items-center h-48 overflow-hidden position-relative rounded  bg-white" style="border: 1px solid #a3a3a3;">
+                                            <label class="calendar-item position-relative h-100 w-100 pl-40 flex-basic-180" role="button" for="fromCalendar">
+                                                <input id="fromCalendar" class="calendar h-100 p-0 ml-0 mw-100 w-100 input-off-focus pl-15" type="text" value="01 May 2020" role="button" readonly />
+                                                <div class="arrow-2-direction mr-10">
+                                                    <img src="./images/icon-arrow-left-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
+                                                    <img src="./images/icon-arrow-right-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-xs-100 d-flex flex-column justify-content-between">
+                                <div class="d-flex flex-wrap m-lg-0">
+                                    <div class="col-lg-6 pl-10 pr-0">
+                                        <div class="form-group form-large mb-0" id="traveller">
+                                            <input type="text" name="" class="form-control bg-white" placeholder="2 Travelers,  Premium Econ..."  id="total-travel" disabled />
+                                        </div>
+                                        <div class="box-traveller  box-traveller-cus-1 hidden-xs" id="box-traveller">
+                                            <div class="d-flex align-items-center w-100 justify-content-between">
+                                                <p class="mb-0 text-medium">Adults</p>
+                                                <div class="input-number-wrapper" id="adults">
+                                                    <div class="sub"></div>
+                                                    <input type="number" value="1" class="form-control" readonly />
+                                                    <div class="plus"></div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center w-100 justify-content-between mt-10">
+                                                <div>
+                                                    <p class="mb-0 text-medium">Children</p>
+                                                    <p class="mb-0 text-12 text-grey-3">Age 2 to 17</p>
+                                                </div>
+                                                <div class="input-number-wrapper" id="children">
+                                                    <div class="sub"></div>
+                                                    <input type="number" value="1" class="form-control" readonly />
+                                                    <div class="plus"></div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center w-100 justify-content-between mt-10">
+                                                <div>
+                                                    <p class="mb-0 text-medium">Infants</p>
+                                                    <p class="mb-0 text-12 text-grey-3">Younger than 2</p>
+                                                </div>
+                                                <div class="input-number-wrapper" id="infants">
+                                                    <div class="sub"></div>
+                                                    <input type="number" value="1" class="form-control" readonly />
+                                                    <div class="plus"></div>
+                                                </div>
+                                            </div>
+                                            <hr class="bg-white-light">
+                                            <div>
+                                                <div class="class-flight">
+                                                    <p class=" text-medium">Class</p>
+                                                    <div class="form-group w-100">
+                                                        <div class="position-relative h-48">
+                                                            <select class="selectCategory">
+                                                                    <option></option>
+                                                                    <option value="Economy">Economy</option>
+                                                                    <option value="Bussiness">Bussiness</option>
+                                                                    <option value="Normal">Normal</option>
+                                                                </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-end mt-50">
+                                                    <a href="#" title="" target="_self" class="text-medium text-accent text-16" id="done">Done</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mt-xs-20 pl-10 pr-0">
+                                        <button type="submit" class="btn w-100 btn-secondary">
+                                                <img src="./images/icon-search-white.svg" alt="Search Flights" title="Search Flights" class="d-block d-lg-none mr-10">
+                                                Search Flights
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- content -->
+                <div class="padding-block bg-light-gray">
+                    <div class="container d-flex flex-wrap align-items-start flight-booking-container">
+                        <!-- filter sidebar -->
+                        <div class="col-12 col-lg-3 pr-12">
+                            <div class="filter-bar">
+                                <!-- filter result -->
+                                <div class="mb-30">
+                                    <h3 class="text-16 text-medium">Filter Your Results</h3>
+                                    <p class="mb0">267 results found</p>
+                                </div>
+                                <!-- Stops -->
+                                <div class="mb-30">
+                                    <h3 class="text-16 text-medium">Stops</h3>
+                                    <label for="Nonstop" class="radio-container text-14" role="button">
+                                        <input id="Nonstop" type="radio" name="stop">
+                                        <span class="checkmark-custom mr-15">
+                                            <span class="dot"></span>
+                                        </span>
+                                        <span>Nonstop</span>
+                                        <span class="ml-auto">$1,088</span>
+                                    </label>
+                                    <label for="one-stop" class="radio-container text-14" role="button">
+                                        <input id="one-stop" type="radio" name="stop">
+                                        <span class="checkmark-custom mr-15">
+                                            <span class="dot"></span>
+                                        </span>
+                                        <span>1 stop</span>
+                                        <span class="ml-auto">$1,264</span>
+                                    </label>
+                                    <label for="two-stop" class="radio-container mb-0 text-14" role="button">
+                                        <input id="two-stop" type="radio" name="stop">
+                                        <span class="checkmark-custom mr-15">
+                                            <span class="dot"></span>
+                                        </span>
+                                        <span>2 stops +</span>
+                                        <span class="ml-auto">$1,355</span>
+                                    </label>
+                                </div>
+                                <!-- Price -->
+                                <div class="mb-30">
+                                    <h3 class="text-16 mb-15 text-medium">Price</h3>
+                                    <div>
+                                        <label for="filter-price-amount" id="filter-price-amount" class="d-flex justify-content-between align-items-center text-14 mb-20">
+                                            <span class="left-value">$1,025</span>
+                                            <span class="right-value">$2,534</span>
+                                        </label>
+                                        <div id="filter-price-range" class="range-custom-1"></div>
+                                    </div>
+
+                                </div>
+                                <!-- Flight TImes -->
+                                <div class="mb-30">
+                                    <h3 class="text-16 mb-15 text-medium">Flight Times</h3>
+                                    <!-- Going to Manila -->
+                                    <div class="mb-30">
+                                        <p class="text-14"><span class="text-medium">Going</span> to Manila (MNL)</p>
+                                        <p class="text-14 mb-20" id="filter-time-going-amount">
+                                            Depart:
+                                            <span class="left-value">12:00 am</span> -
+                                            <span class="right-value">11:45 pm</span>
+                                        </p>
+                                        <div class="">
+                                            <div id="filter-time-going-range" class="range-custom-1"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Returning to HCM : apart -->
+                                    <div class="mb-30">
+                                        <p class="text-14"><span class="text-medium">Returning</span> to Ho Chi Minh City (SGN)</p>
+                                        <p class="text-14 mb-20" id="filter-time-return-amount">
+                                            Depart:
+                                            <span class="left-value">6:30 pm</span> -
+                                            <span class="right-value">09:30 pm</span>
+                                        </p>
+                                        <div class="">
+                                            <div id="filter-time-return-range" class="range-custom-1"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Arive -->
+                                    <div class="mb-30">
+                                        <p class="text-14 mb-20" id="filter-time-arrive-amount">
+                                            Arrive:
+                                            <span class="left-value">11:45 pm</span> -
+                                            <span class="right-value">12:00 am</span>
+                                        </p>
+                                        <div class="">
+                                            <div id="filter-time-arrive-range" class="range-custom-1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Duration -->
+                                <div class="mb-30">
+                                    <h3 class="text-16 mb-15 text-medium">Duration</h3>
+                                    <!-- Going to Manila -->
+                                    <div class="mb-30">
+                                        <p class="text-14"><span class="text-medium">Going</span> to Manila (MNL)</p>
+                                        <p class="text-14 mb-20" id="filter-duration-going-amount">
+                                            Layover Duration: up to
+                                            <span class="value">15h 15m</span>
+                                        </p>
+                                        <div class="">
+                                            <div id="filter-duration-going-range" class="range-custom-1"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Returning to HCM -->
+                                    <div class="mb-30">
+                                        <p class="text-14">Returning to Ho Chi Minh City (SGN)</p>
+                                        <p class="text-14 mb-20" id="filter-duration-return-amount">
+                                            Total Duration: up to
+                                            <span class="value">40h 15m</span>
+                                        </p>
+                                        <div class="">
+                                            <div id="filter-duration-return-range" class="range-custom-1"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Arive -->
+                                    <div class="mb-30">
+                                        <p class="text-14 mb-20" id="filter-duration-arrive-amount">Layover Duration: up to
+                                            <span class="value">19h 15m</span>
+                                        </p>
+                                        <div class="">
+                                            <div id="filter-duration-arrive-range" class="range-custom-1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Airlines -->
+                                <div class="mb-30">
+                                    <h3 class="text-16 text-medium">Airlines</h3>
+                                    <label for="vn-airline" class="radio-container justify-content-start align-items-start text-14" role="button">
+                                        <input id="vn-airline" type="radio" name="Airlines">
+                                        <span class="checkmark-custom mr-15">
+                                            <span class="dot"></span>
+                                        </span>
+                                        <div>
+                                            <p class="mb-0 text-14">Vietnam Airlines</p>
+                                            <p class="mb-0 text-14">(with others)</p>
+                                        </div>
+                                        <span class="ml-auto">$1,088</span>
+                                    </label>
+                                    <label for="china-airline" class="radio-container justify-content-start align-items-start text-14" role="button">
+                                        <input id="china-airline" type="radio" name="Airlines">
+                                        <span class="checkmark-custom mr-15">
+                                            <span class="dot"></span>
+                                        </span>
+                                        <div>
+                                            <p class="mb-0 text-14">China Airlines</p>
+                                            <p class="mb-0 text-14">(with others)</p>
+                                        </div>
+                                        <span class="ml-auto">$1,264</span>
+                                    </label>
+                                    <label for="finnair" class="radio-container mb-0 justify-content-start align-items-start text-14" role="button">
+                                        <input id="finnair" type="radio" name="Airlines">
+                                        <span class="checkmark-custom mr-15">
+                                            <span class="dot"></span>
+                                        </span>
+                                        <div>
+                                            <p class="mb-0 text-14">Finnair</p>
+                                            <p class="mb-0 text-14">(with others)</p>
+                                        </div>
+                                        <span class="ml-auto">$1,355</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flight booking content -->
+                        <div class="col-12 col-lg-9 pl-12 flight-booking-content ">
+                            <!-- show all fares -->
+                            <div class="all-fares-wrap rounded box-shadow-1 bg-white">
+                                <div class="item-wrap text-center d-flex border-bottom-cus">
+                                    <div class="item text-left d-flex align-items-center border-right-cus pl-20 py-10  text-14">
+                                        Show All Fares
+                                    </div>
+                                    <div class="item py-10 border-right-cus">
+                                        <img src="./images/united-air-logo.svg" alt="united airline" title="united airline" class="mb-5">
+                                        <p class="mb-0 text-grey-2 text-14">United Airlines</p>
+                                    </div>
+                                    <div class="item py-10 border-right-cus">
+                                        <img src="./images/alaska-air-logo.svg" alt="Alaska Airlines" title="Alaska Airlines" class="mb-5">
+                                        <p class="mb-0 text-grey-2 text-14">Alaska Airlines</p>
+                                        <p class="mb-0 text-grey-3 text-10">(with orthers)</p>
+                                    </div>
+                                    <div class="item py-10">
+                                        <img src="./images/ameriaca-air-logo.svg" alt="American Airlines" title="American Airlines" class="mb-5">
+                                        <p class="mb-0 text-grey-2 text-14">American Airlines</p>
+                                    </div>
+                                </div>
+                                <div class="item-wrap text-center d-flex border-bottom-cus">
+                                    <div class="item text-left text-secondary d-flex align-items-center pl-20 py-10 border-right-cus">
+                                        <span>Non stop</span>
+                                    </div>
+                                    <div class="item text-medium py-10 border-right-cus">
+                                        <span>$360.99</span>
+                                    </div>
+                                    <div class="item text-medium py-10 border-right-cus">
+                                        <span>$360.99</span>
+                                    </div>
+                                    <div class="item text-medium py-10">
+                                        <span>$360.99</span>
+                                    </div>
+                                </div>
+                                <div class="item-wrap text-center d-flex">
+                                    <div class="item text-left text-secondary d-flex align-items-center pl-20 py-10 border-right-cus">
+                                        <span>1+ Stops</span>
+                                    </div>
+                                    <div class="item text-medium py-10 border-right-cus">
+                                        <span>$369.12</span>
+                                    </div>
+                                    <div class="item text-medium py-10 border-right-cus">
+                                        <span>$369.12</span>
+                                    </div>
+                                    <div class="item text-medium py-10">
+                                        <span>$369.12</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- text note -->
+                            <p class="mb-20 mt-10 text-grey-3 text-12">
+                                Fares for our carriers are round trip, incl. taxes & fees and our service fees. Airfares include applied Booking Bonus. Additional baggage fees may apply. ~Some flights displayed may be for alternate dates and/or airports. Certain results may be outside
+                                your search criteria.
+                            </p>
+                            <!-- recommend -->
+                            <div class="recommend bg-white box-shadow-1 rounded d-flex">
+                                <a href="javascript:void(0)" target="_self" title="" class="recommend-item px-10 position-relative active">
+                                    <div class="recommend-content d-flex justify-content-center align-items-start py-10">
+                                        <img src="./images/icon-start-recommend.svg" alt="start" title="start" class="pr-5" data-status="normal">
+                                        <img src="./images/icon-start-recommend-active.svg" alt="start" title="start" class="pr-5" data-status="active">
+                                        <div>
+                                            <span class="d-block">Recommended</span>
+                                            <span class="d-block text-16 text-medium text-secondary">$360.99</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)" target="_self" title="" class="recommend-item px-10 position-relative">
+                                    <div class="recommend-content d-flex justify-content-center align-items-start py-10">
+                                        <img src="./images/icon-tag-recommend.svg" alt="tag" title="tag" class="pr-5" data-status="normal">
+                                        <img src="./images/icon-tag-recommend-active.svg" alt="tag" title="tag" class="pr-5" data-status="active">
+                                        <div>
+                                            <span class="d-block">Cheapest</span>
+                                            <span class="d-block text-16 text-medium text-secondary">$343.99</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)" target="_self" title="" class="recommend-item px-10 position-relative">
+                                    <div class="recommend-content d-flex justify-content-center align-items-start py-10">
+                                        <img src="./images/icon-clock-recommend.svg" alt="clock" title="clock" class="pr-5" data-status="normal">
+                                        <img src="./images/icon-clock-recommend-active.svg" alt="clock" title="clock" class="pr-5" data-status="active">
+                                        <div>
+                                            <span class="d-block">Shortest</span>
+                                            <span class="d-block text-16 text-medium text-secondary">$360.99</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)" target="_self" title="" class="recommend-item px-10 position-relative">
+                                    <div class="recommend-content d-flex justify-content-center align-items-start py-10">
+                                        <img src="./images/icon-calendar-recommend.svg" alt="calendar" title="calendar" class="pr-5" data-status="normal">
+                                        <img src="./images/icon-calendar-recommend-active.svg" alt="calendar" title="calendar" class="pr-5" data-status="active">
+                                        <div>
+                                            <span class="d-block">Alternate Dates</span>
+                                            <span class="d-block text-16 text-medium text-secondary">$360.99</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)" target="_self" title="" class="recommend-item px-10 position-relative">
+                                    <div class="recommend-content d-flex justify-content-center align-items-start py-10">
+                                        <img src="./images/icon-location-recommend.svg" alt="location" title="location" class="pr-5" data-status="normal">
+                                        <img src="./images/icon-location-recommend-active.svg" alt="location" title="location" class="pr-5" data-status="active">
+                                        <div>
+                                            <span class="d-block">Nearby Airports</span>
+                                            <span class="d-block text-16 text-medium text-secondary">$360.99</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Flight Item -->
+                            <div class="flight-details-item mt-20">
+                                <div class="brief-expand-effect show">
+                                    <div class="content-brief box-shadow-1 rounded bg-white py-10 pl-20 pr-8">
+                                        <div class="content-brief-wrap d-flex">
+                                            <div class="brief-left pr-20">
+                                                <!-- ticket item -->
+                                                <div class="d-flex align-items-start justify-content-between">
+                                                    <!-- item -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <div class=" d-flex align-items-start ">
+                                                            <img src="./images/icon-united-airline-48.svg" alt="united airline" title="united airline" class="mr-15">
+                                                            <p class="d-flex align-items-center text-14">
+                                                                United Airlines
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <p class="mb-5 text-14">Fri,</p>
+                                                        <p class="mb-0 text-14">Jan 10</p>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item d-flex align-items-start py-15">
+                                                        <div class=" text-right mr-15">
+                                                            <p class="mb-5 text-16 text-medium">
+                                                                02:40
+                                                                <span class="text-medium-light text-12">am</span>
+                                                            </p>
+                                                            <p class="text-12 text-grey-3 mb-0">DFW Nearby Airport</p>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <p class="text-12 text-grey-3 mb-5">7h 7m</p>
+                                                            <div class="line-dot"></div>
+                                                            <p class="text-12 text-grey-3 mb-0  mt-5">Nonstop</p>
+                                                        </div>
+                                                        <div class="text-left ml-15">
+                                                            <p class="mb-5 text-16 text-medium">
+                                                                05:47
+                                                                <span class="text-medium-light text-12">pm</span>
+                                                            </p>
+                                                            <p class="text-12 text-grey-3 mb-0">SFO</p>
+                                                        </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <a href="javascript:void(0)" target="_self" title="select" class="mb-0 text-13 text-secondary d-flex align-items-center">
+                                                            <span class="mw-62">Select this Departure</span>
+                                                            <img src="./images/icon-arrow-right-blue-16.svg" alt="right" title="right" class="ml-5">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <span class="text-12 text-grey-3">
+                                                    Operated United Airlines
+                                                </span>
+                                            </div>
+                                            <div class="brief-right align-self-end pl-10 select-wrap">
+                                                <p class="text-24 mb-5 text-medium text-right"> $63</p>
+                                                <p class="text-12 text-grey-3 text-right mb-20">Price per person (incl. taxes & fees)</p>
+                                                <a href="javascript:void(0)" target="_self" title="select" class="btn btn-secondary btn-select h-42 text-16">Select 
+                                                    <img src="./images/icon-arrow-right-white-12.svg" alt="right" title="right" class="ml-5">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="btn-expand-wrap mt-20 pt-10">
+                                            <div class="d-flex align-items-center user-select-none btn-expand-brief" role="button">
+                                                <img src="./images/icon-arrow-up-blue-12.svg" alt="up" title="up" class="mr-10 arrow-up">
+                                                <span class="text-14 text-secondary off">Close Flight Detail</span>
+                                                <span class="text-14 text-secondary on">Flight Detail</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-brief-expand box-shadow-1 rounded bg-white">
+                                        <div class="p-20 pt-30">
+                                            <div class="detail-item">
+                                                <p class="text-14 mb-15 text-medium">Depart Mon, Nov 02</p>
+                                                <div class="ticket-wrap mb-20">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="item-content">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="./images/icon-united-airline-48.svg" alt="united airline" title="united airline" class="mr-15">
+                                                                <div class="mb-0">
+                                                                    <span class="d-block text-13 mb-5">United Airlines</span>
+                                                                    <span class="d-block text-13">Flight 701 | Aircraft 333</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">02:40</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">Newark Liberty, EWR</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">12:00</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">San Francisco, SFO</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-13"><span class="text-medium">Cabin:</span> Econ</p>
+                                                            <p class="mb-0 text-13">
+                                                                <img src="./images/icon-flight-briefcase.svg" alt="brief case" title="brief case"> 1 free bag
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-grey-3 mb-0 mt-15 text-13 pl-50">Operated by United Airlines</p>
+                                                </div>
+                                                <p class="text-12 mb-0">Total Trip Duration: 0h 55m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Flight Item -->
+                            <div class="flight-details-item mt-20">
+                                <div class="brief-expand-effect">
+                                    <div class="content-brief box-shadow-1 rounded bg-white py-10 pl-20 pr-8">
+                                        <div class="content-brief-wrap d-flex">
+                                            <div class="brief-left pr-20">
+                                                <!-- ticket item -->
+                                                <div class="d-flex align-items-start justify-content-between">
+                                                    <!-- item -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <div class=" d-flex align-items-start ">
+                                                            <img src="./images/icon-vn-airline-48.svg" alt="vn airline" title="vn airline" class="mr-15">
+                                                            <p class="d-flex align-items-center text-14">
+                                                                Vietnam Airlines
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <p class="mb-5 text-14">Fri,</p>
+                                                        <p class="mb-0 text-14">Jan 10</p>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item d-flex align-items-start py-15">
+                                                        <div class="d-flex">
+                                                            <div class=" text-right mr-15">
+                                                                <p class="mb-5 text-16 text-medium">
+                                                                    11:05
+                                                                    <span class="text-medium-light text-12">am</span>
+                                                                </p>
+                                                                <p class="text-12 text-grey-3 mb-0">SGN</p>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <p class="text-12 text-grey-3 mb-5">0h 55m</p>
+                                                                <div class="line-dot"></div>
+                                                                <p class="text-12 text-grey-3 mb-0  mt-5">Nonstop</p>
+                                                            </div>
+                                                            <div class="text-left ml-15">
+                                                                <p class="mb-5 text-16 text-medium">
+                                                                    12:00
+                                                                    <span class="text-medium-light text-12">pm</span>
+                                                                </p>
+                                                                <p class="text-12 text-grey-3 mb-0">DLI</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <span class="text-12 text-grey-3">
+                                                    Operated Vietnam Airlines
+                                                </span>
+                                            </div>
+                                            <div class="brief-right align-self-end pl-10 select-wrap">
+                                                <p class="text-24 mb-5 text-medium text-right">$82</p>
+                                                <p class="text-12 text-grey-3 text-right mb-20">Price per person (incl. taxes & fees)</p>
+                                                <a href="javascript:void(0)" target="_self" title="select" class="btn btn-secondary btn-select h-42 text-16">Select 
+                                                    <img src="./images/icon-arrow-right-white-12.svg" alt="right" title="right" class="ml-5">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="btn-expand-wrap mt-20 pt-10">
+                                            <div class="d-flex align-items-center user-select-none btn-expand-brief" role="button">
+                                                <img src="./images/icon-arrow-up-blue-12.svg" alt="up" title="up" class="mr-10 arrow-up">
+                                                <span class="text-14 text-secondary off">Close Flight Detail</span>
+                                                <span class="text-14 text-secondary on">Flight Detail</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-brief-expand box-shadow-1 rounded bg-white">
+                                        <div class="p-20 pt-30">
+                                            <div class="detail-item">
+                                                <p class="text-14 mb-15 text-medium">Depart Mon, Nov 02</p>
+                                                <div class="ticket-wrap mb-20">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="item-content">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="./images/icon-vn-airline-48.svg" alt="vn airline" title="vn airline" class="mr-15">
+                                                                <div class="mb-0">
+                                                                    <span class="d-block text-13 mb-5">United Airlines</span>
+                                                                    <span class="d-block text-13">Flight 701 | Aircraft 333</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">02:40</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">Newark Liberty, EWR</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">12:00</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">San Francisco, SFO</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-13"><span class="text-medium">Cabin:</span> Econ</p>
+                                                            <p class="mb-0 text-13">
+                                                                <img src="./images/icon-flight-briefcase.svg" alt="brief case" title="brief case"> 1 free bag
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-grey-3 mb-0 mt-15 text-13 pl-50">Operated by United Airlines</p>
+                                                </div>
+                                                <p class="text-12 mb-0">Total Trip Duration: 0h 55m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Flight Item -->
+                            <div class="flight-details-item mt-20">
+                                <div class="brief-expand-effect">
+                                    <div class="content-brief box-shadow-1 rounded bg-white py-10 pl-20 pr-8">
+                                        <div class="content-brief-wrap d-flex">
+                                            <div class="brief-left pr-20">
+                                                <!-- ticket item -->
+                                                <div class="d-flex align-items-start justify-content-between">
+                                                    <!-- item -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <div class=" d-flex align-items-start ">
+                                                            <img src="./images/icon-vn-airline-48.svg" alt="vn airline" title="vn airline" class="mr-15">
+                                                            <p class="d-flex align-items-center text-14">
+                                                                Vietnam Airlines
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <p class="mb-5 text-14">Fri,</p>
+                                                        <p class="mb-0 text-14">Jan 10</p>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item d-flex align-items-start py-15">
+                                                        <div class="d-flex">
+                                                            <div class=" text-right mr-15">
+                                                                <p class="mb-5 text-16 text-medium">
+                                                                    11:05
+                                                                    <span class="text-medium-light text-12">am</span>
+                                                                </p>
+                                                                <p class="text-12 text-grey-3 mb-0">SGN</p>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <p class="text-12 text-grey-3 mb-5">0h 55m</p>
+                                                                <div class="line-dot"></div>
+                                                                <p class="text-12 text-grey-3 mb-0  mt-5">Nonstop</p>
+                                                            </div>
+                                                            <div class="text-left ml-15">
+                                                                <p class="mb-5 text-16 text-medium">
+                                                                    12:00
+                                                                    <span class="text-medium-light text-12">pm</span>
+                                                                </p>
+                                                                <p class="text-12 text-grey-3 mb-0">DLI</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <span class="text-12 text-grey-3">
+                                                    Operated Vietnam Airlines
+                                                </span>
+                                            </div>
+                                            <div class="brief-right align-self-end pl-10 select-wrap">
+                                                <p class="text-24 mb-5 text-medium text-right">$82</p>
+                                                <p class="text-12 text-grey-3 text-right mb-20">Price per person (incl. taxes & fees)</p>
+                                                <a href="javascript:void(0)" target="_self" title="select" class="btn btn-secondary btn-select h-42 text-16">Select 
+                                                    <img src="./images/icon-arrow-right-white-12.svg" alt="right" title="right" class="ml-5">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="btn-expand-wrap mt-20 pt-10">
+                                            <div class="d-flex align-items-center user-select-none btn-expand-brief" role="button">
+                                                <img src="./images/icon-arrow-up-blue-12.svg" alt="up" title="up" class="mr-10 arrow-up">
+                                                <span class="text-14 text-secondary off">Close Flight Detail</span>
+                                                <span class="text-14 text-secondary on">Flight Detail</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-brief-expand box-shadow-1 rounded bg-white">
+                                        <div class="p-20 pt-30">
+                                            <div class="detail-item">
+                                                <p class="text-14 mb-15 text-medium">Depart Mon, Nov 02</p>
+                                                <div class="ticket-wrap mb-20">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="item-content">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="./images/icon-vn-airline-48.svg" alt="vn airline" title="vn airline" class="mr-15">
+                                                                <div class="mb-0">
+                                                                    <span class="d-block text-13 mb-5">United Airlines</span>
+                                                                    <span class="d-block text-13">Flight 701 | Aircraft 333</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">02:40</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">Newark Liberty, EWR</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">12:00</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">San Francisco, SFO</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-13"><span class="text-medium">Cabin:</span> Econ</p>
+                                                            <p class="mb-0 text-13">
+                                                                <img src="./images/icon-flight-briefcase.svg" alt="brief case" title="brief case"> 1 free bag
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-grey-3 mb-0 mt-15 text-13 pl-50">Operated by United Airlines</p>
+                                                </div>
+                                                <p class="text-12 mb-0">Total Trip Duration: 0h 55m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Flight Item -->
+                            <div class="flight-details-item mt-20">
+                                <div class="brief-expand-effect">
+                                    <div class="content-brief box-shadow-1 rounded bg-white py-10 pl-20 pr-8">
+                                        <div class="content-brief-wrap d-flex">
+                                            <div class="brief-left pr-20">
+                                                <!-- ticket item -->
+                                                <div class="d-flex align-items-start justify-content-between">
+                                                    <!-- item -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <div class=" d-flex align-items-start ">
+                                                            <img src="./images/icon-vn-airline-48.svg" alt="vn airline" title="vn airline" class="mr-15">
+                                                            <p class="d-flex align-items-center text-14">
+                                                                Vietnam Airlines
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <p class="mb-5 text-14">Fri,</p>
+                                                        <p class="mb-0 text-14">Jan 10</p>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item d-flex align-items-start py-15">
+                                                        <div class="d-flex">
+                                                            <div class=" text-right mr-15">
+                                                                <p class="mb-5 text-16 text-medium">
+                                                                    11:05
+                                                                    <span class="text-medium-light text-12">am</span>
+                                                                </p>
+                                                                <p class="text-12 text-grey-3 mb-0">SGN</p>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <p class="text-12 text-grey-3 mb-5">0h 55m</p>
+                                                                <div class="line-dot"></div>
+                                                                <p class="text-12 text-grey-3 mb-0  mt-5">Nonstop</p>
+                                                            </div>
+                                                            <div class="text-left ml-15">
+                                                                <p class="mb-5 text-16 text-medium">
+                                                                    12:00
+                                                                    <span class="text-medium-light text-12">pm</span>
+                                                                </p>
+                                                                <p class="text-12 text-grey-3 mb-0">DLI</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <span class="text-12 text-grey-3">
+                                                    Operated Vietnam Airlines
+                                                </span>
+                                            </div>
+                                            <div class="brief-right align-self-end pl-10 select-wrap">
+                                                <p class="text-24 mb-5 text-medium text-right">$82</p>
+                                                <p class="text-12 text-grey-3 text-right mb-20">Price per person (incl. taxes & fees)</p>
+                                                <a href="javascript:void(0)" target="_self" title="select" class="btn btn-secondary btn-select h-42 text-16">Select 
+                                                    <img src="./images/icon-arrow-right-white-12.svg" alt="right" title="right" class="ml-5">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="btn-expand-wrap mt-20 pt-10">
+                                            <div class="d-flex align-items-center user-select-none btn-expand-brief" role="button">
+                                                <img src="./images/icon-arrow-up-blue-12.svg" alt="up" title="up" class="mr-10 arrow-up">
+                                                <span class="text-14 text-secondary off">Close Flight Detail</span>
+                                                <span class="text-14 text-secondary on">Flight Detail</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-brief-expand box-shadow-1 rounded bg-white">
+                                        <div class="p-20 pt-30">
+                                            <div class="detail-item">
+                                                <p class="text-14 mb-15 text-medium">Depart Mon, Nov 02</p>
+                                                <div class="ticket-wrap mb-20">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="item-content">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="./images/icon-vn-airline-48.svg" alt="vn airline" title="vn airline" class="mr-15">
+                                                                <div class="mb-0">
+                                                                    <span class="d-block text-13 mb-5">United Airlines</span>
+                                                                    <span class="d-block text-13">Flight 701 | Aircraft 333</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">02:40</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">Newark Liberty, EWR</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">12:00</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">San Francisco, SFO</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-13"><span class="text-medium">Cabin:</span> Econ</p>
+                                                            <p class="mb-0 text-13">
+                                                                <img src="./images/icon-flight-briefcase.svg" alt="brief case" title="brief case"> 1 free bag
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-grey-3 mb-0 mt-15 text-13 pl-50">Operated by United Airlines</p>
+                                                </div>
+                                                <p class="text-12 mb-0">Total Trip Duration: 0h 55m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Flight Item -->
+                            <div class="flight-details-item mt-20">
+                                <div class="brief-expand-effect">
+                                    <div class="content-brief box-shadow-1 rounded bg-white py-10 pl-20 pr-8">
+                                        <div class="content-brief-wrap d-flex">
+                                            <div class="brief-left pr-20">
+                                                <!-- ticket item -->
+                                                <div class="d-flex align-items-start justify-content-between">
+                                                    <!-- item -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <div class=" d-flex align-items-start ">
+                                                            <img src="./images/icon-vn-airline-48.svg" alt="vn airline" title="vn airline" class="mr-15">
+                                                            <p class="d-flex align-items-center text-14">
+                                                                Vietnam Airlines
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item py-15">
+                                                        <p class="mb-5 text-14">Fri,</p>
+                                                        <p class="mb-0 text-14">Jan 10</p>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="airline-ticket-item d-flex align-items-start py-15">
+                                                        <div class="d-flex">
+                                                            <div class=" text-right mr-15">
+                                                                <p class="mb-5 text-16 text-medium">
+                                                                    11:05
+                                                                    <span class="text-medium-light text-12">am</span>
+                                                                </p>
+                                                                <p class="text-12 text-grey-3 mb-0">SGN</p>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <p class="text-12 text-grey-3 mb-5">0h 55m</p>
+                                                                <div class="line-dot"></div>
+                                                                <p class="text-12 text-grey-3 mb-0  mt-5">Nonstop</p>
+                                                            </div>
+                                                            <div class="text-left ml-15">
+                                                                <p class="mb-5 text-16 text-medium">
+                                                                    12:00
+                                                                    <span class="text-medium-light text-12">pm</span>
+                                                                </p>
+                                                                <p class="text-12 text-grey-3 mb-0">DLI</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <span class="text-12 text-grey-3">
+                                                    Operated Vietnam Airlines
+                                                </span>
+                                            </div>
+                                            <div class="brief-right align-self-end pl-10 select-wrap">
+                                                <p class="text-24 mb-5 text-medium text-right">$82</p>
+                                                <p class="text-12 text-grey-3 text-right mb-20">Price per person (incl. taxes & fees)</p>
+                                                <a href="javascript:void(0)" target="_self" title="select" class="btn btn-secondary btn-select h-42 text-16">Select 
+                                                    <img src="./images/icon-arrow-right-white-12.svg" alt="right" title="right" class="ml-5">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="btn-expand-wrap mt-20 pt-10">
+                                            <div class="d-flex align-items-center user-select-none btn-expand-brief" role="button">
+                                                <img src="./images/icon-arrow-up-blue-12.svg" alt="up" title="up" class="mr-10 arrow-up">
+                                                <span class="text-14 text-secondary off">Close Flight Detail</span>
+                                                <span class="text-14 text-secondary on">Flight Detail</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-brief-expand box-shadow-1 rounded bg-white">
+                                        <div class="p-20 pt-30">
+                                            <div class="detail-item">
+                                                <p class="text-14 mb-15 text-medium">Depart Mon, Nov 02</p>
+                                                <div class="ticket-wrap mb-20">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="item-content">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="./images/icon-vn-airline-48.svg" alt="vn airline" title="vn airline" class="mr-15">
+                                                                <div class="mb-0">
+                                                                    <span class="d-block text-13 mb-5">United Airlines</span>
+                                                                    <span class="d-block text-13">Flight 701 | Aircraft 333</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">02:40</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">Newark Liberty, EWR</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12"><span class="text-16 text-medium">12:00</span> pm</p>
+                                                            <p class="mb-0 text-12 text-grey-3">San Francisco, SFO</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-12">Fri,</p>
+                                                            <p class="mb-0 text-14">Feb 26</p>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p class="mb-5 text-13"><span class="text-medium">Cabin:</span> Econ</p>
+                                                            <p class="mb-0 text-13">
+                                                                <img src="./images/icon-flight-briefcase.svg" alt="brief case" title="brief case"> 1 free bag
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-grey-3 mb-0 mt-15 text-13 pl-50">Operated by United Airlines</p>
+                                                </div>
+                                                <p class="text-12 mb-0">Total Trip Duration: 0h 55m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- pagination -->
+                            <div class="d-flex py-30">
+                        <ul class="pagination mb-xs-0 mb-lg-0">
+                            <li class="page-item"><a class="page-link arrow-previous" href="javascript:void(0);"></a></li>
+                            <li class="page-item"><a class="page-link active" href="javascript:void(0);">1</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">...</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">50</a></li>
+                            <li class="page-item"><a class="page-link arrow-next" href="javascript:void(0);"></a></li>
+                        </ul>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ourr offer -->
+                <div class="bg padding-block d-flex align-items-center pt-lg-50" style="background-image: url(images/mask-group.png);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center text-white">
+                                <h2>Don't Miss Our Offers!</h2>
+                                <p class="text-white">Sign up today and get your amazing deal with Travelner</p>
+                                <div class="form-group-search bg-white rounded d-flex align-items-center mb-0 w-600 mx-auto">
+                                    <div class="form-group mb-0 p-0">
+                                        <input type="text" placeholder="Joins Us - Get Notification" class="form-control border-0 p-0">
+                                    </div>
+                                    <button class="btn btn-secondary btn-search ml-auto py-10 px-20 mw-lg-100"><span class="d-none d-lg-inline-block">Sign Up</span><img src="./images/arrow-right-white-mobile.svg" alt="Sign Up" title="Sign Up" class="d-block d-lg-none"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile -->
+            <div class="d-block d-lg-none">
+                <div class="page-mobile flight-roundtrip-2">
+                    <div class="current-tickets mb-10">
+                        <div class="d-flex justify-content-center mb-20">
+                            <p class="mb-0 text-white text-14">DAL
+                                <img src="./images/icon-two-arrows-white.svg" alt="two arrow" title='two arrow' class="px-5"> WAS
+                            </p>
+                            <p class="mb-0 text-white text-14 px-5 mx-10 border-lr">
+                                1
+                                <img src="./images/icon-user-white-flight.svg" alt="user" title="user" class="ml-5">
+                            </p>
+                            <p class="mb-0 text-white text-14">Economy <span class="ml-10 d-inline-block border-rd border-white px-12">Edit</span></p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <p class="mb-0 px-10 py-8 mr-10 current-item text-13 text-white rounded">
+                                <img src="./images/icon-arrow-left-white-ticket.svg" alt="left ticket" title="left ticket">
+                                <span class="px-15">Fri, Jan 29</span>
+                                <img src="./images/icon-arrow-right-white-ticket.svg" alt="right" title="right">
+                            </p>
+                            <p class="mb-0 px-10 py-8 current-item text-13 text-white rounded">
+                                <img src="./images/icon-arrow-left-white-ticket.svg" alt="left ticket" title="left ticket">
+                                <span class="px-15">Fri, Jan 29</span>
+                                <img src="./images/icon-arrow-right-white-ticket.svg" alt="right" title="right">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between px-15 mb-10 mt-20">
+                        <span class="text-13">Your departing flight</span>
+                        <a href="javascript:void(0)" target="_self" title="change" class="text-secondary text-13">Change</a>
+                    </div>
+                    <div class="px-15">
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15 active-bd-bg">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <div class="mr-15">
+                                    <input type="checkbox" name="" id="" checked>
+                                </div>
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/icon-alaska-air-48.svg" alt="alaska air" title="alaska air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Alaska Airlines
+                                        </p>
+                                        <!-- <p class="mb-0 ml-auto text-16 text-medium text-secondary">$82 
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow right">
+                                        </a> -->
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">2 stops</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-13 px-15">Select your <span class="text-medium">return flight</span></p>
+                    <p class="mb-0 text-12 px-15">Prices shown are price per person (incl. taxes & fees) <img src="./images/icon-infomation.svg" alt="infomation" title="infomation" class="ml-5"></p>
+                    <!--  -->
+                    <div class="px-15 mt-15 pb-60">
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/icon-alaska-air-48.svg" alt="alaska air" title="alaska air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Alaska Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$416</span>
+                                            <span class="d-block text-10">Roundtrip</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">140h 50m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">2 stops</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-mobile flight-roundtrip-1">
+                    <div class="current-tickets mb-10">
+                        <div class="d-flex justify-content-center mb-20">
+                            <p class="mb-0 text-white text-14">DAL
+                                <img src="./images/icon-two-arrows-white.svg" alt="two arrow" title='two arrow' class="px-5"> WAS
+                            </p>
+                            <p class="mb-0 text-white text-14 px-5 mx-10 border-lr">
+                                1
+                                <img src="./images/icon-user-white-flight.svg" alt="user" title="user" class="ml-5">
+                            </p>
+                            <p class="mb-0 text-white text-14">Economy <span class="ml-10 d-inline-block border-rd border-white px-12">Edit</span></p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <p class="mb-0 px-10 py-8 mr-10 current-item text-13 text-white rounded">
+                                <img src="./images/icon-arrow-left-white-ticket.svg" alt="left ticket" title="left ticket">
+                                <span class="px-15">Fri, Jan 29</span>
+                                <img src="./images/icon-arrow-right-white-ticket.svg" alt="right" title="right">
+                            </p>
+                            <p class="mb-0 px-10 py-8 current-item text-13 text-white rounded">
+                                <img src="./images/icon-arrow-left-white-ticket.svg" alt="left ticket" title="left ticket">
+                                <span class="px-15">Fri, Jan 29</span>
+                                <img src="./images/icon-arrow-right-white-ticket.svg" alt="right" title="right">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex px-15 recommend">
+                        <!--  -->
+                        <a href="javascript:void(0)" target="_self" title="recommend" class="d-block text-12 py-10 flex-grow-1 text-center border-bottom-light-gray rec-item-mobile active">
+                            <span class="d-block">Recommended</span>
+                            <span class="d-block text-medium">$174.99</span>
+                        </a>
+                        <!--  -->
+                        <a href="javascript:void(0)" target="_self" title="Cheapest" class="d-block text-12 py-10 flex-grow-1 text-center border-bottom-light-gray rec-item-mobile">
+                            <span class="d-block">Cheapest</span>
+                            <span class="d-block text-medium">$170.22</span>
+                        </a>
+                        <!--  -->
+                        <a href="javascript:void(0)" target="_self" title="Shortest" class="d-block text-12 py-10 flex-grow-1 text-center border-bottom-light-gray rec-item-mobile">
+                            <span class="d-block">Shortest</span>
+                            <span class="d-block text-medium">$174.99</span>
+                        </a>
+                        <!--  -->
+                        <a href="javascript:void(0)" target="_self" title="Altermate" class="d-block text-12 py-10 flex-grow-1 text-center border-bottom-light-gray rec-item-mobile">
+                            <span class="d-block">Altermate</span>
+                            <span class="d-block text-medium">$174.99</span>
+                        </a>
+                    </div>
+                    <div class="filter-mobile-1  pl-15">
+                        <ul class="mb-0 d-flex align-items-center overflow-auto list-unstyled py-15">
+                            <li class="mr-5 flex-basic-50 flex-shrink-0"><span class="text-14">Filter by</span></li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Stops" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Stops</a>
+                            </li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Time" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Time</a>
+                            </li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Durantion" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Durantion</a>
+                            </li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Airlines" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Airlines</a>
+                            </li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Airlines" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Airlines</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-12 text-medium px-15">Recommended Results <img src="./images/icon-infomation.svg" alt="infomation" title="infomation" class="ml-5"></p>
+                    <p class="mb-0 text-12 px-15">Prices shown are price per person (incl. taxes & fees) <img src="./images/icon-infomation.svg" alt="infomation" title="infomation" class="ml-5"></p>
+                    <!--  -->
+                    <div class="px-15 mt-15 pb-60">
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/icon-alaska-air-48.svg" alt="alaska air" title="alaska air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Alaska Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">2 stops</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/icon-alaska-air-48.svg" alt="alaska air" title="alaska air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Alaska Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">2 stop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/icon-alaska-air-48.svg" alt="alaska air" title="alaska air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Alaska Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">2 stops</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/icon-alaska-air-48.svg" alt="alaska air" title="alaska air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Alaska Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">2 stop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/icon-alaska-air-48.svg" alt="alaska air" title="alaska air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Alaska Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">2 stops</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/icon-alaska-air-48.svg" alt="alaska air" title="alaska air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Alaska Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">2 stop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" onclick="(function(t){
+                        console.log('this.parentElement', t.parentElement)
+                        t.parentElement.style.transition = 'all 0.3s';
+                        t.parentElement.style.left = '100%';
+                    })(this)">next page</button>
+                </div>
+                <div class="page-mobile flight-oneway-mobile">
+                    <div class="current-tickets mb-10">
+                        <div class="d-flex justify-content-center mb-20">
+                            <p class="mb-0 text-white text-14">DAL
+                                <img src="./images/icon-two-arrows-white.svg" alt="two arrow" title='two arrow' class="px-5"> WAS
+                            </p>
+                            <p class="mb-0 text-white text-14 px-5 mx-10 border-lr">
+                                1
+                                <img src="./images/icon-user-white-flight.svg" alt="user" title="user" class="ml-5">
+                            </p>
+                            <p class="mb-0 text-white text-14">Economy <span class="ml-10 d-inline-block border-rd border-white px-12">Edit</span></p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <p class="mb-0 px-10 py-8 mr-10 current-item text-13 text-white rounded">
+                                <img src="./images/icon-arrow-left-white-ticket.svg" alt="left ticket" title="left ticket">
+                                <span class="px-15">Fri, Jan 29</span>
+                                <img src="./images/icon-arrow-right-white-ticket.svg" alt="right" title="right">
+                            </p>
+                            <p class="mb-0 px-10 py-8 current-item text-13 text-white rounded">
+                                <img src="./images/icon-arrow-left-white-ticket.svg" alt="left ticket" title="left ticket">
+                                <span class="px-15">Fri, Jan 29</span>
+                                <img src="./images/icon-arrow-right-white-ticket.svg" alt="right" title="right">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex px-15 recommend">
+                        <!--  -->
+                        <a href="javascript:void(0)" target="_self" title="recommend" class="d-block text-12 py-10 flex-grow-1 text-center border-bottom-light-gray rec-item-mobile active">
+                            <span class="d-block">Recommended</span>
+                            <span class="d-block text-medium">$174.99</span>
+                        </a>
+                        <!--  -->
+                        <a href="javascript:void(0)" target="_self" title="Cheapest" class="d-block text-12 py-10 flex-grow-1 text-center border-bottom-light-gray rec-item-mobile">
+                            <span class="d-block">Cheapest</span>
+                            <span class="d-block text-medium">$170.22</span>
+                        </a>
+                        <!--  -->
+                        <a href="javascript:void(0)" target="_self" title="Shortest" class="d-block text-12 py-10 flex-grow-1 text-center border-bottom-light-gray rec-item-mobile">
+                            <span class="d-block">Shortest</span>
+                            <span class="d-block text-medium">$174.99</span>
+                        </a>
+                        <!--  -->
+                        <a href="javascript:void(0)" target="_self" title="Altermate" class="d-block text-12 py-10 flex-grow-1 text-center border-bottom-light-gray rec-item-mobile">
+                            <span class="d-block">Altermate</span>
+                            <span class="d-block text-medium">$174.99</span>
+                        </a>
+                    </div>
+                    <div class="filter-mobile-1 pl-15">
+                        <ul class="mb-0 d-flex align-items-center overflow-auto list-unstyled py-15">
+                            <li class="mr-5 flex-basic-50 flex-shrink-0"><span class="text-14">Filter by</span></li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Stops" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Stops</a>
+                            </li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Time" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Time</a>
+                            </li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Durantion" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Durantion</a>
+                            </li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Airlines" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Airlines</a>
+                            </li>
+                            <li class="mr-5">
+                                <a href="javascript:void(0)" target="_self" title="Airlines" class="d-block bg-white text-black text-13 px-12 pt-5 pb-5 rounded-pill box-shadow-2">Airlines</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="text-12 text-medium px-15">Recommended Results <img src="./images/icon-infomation.svg" alt="infomation" title="infomation" class="ml-5"></p>
+                    <p class="mb-0 text-12 px-15">Prices shown are price per person (incl. taxes & fees) <img src="./images/icon-infomation.svg" alt="infomation" title="infomation" class="ml-5"></p>
+                    <div class="px-15 mt-15 pb-60">
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <!-- <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div> -->
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/logo-viet-air-mobile.svg" alt="viet air" title="viet air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Vietnam Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">Nonstop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <!-- <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div> -->
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/logo-viet-air-mobile.svg" alt="viet air" title="viet air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Vietnam Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">Nonstop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <!-- <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div> -->
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/logo-viet-air-mobile.svg" alt="viet air" title="viet air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Vietnam Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">Nonstop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <!-- <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div> -->
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/logo-viet-air-mobile.svg" alt="viet air" title="viet air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Vietnam Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">Nonstop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <!-- <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div> -->
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/logo-viet-air-mobile.svg" alt="viet air" title="viet air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Vietnam Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$82</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">Nonstop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" onclick="(function(t){
+                        console.log('this.parentElement', t.parentElement)
+                        t.parentElement.style.transition = 'all 0.3s';
+                        t.parentElement.style.left = '100%';
+                    })(this)">next page</button>
+                </div>
+                <div class="page-mobile flight-loading-search-page bg-light-gray px-15">
+                    <div class="booking-searching pt-15 pb-64 mb-50 rounded">
+                        <!-- logo and text -->
+                        <div class="logo text-center">
+                            <img src="./images/logo-vietjet-air-36-36.svg" alt="vietjet air" title="vietjet air" class="m-auto">
+                            <p class="mb-10 text-center text-12">Viet Jet Air</p>
+                        </div>
+                        <p class="text-medium text-center mb-40 text-13">Searching flights to Dalat for you</p>
+                        <!-- searching loading bar -->
+                        <div class="searching-loading mb-40 overflow-hidden rounded-sm">
+                            <div class="loading-bar">
+                            </div>
+                        </div>
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <!-- <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div> -->
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/logo-viet-air-mobile.svg" alt="viet air" title="viet air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Vietnam Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$129</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">Nonstop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <!-- <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div> -->
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/logo-viet-air-mobile.svg" alt="viet air" title="viet air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Vietnam Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$129</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">Nonstop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flight ticket -->
+                        <div class="booking-mobile bg-white rounded box-shadow-1 px-20 py-10 mb-15">
+                            <!-- ticket item -->
+                            <div class="d-flex align-items-center">
+                                <!-- checkbox -->
+                                <!-- <div class="mr-15">
+                                    <input type="checkbox" name="" id="">
+                                </div> -->
+                                <!-- content -->
+                                <div class="booking-ticker flex-grow-1">
+                                    <!-- price -->
+                                    <div class="ticket-price d-flex align-items-center mb-12">
+                                        <img src="./images/logo-viet-air-mobile.svg" alt="viet air" title="viet air">
+                                        <p class="mb-0 text-12 ml-5">
+                                            Vietnam Airlines
+                                        </p>
+                                        <p class="mb-0 ml-auto text-16 text-medium text-secondary">
+                                            <span class="d-block">$129</span>
+                                        </p>
+                                        <a href="javascript:void(0)" target="_self" title="more detail" class="ml-5 align-self-start">
+                                            <img src="./images/arrrow-right-mobile-12-12.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                    <!-- booking time -->
+                                    <div class="ticket-time d-flex align-items-center justify-content-between mb-15">
+                                        <div class="from text-right">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                        <div class="type px-20 flex-grow-1 text-center">
+                                            <p class="mb-0 text-10 text-grey-3">0h 55m</p>
+                                            <div class="line-time mt-5 mb-5">
+                                                <div class="dots">
+                                                    <div class="dot mr-10"></div>
+                                                    <div class="dot ml-10"></div>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 text-10 text-grey-3">Nonstop</p>
+                                        </div>
+                                        <div class="to text-left">
+                                            <p class="mb-5 text-14 text-medium">11:05 am</p>
+                                            <p class="mb-0 text-12 text-grey-3">SGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" onclick="(function(t){
+                        console.log('this.parentElement', t.parentElement)
+                        t.parentElement.style.transition = 'all 0.3s';
+                        t.parentElement.style.left = '100%';
+                    })(this)">next page</button>
+                </div>
+                <div class="page-mobile flight-loading-page bg-light-gray pb-30 pt-70 px-15">
+                    <div class="booking-loading bg-white py-30 px-30 mb-50 rounded">
+                        <div class="loading-animation mb-30">
+                            <div class="loading-wrap  position-relative" role="status">
+                                <img src="./images/loading-logo-flight-booking.svg" alt="loading" title="loading">
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading..ládfkljsadklf.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="text-18 text-medium mb-20 text-center">Fast Way to Book Our Cheapest Flights!</h2>
+                        <p class="mb-0 text-18 text-center">You told us when where, now let us take you there with <span class="text-medium">our best price</span> on over 600 airlines, <span class="text-medium">guaranteed!</span></p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="(function(t){
+                        console.log('this.parentElement', t.parentElement)
+                        t.parentElement.style.transition = 'all 0.3s';
+                        t.parentElement.style.left = '100%';
+                    })(this)">next page</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="d-none d-lg-block">
+        <div class="top-footer d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <a href="tel:+61280113917" target="_blank" title="+61 280 113 917" class="text-link text-18 text-bolder">
+                            <img src="./images/sx.svg" data-src="./images/icon-phone-circle-red.svg" alt="Phone" title="Phone" class="lazyload mr-10" /> +61 280 113 917
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="mailto:support@travelner.com" target="_blank" title="Support@Travelner.com" class="text-link text-18 text-bolder">
+                            <img src="./images/sx.svg" data-src="./images/icon-mail-circle-red.svg" alt="Mail" title="Mail" class="lazyload mr-10" /> Support@Travelner.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer">
+            <div class="container">
+                <div class="text-center d-block d-lg-none mb-30">
+                    <a href="#" target="_self" title="Logo">
+                        <img src="./images/logo-white.svg" data-src="./images/logo-white.svg" alt="Logo" title="Logo" class="lazyload" />
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-lg-3 d-none d-lg-block mb-xs-15">
+                        <h3 class="footer-title mb-10">USA - HEAD OFFICE (Travelner, LLC)</h3>
+                        <ul class="footer-nav-info text-medium">
+                            <li>
+                                <a href="mailto:support@travelner.com" target="_blank" title="support@travelner.com" class="text-link">
+                                    <img src="./images/sx.svg" data-src="./images/icon-mail-blue.svg" alt="Mail" title="Mail" class="lazyload mr-10" /> support@travelner.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+6562406830" target="_blank" title="+65 6240 6830" class="text-link">
+                                    <img src="./images/sx.svg" data-src="./images/icon-phone-blue.svg" alt="Phone" title="Phone" class="lazyload mr-10" /> +65 6240 6830
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <img src="./images/sx.svg" data-src="./images/icon-address-blue.svg" alt="Address" title="Address" class="lazyload mr-10" /> 19900 MacArthur Boulevard, Suite 1190, Irvine, CA 92612.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-xs-15">
+                        <h3 class="footer-title">ABOUT US</h3>
+                        <ul class="footer-nav mb-0">
+                            <li>
+                                <a href="#" target="_self" title="About Travelner">
+                                        About Travelner
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Our vision, mission and values">
+                                        Our vision, mission and values
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Why Us">
+                                        Why Us
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Blog">
+                                        Blog
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-xs-15">
+                        <h3 class="footer-title">HELP</h3>
+                        <ul class="footer-nav mb-0">
+                            <li>
+                                <a href="#" target="_self" title="FAQs">
+                                        FAQs
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Payment Guidelines">
+                                        Payment Guidelines
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Service Fees">
+                                        Service Fees
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Contact Us">
+                                        Contact Us
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Make a Payment">
+                                        Make a Payment
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-xs-15">
+                        <h3 class="footer-title">TERM OF USE</h3>
+                        <ul class="footer-nav mb-0">
+                            <li>
+                                <a href="#" target="_self" title="Disclamer">
+                                        Disclamer
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Legal Agreements">
+                                        Legal Agreements
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Privacy Policy">
+                                        Privacy Policy
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Refund Policy">
+                                        Refund Policy
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" title="Universal Term of Services">
+                                        Universal Term of Services
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-3 d-none d-lg-block mb-xs-15">
+                        <a href="#" target="_self" title="Find More Travelner Office" class="btn btn-block btn-tiny rounded-pill btn-find-more-ft">
+                                Find More Travelner Office <img src="./images/sx.svg" data-src="./images/icon-arrow-right-blue.svg" alt="Find More Travelner Office" title="Find More Travelner Office" class="lazyload" />
+                            </a>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-xs-15">
+                        <h3 class="footer-title">BEFORE OF FLY</h3>
+                        <ul class="footer-nav">
+                            <li>
+                                <a href="#" target="_self" title="Visa and Passport information">
+                                        Visa and Passport information
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 d-block d-lg-none mb-xs-15 mt-xs-15">
+                        <h3 class="footer-title">SINGAPORE OFFICE</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-5">
+                                <a href="mailto:support@travelner.com" target="_blank" title="Email: support@travelner.com">
+                                        Email: support@travelner.com
+                                    </a>
+                            </li>
+                            <li class="mb-5">
+                                <a href="tel:+6562406830" target="_blank" title="Hotline: +65 6240 6830">
+                                        Hotline: +65 6240 6830
+                                    </a>
+                            </li>
+                            <li class="mb-5">
+                                Address: #14-02 The Arcade, 11 Collyer Quay, Singapore, 049317.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 d-block d-lg-none mb-xs-15 mt-xs-15">
+                        <h3 class="footer-title">HONG KONG OFFICE</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-5">
+                                <a href="mailto:support@travelner.com" target="_blank" title="Email: support@travelner.com">
+                                        Email: support@travelner.com
+                                    </a>
+                            </li>
+                            <li class="mb-5">
+                                <a href="tel:+85281990206" target="_blank" title="Hotline: +852 8199 0206">
+                                        Hotline: +852 8199 0206
+                                    </a>
+                            </li>
+                            <li class="mb-5">
+                                Address: Unit 1411, 14/Floor, Cosco Tower, 183 Queen's Road Central, Sheung Wan, Hong Kong.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="text-xs-white text-xs-12">
+                            Prices are for online bookings, in USD and subject to availability. Additional booking fees may apply to bookings. Airfares change regularly and each fare has specific terms and conditions set by the airline such as refund and cancellation rules which
+                            affect the price. Fares are not guaranteed until Flights Ticket Vip confirms your booking and payment is made in full.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="text-xs-white text-xs-12">
+                            This website is not, neither does it intend to be, for persons subject to the laws or regulations of the United States and/or Canada. The information contained in this website are published in English and in dollars because that meets international standards.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center mt-20">
+                    <a href="#" target="_self" title="" class="d-inline-block my-5">
+                        <img src="./images/sx.svg" data-src="./images/visa.svg" alt="Visa" title="Visa" class="lazyload" />
+                    </a>
+                    <a href="#" target="_self" title="" class="d-inline-block my-5">
+                        <img src="./images/sx.svg" data-src="./images/master-card.svg" alt="Master Card" title="Master Card" class="lazyload" />
+                    </a>
+                    <a href="#" target="_self" title="" class="d-inline-block my-5">
+                        <img src="./images/sx.svg" data-src="./images/amex.svg" alt="American Express" title="American Express" class="lazyload" />
+                    </a>
+                    <a href="#" target="_self" title="" class="d-inline-block my-5">
+                        <img src="./images/sx.svg" data-src="./images/paypal.svg" alt="Paypal" title="Paypal" class="lazyload" />
+                    </a>
+                    <a href="#" target="_self" title="" class="d-inline-block my-5">
+                        <img src="./images/sx.svg" data-src="./images/shopper-approved.svg" alt="Shopper Approved" title="Shopper Approved" class="lazyload" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <div class="container">
+                <p class="mb-0 text-xs-12 text-xs-center w-xs-100">Copyright ©1997 - 2019 <a href="https://www.travelner.com" target="_self" title="www.travelner.com" class="text-link">www.travelner.com</a>.<br class="d-block d-lg-none"> All Rights Reserved.</p>
+                <div class="footer-right d-none d-lg-block">
+                    <div class="ft-dropdown-wrapper d-inline-block mr-5">
+                        <div class="has-dropdown">
+                            <a href="javascript:void(0)" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="EN" title="EN" class="mr-5" /> EN </a>
+                            <ul class="ft-dropdown mb-0">
+                                <li>
+                                    <a href="#" target="_self" title="VN"> <img src="./images/flag-vn.svg" alt="VN" title="VN" class="mr-5" /> VN </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self" title="EN"> <img src="./images/flag-uk.svg" alt="UK" title="UK" class="mr-5" /> EN </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ft-dropdown-wrapper d-inline-block">
+                        <div class="has-dropdown">
+                            <a href="javascript:void(0)" target="_self" title="USD">
+                                    USD
+                                </a>
+                            <ul class="ft-dropdown mb-0">
+                                <li>
+                                    <a href="#" target="_self" title="USD">USD </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_self" title="VND">VND </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.5.min.js"></script>
+    <script src="js/select2/select2.min.js"></script>
+    <script src="js/lazysizes.min.js"></script>
+    <script src="js/ls.bgset.min.js"></script>
+    <script src="js/typeahead.bundle.js"></script>
+
+    <script src="js/jquery.plugin.min.js"></script>
+    <script src="js/jquery.datepick.js"></script>
+    <script src="js/style.js?v=1"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(document).on("click", ".dropdown-menu", function(e) {
+                e.stopPropagation();
+            });
+            $('#fromCalendar').daterangepicker({
+                minDate: new Date(),
+                singleDatePicker: true,
+                autoApply: true,
+                "dateFormat": "M d yy"
+            });
+            var substringMatcher = function(strs) {
+                return function findMatches(q, cb) {
+                    var matches, substringRegex;
+
+                    matches = [];
+
+                    substrRegex = new RegExp(q, "i");
+
+                    $.each(strs, function(i, str) {
+                        if (substrRegex.test(str)) {
+                            matches.push(str);
+                        }
+                    });
+
+                    cb(matches);
+                };
+            };
+            var locations = ["Alabama Alabama Alabama Alabama Alabama Alabama Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+
+            $("#selectFromLocation .typeahead").typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1
+            }, {
+                name: "locations",
+                source: substringMatcher(locations),
+                templates: {
+                    header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
+                }
+            });
+
+            $("#selectToLocation .typeahead").typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1,
+            }, {
+                name: "locations",
+                source: substringMatcher(locations),
+                templates: {
+                    header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
+                }
+            });
+
+            $('#selectFromLocation .typeahead').bind('typeahead:render', function(ev, suggestion) {
+                $("#selectFromLocation .typeahead-title").html('Matching With ' + $("#selectFromLocation .tt-input").next().html())
+            });
+            $('#selectToLocation .typeahead').bind('typeahead:render', function(ev, suggestion) {
+                $("#selectToLocation .typeahead-title").html('Matching With ' + $("#selectToLocation .tt-input").next().html())
+            });
+
+            // expand content
+            $(".btn-expand-brief").on("click", function(e) {
+                let childEle = $($(this).data("target"));
+                let parent = $(this).parents(".brief-expand-effect")
+                let briefExpand = parent.find(".content-brief-expand");
+                parent.toggleClass("show");
+                if (parent.hasClass("show")) {
+                    briefExpand.css({
+                        height: briefExpand[0].scrollHeight + "px"
+                    });
+                    return;
+                }
+                briefExpand.css({
+                    height: ""
+                });
+            })
+            $(".brief-expand-effect.show").each(function(ind, val) {
+                    let briefExpand = $(val).find(".content-brief-expand");
+                    briefExpand.css({
+                        height: briefExpand[0].scrollHeight + "px"
+                    });
+                })
+                // let briefExpand = .find(".content-brief-expand");
+                // briefExpand.css({height: briefExpand[0].scrollHeight + "px"});
+                // Filter price range
+            $("#filter-price-range").slider({
+                range: true,
+                min: 1025,
+                max: 2534,
+                values: [1400, 2170],
+                slide: function(event, ui) {
+                    $("#filter-price-amount .left-value").html("$" + ui.values[0]);
+                    $("#filter-price-amount .right-value").html("$" + ui.values[1]);
+                }
+            });
+            $("#filter-price-amount .left-value").html("$" + $("#filter-price-range").slider("values", 0));
+            $("#filter-price-amount .right-value").html("$" + $("#filter-price-range").slider("values", 1));
+            // Filter times going range
+            $("#filter-time-going-range").slider({
+                range: true,
+                min: 0,
+                max: 1439,
+                step: 15,
+                values: [0, 1425],
+                slide: function(event, ui) {
+                    $("#filter-time-going-amount .left-value").html(formaMinutesToAmPm(ui.values[0]));
+                    $("#filter-time-going-amount .right-value").html(formaMinutesToAmPm(ui.values[1]));
+                }
+            });
+            $("#filter-time-going-amount .left-value").html(formaMinutesToAmPm($("#filter-time-going-range").slider("values", 0)));
+            $("#filter-time-going-amount .right-value").html(formaMinutesToAmPm($("#filter-time-going-range").slider("values", 1)));
+            // Filter times return range
+            $("#filter-time-return-range").slider({
+                range: true,
+                min: 1110,
+                max: 1290,
+                step: 1,
+                values: [1110, 1290],
+                slide: function(event, ui) {
+                    $("#filter-time-return-amount .left-value").html(formaMinutesToAmPm(ui.values[0]));
+                    $("#filter-time-return-amount .right-value").html(formaMinutesToAmPm(ui.values[1]));
+                }
+            });
+            $("#filter-time-return-amount .left-value").html(formaMinutesToAmPm($("#filter-time-return-range").slider("values", 0)));
+            $("#filter-time-return-amount .right-value").html(formaMinutesToAmPm($("#filter-time-return-range").slider("values", 1)));
+            // Filter times arrive range
+            $("#filter-time-arrive-range").slider({
+                range: true,
+                min: 1425,
+                max: 1440,
+                step: 1,
+                values: [1425, 1440],
+                slide: function(event, ui) {
+                    $("#filter-time-arrive-amount .left-value").html(formaMinutesToAmPm(ui.values[0]));
+                    $("#filter-time-arrive-amount .right-value").html(formaMinutesToAmPm(ui.values[1]));
+                }
+            });
+            $("#filter-time-arrive-amount .left-value").html(formaMinutesToAmPm($("#filter-time-arrive-range").slider("values", 0)));
+            $("#filter-time-arrive-amount .right-value").html(formaMinutesToAmPm($("#filter-time-arrive-range").slider("values", 1)));
+            // Filter duration going range
+            $("#filter-duration-going-range").slider({
+                range: "min",
+                min: 0,
+                max: 915,
+                step: 5,
+                value: 915,
+                slide: function(event, ui) {
+                    $("#filter-duration-going-amount .value").html(formatTimeDuration(ui.value));
+                }
+            });
+            $("#filter-duration-going-amount .value").html(formatTimeDuration($("#filter-duration-going-range").slider("value")));
+            // Filter duration return range
+            $("#filter-duration-return-range").slider({
+                range: "min",
+                min: 0,
+                max: 2415,
+                step: 5,
+                value: 2415,
+                slide: function(event, ui) {
+                    $("#filter-duration-return-amount .value").html(formatTimeDuration(ui.value));
+                }
+            });
+            $("#filter-duration-return-amount .value").html(formatTimeDuration($("#filter-duration-return-range").slider("value")));
+            // Filter duration arrive range
+            $("#filter-duration-arrive-range").slider({
+                range: "min",
+                min: 0,
+                max: 1155,
+                step: 5,
+                value: 1155,
+                slide: function(event, ui) {
+                    $("#filter-duration-arrive-amount .value").html(formatTimeDuration(ui.value));
+                }
+            });
+            $("#filter-duration-arrive-amount .value").html(formatTimeDuration($("#filter-duration-arrive-range").slider("value")));
+            //  function to format minutes to hours am or pm
+            function formaMinutesToAmPm(minutes) {
+                // 1h is 60 minutes
+                // 0h00 => 23h59 is 1440 minutes
+                // 12:00 am => 11:59 pm is 1439 minutes       
+                // input minutes (number integer) : 980 
+                // output : hh:mm am|pm : => 04:20 pm
+                minutes = +minutes;
+                if (minutes > 1440) {
+                    return;
+                }
+                if (minutes < 0) {
+                    return;
+                }
+                // count hour
+                let hour = Number.parseInt(+minutes / 60) % 12;
+                hour = hour == 0 ? 12 : hour;
+                // check pm or am
+                let pmOrAm = (+minutes - 720) >= 0 && minutes != 1440 ? " pm" : " am";
+                // count minutes
+                minute = minutes % 60;
+                // format to text
+                hourText = hour < 10 ? "0" + hour : hour;
+                minuteText = minute < 10 ? "0" + minute : minute;
+                return hourText + ":" + minuteText + pmOrAm;
+            }
+            // function to format time into 10h 15m
+            function formatTimeDuration(minutes) {
+                // 1h is 60 minutes
+                // 0h00 => 23h59 is 1440 minutes
+                // 12:00 am => 11:59 pm is 1439 minutes       
+                // input minutes (number integer): 980 
+                // ouput : hour"h" minutes"m" => 16h 20m
+                minutes = +minutes;
+                // if(minutes > 1440) {return;}
+                if (minutes < 0) {
+                    return;
+                }
+                // count hour
+                let hour = Number.parseInt(+minutes / 60);
+                // count minutes
+                minute = minutes % 60;
+                // format to text
+                hourText = hour < 10 ? "0" + hour : hour;
+                minuteText = minute < 10 ? "0" + minute : minute;
+                return hourText + "h " + minuteText + "m";
+            }
+            // Travelers select
+            $('#traveller').click(function(){
+                    $('.box-traveller').toggle();
+                })
+                $('#done').click(function(){
+                    $('.box-traveller').hide();
+                })
+                $(document).on('click', function (e) {
+                    if ($(e.target).closest("#traveller").length === 0 && $(e.target).closest("#box-traveller").length === 0) {
+                        $("#box-traveller").hide();
+                    }
+                });
+
+                $('#done').click(function(){
+                    let sum = 0;
+                    $('.input-number-wrapper input[type=number]').each(function(index, ele){
+                        $(ele).val(function(index, currentValue){
+                            sum += +currentValue;
+                            return currentValue;
+                        })
+                    })
+                    
+                    event.preventDefault();
+                    var title = $(".select2-selection__rendered").attr('title');
+                    // $('#info-class').text(title)
+                    $("#total-travel").val(`${sum + " Travelers, " + (title ? title : "")}`);
+
+                })
+                $(".input-number-wrapper").not(".disabled")
+                    .find(".sub")
+                    .click(function () {
+                        $(this)
+                            .next("input")
+                            .val(function (index, currentValue) {
+                                if (parseInt(currentValue) > 0) {
+                                    return parseInt(currentValue) - 1;
+                                } else return currentValue;
+                            });
+                    });
+                $(".input-number-wrapper").not(".disabled")
+                    .find(".plus")
+                    .click(function () {
+                        $(this)
+                            .prev("input")
+                            .val(function (index, currentValue) {
+                                return parseInt(currentValue) + 1;
+                            });
+                    });
+                    $(".selectCategory").select2({
+                placeholder: "Please select",
+                });
+        });
+    </script>
+</body>
+
+</html>

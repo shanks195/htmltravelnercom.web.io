@@ -1,0 +1,17 @@
+.dropdown {
+	position: relative;
+}
+.dropdown-box {
+	background-color: $white;
+	border: none;
+	box-shadow: 2px 5px 5px rgba(26, 25, 25, 0.1);
+	border-radius: 4px;
+}
+.dropdown-signin {
+	padding: 20px 30px 30px 30px;
+	width: 450px;
+	top: 30px !important;
+	left: unset !important;
+	right: -30px !important;
+	transform: none !important;
+}

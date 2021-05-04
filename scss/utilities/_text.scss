@@ -1,0 +1,376 @@
+.text-secondary {
+    color: $secondary-color !important;
+}
+.text-secondary-dark {
+    color: $secondary-dark !important;
+}
+
+a.text-hover-inherit:hover {
+    color: darken($secondary-color, 10%) !important;
+}
+a.text-secondary:focus, a.text-secondary:hover {
+    color: $secondary-color !important;
+}
+a {
+    &:hover {
+        color: #0046b8;
+        h3 {
+            color: #0046b8;
+        }
+    }
+}
+
+.text-black {
+    color: $dark-black;
+}
+
+.text-red {
+    color: $red !important;
+}
+
+.text-green {
+    color: $green !important;
+}
+
+.text-green-1 {
+    color: #219653;
+}
+
+.text-green-2 {
+    color: #008009 !important;
+}
+
+.text-brown {
+    color: $brown !important;
+}
+
+.text-success {
+    color: $success !important;
+}
+
+.text-main {
+    color: $primary-color !important;
+}
+
+.text-gray {
+    color: #6d7479 !important;
+}
+
+.text-gray-2 {
+    color: $gray;
+}
+.text-gray-4 {
+    color: $form-border;
+}
+
+.text-green-dark {
+    color: $green-dark !important;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+.text-black-dark {
+    color: $black-dark;
+}
+
+.text-dark-color {
+    color: $dark_color;
+}
+
+.text-base {
+    color: $text-base !important;
+}
+
+.text-blue-dark {
+    color: $blue-color-dark;
+}
+
+.text-accent {
+    color: $secondary-color !important;
+}
+
+.text-blue-3 {
+    color: #002D75
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-access {
+    color: $three-color;
+}
+
+.text-red {
+    color: $red;
+}
+
+.text-dark-blue {
+    color: #002D75;
+}
+
+.text-gray-light {
+    color: #A3A3A3 !important;
+}
+
+.text-blue-5 {
+    color: #005AEB!important;
+}
+
+.text-blue-6 {
+    color: #2E2E2E!important;
+}
+
+.text-blue-7 {
+    color: #002D75!important;
+}
+
+.text-grey-1 {
+    color: $title-color !important;
+}
+
+.text-grey-3 {
+    color: #828282 !important;
+}
+
+.text-grey-2 {
+    color: #4f4f4f !important;
+}
+
+.text-three {
+    color: #0048BC !important;
+}
+
+.text-bg1 {
+    color: $bg1 !important;
+}
+
+.text-time {
+    color: #4F4F4F !important;
+}
+.text-8 {
+    font-size: 8px !important;
+}
+.text-48 {
+    font-size: 48px !important;
+}
+
+.text-44 {
+    font-size: 44px !important;
+}
+
+.text-36 {
+    font-size: 36px !important;
+}
+
+.text-32 {
+    font-size: 32px !important;
+}
+
+.text-30 {
+    font-size: 30px !important;
+}
+
+.text-28 {
+    font-size: 28px !important;
+}
+
+.text-26 {
+    font-size: 26px !important;
+}
+
+.text-24 {
+    font-size: 24px !important;
+}
+
+.text-22 {
+    font-size: 22px !important;
+}
+
+.text-20 {
+    font-size: 20px !important;
+}
+
+.text-18 {
+    font-size: 18px !important;
+}
+
+.text-16 {
+    font-size: 16px !important;
+}
+
+.text-14 {
+    font-size: 14px !important;
+}
+
+.text-13 {
+    font-size: 13px !important;
+}
+
+.text-12 {
+    font-size: 12px !important;
+}
+
+.text-11 {
+    font-size: 11px !important;
+}
+
+.text-10 {
+    font-size: 10px !important;
+}
+
+.text-normal {
+    font-weight: normal !important;
+}
+
+.text-medium {
+    font-weight: 500 !important;
+}
+
+.text-medium-light {
+    font-weight: 400 !important;
+}
+
+@include media-breakpoint-down(md) {
+    .text-gray-2-xs {
+        color: $gray;
+    }
+    .text-xs-gray-dark {
+        color: $gray;
+    }
+    .text-xs-left {
+        text-align: left !important;
+    }
+    .text-xs-center {
+        text-align: center !important;
+    }
+    .text-xs-white {
+        color: $white !important;
+    }
+    .text-xs-12 {
+        font-size: 12px !important;
+    }
+    .text-xs-14 {
+        font-size: 14px!important;
+    }
+    .text-xs-16 {
+        font-size: 16px !important;
+    }
+    .text-xs-18 {
+        font-size: 18px !important;
+    }
+    .text-xs-20 {
+        font-size: 20px !important;
+    }
+    .text-xs-24 {
+        font-size: 24px !important;
+    }
+    .text-xs-28 {
+        font-size: 28px !important;
+    }
+    .font-xs-weight-light {
+        font-weight: 400;
+    }
+    .text-xs-ellipsis {
+        @include textEllipsis();
+    }
+    .text-xs-red {
+        color: $red !important;
+    }
+    .text-xs-green {
+        color: #008009 !important;
+    }
+    .text-xs-black {
+        color: $black !important;
+    }
+    .text-xs-medium {
+        font-weight: 500 !important;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .text-lg-normal {
+        font-weight: normal !important;
+    }
+    .text-lg-white {
+        color: white !important;
+        &:hover {
+            color: white !important;
+        }
+    }
+    .text-lg-44 {
+        font-size: 44px !important;
+    }
+    .text-lg-42 {
+        font-size: 42px !important;
+    }
+    .text-lg-36 {
+        font-size: 36px !important;
+    }
+    .text-lg-32 {
+        font-size: 32px !important;
+    }
+    .text-lg-24 {
+        font-size: 24px !important;
+    }
+    .text-lg-22 {
+        font-size: 20px !important;
+    }
+    .text-lg-20 {
+        font-size: 20px !important;
+    }
+    .text-lg-18 {
+        font-size: 18px !important;
+    }
+    .text-lg-16 {
+        font-size: 16px !important;
+    }
+    .text-lg-12 {
+        font-size: 12px !important;
+    }
+}
+
+.text-bolder {
+    font-weight: 700;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+a.text-link {
+    transition: color 0.3s;
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.text-ellipsis {
+    @include textEllipsis();
+}
+
+.text-ellipsis-1-line {
+    -webkit-line-clamp: 1;
+}
+
+.text-line-through {
+    text-decoration: line-through;
+}
+
+.text-decoration-underline {
+    text-decoration: underline !important;
+}
+
+.text-line-before {
+    padding-left: 8px;
+    border-left: 2px solid #1f69b2;
+}
+
+.text-under {
+    text-decoration: underline;
+    @include media-breakpoint-down(md) {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,81 @@
+.group-tabs {
+	.nav {
+		li a, li label {
+			background-color: #F5F5F5;
+			color: #4F4F4F;
+			padding: 10px 35px;
+			margin-bottom:0;
+			&.active, &:hover {
+				background-color: $secondary-light;
+				color: $secondary-color;
+			}
+			&:focus {
+				box-shadow: none;
+			}
+		}
+		li input{
+			display: none;
+		}
+		li input:checked ~ label{
+			background-color: $secondary-light;
+			color: $secondary-color;
+		}
+		@include media-breakpoint-down(md) {
+			border: 1px solid #1889D4;
+			border-radius: 4px;
+			li a, li label {
+				background-color: transparent;
+				color: $white;
+				border-radius: 0 !important;
+				margin-bottom:0;
+				padding: 10px 15px;
+				&.active, &:hover {
+					background-color: #1889D5;
+					color: $white;
+				}
+			}
+			li input:checked ~ label{
+				background-color: #1889D5;
+				color: $white;
+			}
+		}
+	}
+}
+
+.group-tabs-flight {
+	.nav {
+		li a {
+			background-color: $white;
+			color: #4F4F4F;
+			padding: 10px 35px;
+			&.active, &:hover {
+				background-color: $secondary-light;
+				color: $secondary-color;
+			}
+			&:focus {
+				box-shadow: none;
+			}
+		}
+		button{
+			background-color: $secondary-color;
+			color: $white;
+			padding: 10px 24px !important;
+			border-radius: 4px;
+			border:none;
+		}
+		@include media-breakpoint-down(md) {
+			border: 1px solid #1889D4;
+			border-radius: 4px;
+			li a {
+				background-color: transparent;
+				color: $white;
+				border-radius: 0 !important;
+				padding: 10px 15px;
+				&.active, &:hover {
+					background-color: #1889D5;
+					color: $white;
+				}
+			}
+		}
+	}
+}

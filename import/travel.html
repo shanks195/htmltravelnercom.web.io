@@ -1,0 +1,100 @@
+<div class=" py-30">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="media">
+                    <div class="media-body">
+                        <h2>Explore travel inspiration</h2>
+                        <p class="text-xs-14">Here’s a quick overview of the process, from start to finish.</p>
+                    </div>
+                    <a href="#" target="_self" title="View All" class="mt-2 mt-lg-40 d-flex align-items-center">
+                        <span class="text-xs-14 text-18 mr-1  text-secondary">View all</span>
+                        <img src="./images/icon-right-small.svg" title="icon-right" alt="icon-right">
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 box-click h-100 mt-lg-30 mt-10 position-relative pr-xs-0">
+                <div class="click-slide-prev hidden-xs">
+                    <img class="prev_click" src="./images/slide-left.png" title="icon-prev" alt="icon-prev">
+                </div>
+                <div class="click-slide-next hidden-xs" style="transform: translate(18px,-50%);">
+                    <img class="next_click" src="./images/slide-right.png" title="icon-next" alt="icon-next">
+                </div>
+                <div class=" slider-travel mxc-15 d-flex">
+                    <div class="h-100 shadow-2  shadow-xs-5  d-flex border-radius-4">
+                        <a href="#" target="_self" title="travel">
+                            <img src="./images/sx.svg" data-src="./images/travel-germany.png" alt="Germany" title="Germany" class="lazyload">
+                            <div class=" p-15">
+                                <h3 class="text-xs-14">Frolic around Freiburg, Germany</h3>
+                                <p class="hidden-xs">Explore the city’s medieval architecture enchanted-esque forests and vineyards.</p>
+                                <time>29 July, 2020</time>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="h-100 shadow-2 border-radius-4  shadow-xs-5  d-flex">
+                        <a href="#" target="_self" title="travel">
+                            <img src="./images/sx.svg" data-src="./images/travel-visit.png" alt="Earth" title="Earth" class="lazyload">
+                            <div class=" p-15">
+                                <h3 class="text-xs-14">Your Personal Guide to 5 Best Places to Visit on Earth</h3>
+                                <p class="hidden-xs">When it comes to tackling overtourism, there’s always a win-win way to travel.</p>
+                                <time>July 27, 2020</time>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="h-100 shadow-2 border-radius-4  shadow-xs-5 d-flex">
+                        <a href="#" target="_self" title="travel">
+                            <img src="./images/sx.svg" data-src="./images/travel-london.png" alt="London" title="London" class="lazyload">
+                            <div class=" p-15">
+                                <h3 class="text-xs-14">Lookalike cities: London</h3>
+                                <p class="hidden-xs">
+                                    When it comes to tackling overtourism, there’s always a win-win way to travel.</p>
+                                <time>July 18, 2020</time>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="h-100 shadow-2 border-radius-4  shadow-xs-5  d-flex">
+                        <a href="#" target="_self" title="travel">
+                            <img src="./images/sx.svg" data-src="./images/travel-visit.png" alt="Earth" title="Earth" class="lazyload">
+                            <div class=" p-15">
+                                <h3 class="text-xs-14">Your Personal Guide to 5 Best Places to Visit on Earth</h3>
+                                <p class="hidden-xs">When it comes to tackling overtourism, there’s always a win-win way to travel.</p>
+                                <time>July 27, 2020</time>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="h-100 shadow-2 border-radius-4  shadow-xs-5 d-flex">
+                        <a href="#" target="_self" title="travel">
+                            <img src="./images/sx.svg" data-src="./images/travel-london.png" alt="London" title="London" class="lazyload">
+                            <div class=" p-15">
+                                <h3 class="text-xs-14">Lookalike cities: London</h3>
+                                <p class="hidden-xs">
+                                    When it comes to tackling overtourism, there’s always a win-win way to travel.</p>
+                                <time>July 18, 2020</time>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.slider-travel').slick({
+        infinite: true,
+        dots: true,
+        speed: 300,
+        prevArrow: $('.prev_click'),
+        nextArrow: $('.next_click'),
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                variableWidth: true,
+                dots: false,
+            }
+        }]
+    });
+</script>
