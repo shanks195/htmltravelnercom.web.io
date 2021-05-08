@@ -126,3 +126,38 @@
 		}
 	}
 }
+.calendar-item-large {
+	background-image: url('../images/icon-check-in.svg');
+	background-repeat: no-repeat;
+	background-position: top 6px left 6px!important;
+	margin-bottom: 0;
+	.calendar {
+		margin-left: 45px;
+		border: none !important;
+		font-weight: 500;
+		max-width: calc(100% - 45px);
+		outline: none;
+		padding: 0;
+		cursor: auto;
+		color: $black-dark;
+	}
+	.append-date-picker {
+		margin-left: 45px;
+		color: #828282;
+	}
+	@include media-breakpoint-down(md){
+		background-position: top 3px left 6px!important;
+	}
+}
+.h-44 .calendar-item-large:nth-of-type(2), .box-date-large .calendar-item-large:nth-of-type(2){
+	@include media-breakpoint-down(md){
+		background-image: none;
+		.calendar{
+			margin-left: 20px;
+		}
+		.append-date-picker {
+			margin-left: 20px;
+		}
+	}
+	
+}

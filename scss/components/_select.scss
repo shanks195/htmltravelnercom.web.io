@@ -10,14 +10,18 @@ $border-radius-select-box: 4px;
 	.select2-selection__arrow {
 		b {
 			width: 14px !important;
-			height: 8px !important;
+			height: 12px !important;
 			background-image: url('../images/icon-arrow-down.svg') !important;
+			background-repeat: no-repeat;
+			background-position: center;
+			transform: translateY(-50%);
 		}
 	}
 	&.select2-container--open {
 		.select2-selection__arrow {
 			b {
 				background-image: url('../images/icon-arrow-up.svg') !important;
+				transform: translateY(-50%) rotate(180deg);
 			}
 		}
 		.select2-selection--single {
@@ -210,17 +214,13 @@ $border-radius-select-box: 4px;
 		.select2-selection__arrow {
 			height: 54px !important;
 			b {
+				margin-top: 0;
 				width: 14px !important;
 				height: 8px !important;
 				background-image: url('../images/icon-arrow-down.svg') !important;
 			}
 		}
 		&.select2-container--open {
-			.select2-selection__arrow {
-				b {
-					background-image: url('../images/icon-arrow-up.svg') !important;
-				}
-			}
 			.select2-selection--single {
 				background-color: $white !important;
 				border-radius: $border-radius-select-box !important;
@@ -259,7 +259,7 @@ $border-radius-select-box: 4px;
 		}
 	}
 	.select2-container--default .select2-selection--single .select2-selection__arrow b{
-		top:30%;
+		top:50%;
 		margin-top: 0;
 	}
 }
@@ -271,5 +271,53 @@ $border-radius-select-box: 4px;
 	cursor: pointer;
 	&:focus{
 		outline: none !important;
+	}
+}
+.can-help{
+	.select2-container{
+		background-color: $white;
+		border: 1px solid #C8CACD;
+		border-radius: 4px;
+		height: 56px !important;
+		.select2-selection__arrow b{
+			background-image: url('../images/icon-arrow-down-gray.svg') !important;
+			background-position: center;
+			background-repeat: no-repeat;
+			
+		}
+		.select2-selection--single{
+			height: 56px !important;
+			.select2-selection__arrow{
+				height: 56px !important;
+			}
+			.select2-selection__rendered{
+				padding: 0 20px !important;
+				height: 56px !important;
+				line-height: 56px !important;
+			}
+		}
+	}
+	@include media-breakpoint-down(md){
+		.select2-container{
+			height: 30px !important;
+			border: none;
+			.select2-selection__arrow b{
+				background-image: url('../images/icon-choose.svg') !important;
+			}
+			.select2-selection--single{
+				height: 30px !important;
+				.select2-selection__placeholder{
+					font-size: 14px;
+				}
+				.select2-selection__arrow{
+					height: 30px !important;
+				}
+				.select2-selection__rendered{
+					height: 30px !important;
+					line-height: 30px !important;
+					padding-left: 0 !important;
+				}
+			}
+		}
 	}
 }

@@ -202,7 +202,7 @@
                                 </div>
                                 <!-- day of birth -->
                                 <p class="text-14 text-grey-2 text-medium">
-                                    Day of birth <span class="text-main">*</span></p>
+                                    Day of birth <span class="text-danger">*</span></p>
                                 <div class="d-flex form-date-selection">
                                     <label for="atttt" class="d-block mb-0 text-12 text-grey-3 position-relative flex-grow-1" role="button">
                                         <div class="form-selection text-14 w-100">
@@ -238,7 +238,7 @@
                                 <!-- gender -->
                                 <div class="my-10 d-flex align-items-center">
                                     <p class="mb-0 text-14 text-grey-2 text-medium">
-                                        Gender <span class="text-main">*</span></p>
+                                        Gender <span class="text-danger">*</span></p>
                                     <label for="gender-select-male" class="mb-0 text-16 mx-auto">
                                         <input type="radio" id="gender-select-male" name="gender">
                                         Male
@@ -285,7 +285,7 @@
                                 </label>
                                 <!-- day of birth -->
                                 <p class="text-14 text-grey-2 text-medium">
-                                    Day of birth <span class="text-main">*</span>
+                                    Day of birth <span class="text-danger">*</span>
                                 </p>
                                 <div class="d-flex form-date-selection">
                                     <label for="atttt" class="d-block form-group mb-0 text-12 text-grey-3 position-relative flex-grow-1" role="button">
@@ -322,7 +322,7 @@
                                 <!-- gender -->
                                 <div class="my-20 d-flex align-items-center">
                                     <p class="mb-0 text-14 text-grey-2 text-medium">
-                                        Gender <span class="text-main">*</span></p>
+                                        Gender <span class="text-danger">*</span></p>
                                     <label for="gender-select-male" class="mb-0 text-16 mx-auto">
                                         <input type="radio" id="gender-select-male" name="gender" checked>
                                         Male
@@ -371,7 +371,9 @@
                                         <!--  -->
                                         <label for="" class="mb-10 d-block label-cus-2">
                                             <input type="text" placeholder="" value="TAS Redress #" class="form-control text-13 pr-30 h-40">
-                                            <img src="./images/icon-info-secondary-12.svg" alt="info" title="info" class="info-blue">
+                                            <div class="info-blue" data-toggle="popover" data-content='<p class="mb-0">TAS Redress #</p>'>
+                                                <img src="./images/icon-info-secondary-12.svg" alt="info" title="info" class="">
+                                            </div>
                                         </label>
                                         <!--  -->
                                         <p class="border-gray-1 text-13 text-medium text-grey-1 h-40 rounded d-flex align-items-center">
@@ -453,6 +455,12 @@
                         return;
                     }
                 });
+                // popover 
+                $(".info-blue").popover({
+                    container: "body",
+                    content: "element",
+                    html : true
+                })
             });
         </script>
     </body>

@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 16 2021 10:17:23 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* hotel-homepage.html
+* scss/_class.scss
+* scss/components/_button.scss
+
+
+Created files:
+* .autogit/logs/log-16-3-2021-9-47-6.txt
+* images/dots.png
+* images/icon-place.svg
+* "images/search flight.png"
+
+
+Deleted files:
+
+
+Renamed files:

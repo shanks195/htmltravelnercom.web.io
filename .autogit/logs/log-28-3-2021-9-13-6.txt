@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Apr 28 2021 09:13:06 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* hotel-homepage.html
+* package-homepage.html
+* tour-homepage.html
+
+
+Created files:
+* .autogit/logs/log-28-3-2021-8-42-45.txt
+* import/faqs.html
+
+
+Deleted files:
+
+
+Renamed files:

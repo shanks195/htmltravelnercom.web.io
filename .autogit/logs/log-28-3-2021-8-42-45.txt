@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Wed Apr 28 2021 08:42:45 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* scss/components/_box.scss
+* scss/utilities/_bg.scss
+* tour-homepage.html
+
+
+Created files:
+* "images/Travelner.com (Desktop) (6).zip"
+* "images/Travelner.com (Desktop) (6)/mol/card/flight/Rectangle 43.svg"
+* "images/Travelner.com (Desktop) (6)/mol/card/flight/Rectangle 44.svg"
+* "images/Travelner.com (Desktop) (7).zip"
+* "images/Travelner.com (Desktop) (8).zip"
+* images/hot-deal.svg
+
+
+Deleted files:
+
+
+Renamed files:

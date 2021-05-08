@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 16 2021 11:48:20 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* homepage-flight.html
+* hotel-homepage.html
+* package-homepage.html
+
+
+Created files:
+* .autogit/logs/log-16-3-2021-11-17-59.txt
+
+
+Deleted files:
+
+
+Renamed files:

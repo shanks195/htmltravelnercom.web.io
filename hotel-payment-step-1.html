@@ -159,7 +159,7 @@
                           </div>
                           <div class="px-10 d-flex flex-column border-secondary-light-bottom pb-20 text-14">
                             <span class="mb-10">Total length of stay:</span>
-                            <span class="text-medium mb-20" id="total-length">2 nights</span>
+                            <span class="text-medium mb-20" id="total-length">1 nights</span>
                             <a href="#" title="" target="_self" class="text-three" data-toggle="modal" data-target="#ChangeDate">Traveling on different dates?</a>
                           </div>
                           <div class="px-10 py-20 d-flex flex-column text-14">
@@ -575,7 +575,7 @@
                             <div class="d-flex">
                                 <div class="area-codes w-50">
                                     <div class="form-group w-100">
-                                        <div class="position-relative h-48">
+                                        <div class="position-relative">
                                             <select class="selectAreacodes">
                                                     <option></option>
                                                     <option value="VN +84">VN +84</option>
@@ -818,52 +818,82 @@
                 $(".selectTime").select2({
                     placeholder: "I don't know"
                 })
+                let d1 = new Date();
+                var d2 = new Date();
+                d2.setDate(d2.getDate()+1)
+                d2.setHours(12,0,0,0);
+                let datepickerBegin = d1
+                let datepickerEnd = d2
+                let diffrence =Math.round((datepickerEnd - datepickerBegin) / 86400000)
                 $('#fromCalendar').daterangepicker({
                     singleDatePicker: true,
                     autoApply: true,
                     minDate: new Date(),
                 },function(start){
-                    drptBegin = start.format('dddd, MMM DD, YYYY')
+                    d1 = new Date(start)
+                    console.log(d1)
+                    d1.setHours(12,0,0,0)
+                    datepickerBegin = d1
+                    console.log(datepickerBegin)
+                    if(d1 >= d2)
+                    {
+                        d2.setDate(d1.getDate()+1)
+                        d2.setMonth(d1.getMonth())
+                        d2.setHours(12,0,0,0)
+                        $('#toCalendar').daterangepicker({
+                            minDate: new Date(d2),
+                            singleDatePicker: true,
+                            autoApply: true
+                        });
+                    }
+                    datepickerEnd = d2
+                    diffrence = Math.round((datepickerEnd - datepickerBegin) / 86400000)
+                    let dayBegin = new Date(start)
+                    $('#toCalendar').daterangepicker({
+                        minDate: new Date(dayBegin.setDate(dayBegin.getDate()+1)),
+                        singleDatePicker: true,
+                        autoApply: true
+                    });
+                    $('#toCalendar').on('hide.daterangepicker', function(ev, picker) {
+                        Dayend = picker.startDate.format('YYYY-MM-DD');
+                        datepickerEnd = new Date('"'+Dayend+'"');
+                        $("#lb-to-day").html(moment(new Date(picker.startDate).setDate(new Date(picker.startDate).getDate())).format("dddd"));
+                        d2 = new Date(picker.startDate)
+                        d2.setHours(12,0,0,0)
+                        diffrence = Math.round((datepickerEnd - datepickerBegin) / 86400000)
+                        if(d1 >= d2){
+                                d2.setDate(d1.getDate()+1)
+                                d2.setMonth(d1.getMonth())
+                                $('#toCalendar').daterangepicker({
+                                minDate: new Date(d2),
+                                singleDatePicker: true,
+                                autoApply: true
+                            });
+                        }
+                    });
                 });
-                let datepickerBegin = new Date()
-                let datepickerEnd = new Date().setDate(new Date().getDate()+1)
-                let diffrence = (datepickerEnd - datepickerBegin) / 86400000;
-                console.log(diffrence)
-                let d1 =null;
-                let drpt = null;
-                let drptBegin = moment(new Date()).format('ddd, MMM DD, YYYY');
+                $('#toCalendar').daterangepicker({
+                    minDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+                    singleDatePicker: true,
+                    autoApply: true,
+                },function(end){
+                    let drptEnd = end.format('dddd');
+                    $("#lb-to-day").html(drptEnd);
+                    d2 = new Date(end);
+                    d2.setHours(12,0,0,0)
+                    datepickerEnd = d2;
+                    diffrence = Math.round((datepickerEnd - datepickerBegin) / 86400000)
+                    console.log(diffrence,(datepickerEnd - datepickerBegin) / 86400000 )
+                }); 
                 $("#lb-from-day").html(moment(new Date()).format("dddd"));
                 $("#lb-to-day").html(moment(new Date().setDate(new Date().getDate() + 1)).format("dddd"));
                 $('#room-check-in').html(moment(new Date()).format("ddd, MMM DD, YYYY"));
                 $('#room-check-out').html(moment(new Date().setDate(new Date().getDate() + 1)).format("ddd, MMM DD, YYYY"));
-                $('#fromCalendar').on('hide.daterangepicker', function(ev, picker) {
-                    Daybegin = picker.startDate.format('YYYY-MM-DD');
-                    datepickerBegin = new Date('"'+Daybegin+'"');
-                    $("#lb-from-day").html(moment(new Date(picker.startDate)).format("dddd"));
-                    $("#lb-to-day").html(moment(new Date(picker.startDate).setDate(new Date(picker.startDate).getDate() + 1)).format("dddd"));
-                    drptBegin = moment(new Date(picker.startDate)).format('ddd, MMM DD, YYYY');
-                    d1 = new Date(Daybegin);
-                    d1.setDate(d1.getDate() + 1);
-                    $('#toCalendar').daterangepicker({
-                    minDate: new Date(d1),
-                    singleDatePicker: true,
-                    autoApply: true
-                    });
-                    $('#toCalendar').on('hide.daterangepicker', function(ev, picker) {
-                        let Dayend = picker.startDate.format('YYYY-MM-DD');
-                        console.log(Dayend)
-                        datepickerEnd = new Date('"'+Dayend+'"');
-                        let drptEnd = moment(new Date(picker.startDate)).format('dddd');
-                        $("#lb-to-day").html(drptEnd);
-                        drpt = moment(new Date(picker.startDate)).format('ddd, MMM DD, YYYY');
-                        d1 = moment(new Date(picker.startDate)).format('ddd, MMM DD, YYYY');
-                        diffrence = (datepickerEnd - datepickerBegin) / 86400000
-                    });
-                });
                 $(".btn-change").on("click", function(e){
-                    $('#room-check-in').html(drptBegin);
-                    $("#room-check-out").html(moment(new Date(d1)).format("ddd, MMM DD, YYYY"));
-                    $('#check-out-mobile').html(moment(new Date(d1)).format("ddd, MMM DD"));
+                    $('#room-check-in').html(moment(new Date(d1)).format('ddd, MMM DD, YYYY'));
+                    $('#check-in-mobile').html(moment(new Date(d1)).format('ddd, MMM DD'));
+                    $("#room-check-out").html(moment(new Date(d2)).format('ddd, MMM DD, YYYY'));
+                    $('#check-out-mobile').html(moment(new Date(d2)).format('ddd, MMM DD'));
                     $('#total-length').text(diffrence+" nights");
                     $('#total-length-mobile').text(diffrence+" night, 1 room")
                 })
@@ -884,17 +914,6 @@
                         cb(matches);
                     };
                 };
-                
-                $('#toCalendar').daterangepicker({
-                    minDate: new Date(new Date().setDate(new Date().getDate() + 1)),
-                    singleDatePicker: true,
-                    autoApply: true,
-                },function(end){
-                    d1 = end.format('dddd, MMM DD, YYYY');
-                    datepickerEnd = new Date(end);
-                    diffrence = Math.ceil((datepickerEnd - datepickerBegin) / 86400000)
-                })
-                
                 var substringMatcher = function (strs) {
                     return function findMatches(q, cb) {
                         var matches, substringRegex;

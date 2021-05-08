@@ -1,0 +1,110 @@
+.border-secondary-1 {
+    border: 1px solid $secondary-color;
+}
+.border-top-6px {
+    border-top-width: 6px;
+}
+.tab-menu-1 {
+    .tab-item {
+        display: inline-block;
+        color: $blue-color-dark;
+        text-align: center;
+        padding: 10px;
+        flex-grow: 1;
+        transition: all 0.3s;
+        &:not(:last-of-type) {
+            border-right: 1px solid $secondary-color;
+        }
+        &.active,
+        &:hover {
+            background: $green-dark;
+            color: #fff;
+        }
+    }
+}
+.box-blue-1 {
+    width: 38px;
+    height: 38px;
+    border-bottom-left-radius: 0 !important;
+}
+.text-medium-900 {
+    font-weight: 900;
+}
+.dot-middle-1 {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #828282;
+}
+.bg-filter-range {
+    background: url(../images/bg-filter-range.svg) no-repeat;
+    background-position: bottom left;
+}
+.filter-text-run {
+    .left-run {
+        min-width: 112px;
+        background: $secondary-color;
+        position: absolute;
+        bottom: calc(100% + 18px);
+        transform: translateX(-8px);
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            transform: translateX(50%);
+            width: 6px;
+            border: 4px solid transparent;
+            border-top-color:  $secondary-color;
+        }
+    }
+    .right-run {
+        min-width: 112px;
+        background:  $secondary-color;
+        position: absolute;
+        bottom: calc(100% + 18px);
+        transform: translateX(calc(-100% + 8px));
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            right: 0%;
+            transform: translateX(-50%);
+            width: 6px;
+            border: 4px solid transparent;
+            border-top-color:  $secondary-color;
+        }
+    }
+    .merge-run {
+        width: calc(100% + 16px);
+        left: 50%;
+        text-align: center;
+        transform: translateX(-50%);
+        background:  $secondary-color;
+        position: absolute;
+        bottom: calc(100% + 18px);
+        display: none;
+        
+        
+    }
+    &.merge {
+        .merge-run {
+            display: block;
+            z-index: 3;
+        }
+        .left-run {
+            background: transparent;
+            color: transparent;
+        }
+        .right-run {
+            background: transparent;
+            color: transparent;
+        }
+    }
+}
+.flex-basic-176 {
+    flex: 0 1 176px;
+}

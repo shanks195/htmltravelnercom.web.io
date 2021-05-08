@@ -259,13 +259,22 @@
                                                     </div>
                                                     <div class="mt-lg-25 mt-15 d-lg-none">
                                                         <label class="text-medium text-xs-14">Departure - Return <span class="text-red">*</span></label>
-                                                        <div class="box-date-large d-flex h-56 h-xs-40">
-                                                            <div class="d-flex w-100">
-                                                                <div class="">
-                                                                    <label for="" class="calendar-item-quotes h-100">
-                                                                        <input id="fromCalendar-mobile" class="calendar p-0 pt-5 mt-1" type="text" value="01 May 2020" readonly />
+                                                        <div class="h-44">
+                                                            <div class="d-flex align-items-center h-100 overflow-hidden rounded position-relative bg-xs-white border-gray-1">
+                                                                <input id="fromCalendar-mobile" class="calendar p-0 pt-5" type="text" readonly style="visibility: hidden; height: 0; width: 0;" />
+                                                                <label class="calendar-item-large h-100 w-50" for="fromCalendar-mobile">
+                                                                        <div class="from-date-wrapper w-100">
+                                                                            <div class="calendar text-xs-14"></div>
+                                                                            <div class="append-date-picker text-xs-14">Sunday</div>
+                                                                        </div>
+                                                                        <img src="./images/icon-horizontal-line.svg" class="position-absolute" style="top: 11px; left: 50%; z-index: 1;" />
                                                                     </label>
-                                                                </div>
+                                                                <label class="calendar-item-large h-100 w-50 d-flex" for="fromCalendar-mobile">
+                                                                        <div class="to-date-wrapper w-100">
+                                                                            <div class="calendar text-xs-14"></div>
+                                                                            <div class="append-date-picker text-xs-14">Sunday</div>
+                                                                        </div>
+                                                                </label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -423,7 +432,7 @@
                                         <div class="col-12 px-lg-10 px-15">
                                         <div class="mt-lg-25 mt-15 d-flex align-items-end justify-content-between">
                                             <div class="w-100">
-                                                <label class="text-medium hidden-xs">Note</span></label>
+                                                <label class="text-medium hidden-xs">Note</label>
                                                 <textarea name="" rows="5" class="box-note border-gray w-100" placeholder="Tell us about your trip."></textarea>
                                             </div>
                                         </div>
@@ -819,28 +828,6 @@
                         cb(matches);
                     };
                 };
-                var drp = $()
-                $('#fromCalendar-mobile').daterangepicker({
-                    autoApply: true,
-                    minDate: new Date()
-                });
-                var substringMatcher = function (strs) {
-                    return function findMatches(q, cb) {
-                        var matches, substringRegex;
-
-                        matches = [];
-
-                        substrRegex = new RegExp(q, "i");
-
-                        $.each(strs, function (i, str) {
-                            if (substrRegex.test(str)) {
-                                matches.push(str);
-                            }
-                        });
-
-                        cb(matches);
-                    };
-                };
                 $('#toCalendar').daterangepicker({
                     singleDatePicker: true,
                     autoApply: true,
@@ -975,6 +962,43 @@
                                 return parseInt(currentValue) + 1;
                             });
                     });
+                    $(".from-date-wrapper .calendar").html(moment(new Date()).format("DD MMM YYYY"));
+                    $(".to-date-wrapper .calendar").html(moment(new Date().setDate(new Date().getDate() + 1)).format("DD MMM YYYY"));
+                    $(".from-date-wrapper .append-date-picker").html(moment(new Date()).format("dddd"));
+                    $(".to-date-wrapper .append-date-picker").html(moment(new Date().setDate(new Date().getDate() + 1)).format("dddd"));
+
+                    $("#fromCalendar-mobile").daterangepicker({
+                        minDate: new Date(),
+                        autoApply: $(window).width() < 992 ? false : true
+                    },
+                    function (start, end) {
+                        $(".from-date-wrapper .calendar").html(moment(new Date(start)).format("DD MMM YYYY"));
+                        $(".to-date-wrapper .calendar").html(moment(new Date(end)).format("DD MMM YYYY"));
+                        $(".from-date-wrapper .append-date-picker").html(moment(new Date(start)).format("dddd"));
+                        $(".to-date-wrapper .append-date-picker").html(moment(new Date(end)).format("dddd"));
+                    });
+                    $(".daterangepicker").addClass('main-homepage');
+                    $(".drp-buttons .applyBtn").addClass("btn-secondary").html("Confirm Dates");
+                    $(".drp-buttons .cancelBtn").addClass("bg-white text-secondary").html("Clear Dates");
+                    $('.ranges').css("float", "none");
+                    $('.ranges').html("<h2 class='p-10 mx-10 pt-0 pb-0 mb-0 text-16 border-bottom'><strong>Confirm your travel dates to see prices</strong></h2>");
+                    var substringMatcher = function(strs) {
+                        return function findMatches(q, cb) {
+                            var matches, substringRegex;
+
+                            matches = [];
+
+                            substrRegex = new RegExp(q, "i");
+
+                            $.each(strs, function(i, str) {
+                                if (substrRegex.test(str)) {
+                                    matches.push(str);
+                                }
+                            });
+
+                            cb(matches);
+                        };
+                };
             });
         </script>
     </body>

@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 03 2021 15:47:36 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* mytrip-desktop.html
+
+
+Created files:
+* .autogit/logs/log-3-4-2021-15-17-19.txt
+
+
+Deleted files:
+
+
+Renamed files:

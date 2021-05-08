@@ -1,0 +1,28 @@
+-------------------- Auto-Git Log --------------------
+		Tue Apr 27 2021 16:40:48 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* scss/_class.scss
+* scss/components/_box.scss
+* scss/prepros.config
+
+
+Created files:
+* .autogit/logs/log-27-3-2021-16-10-31.txt
+* "images/Travelner.com (Desktop) (2).zip"
+* "images/Travelner.com (Desktop) (3).zip"
+* "images/Travelner.com (Desktop) (4).zip"
+* "images/Travelner.com (Desktop) (5).zip"
+* images/icon-bar-col.svg
+* images/icon-bar-row.svg
+* images/icon-barrr.svg
+* images/icon-barsss.svg
+
+
+Deleted files:
+
+
+Renamed files:

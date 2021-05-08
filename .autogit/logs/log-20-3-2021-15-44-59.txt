@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Tue Apr 20 2021 15:44:59 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* js/style.js
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon Apr 26 2021 08:29:25 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* mytrip.html
+
+
+Created files:
+* "images/Travelner.com (Desktop) (1).zip"
+* mytrip-desktop.html
+* mytrip_account.html
+
+
+Deleted files:
+
+
+Renamed files:

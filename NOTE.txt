@@ -1,0 +1,38 @@
+    <div class="list-content-fee mgtop-30">
+                        <ol>
+                            <li class="mgbottom-10">This special package simplifies the onboarding documents process to ensure your business' continuing growth.</li>
+                            <li class="mgbottom-10">PayCEC Payment Gateway supports our merchants anywhere - anytime.</li>
+                            <li class="mgbottom-10">PayCEC offers flexible documents for your business to stay in the global E-commerce market.</li>
+                            <li class="mgbottom-10">Please contact Relationship Manager or <a href="+442032864370" title="+442032864370" target="_blank">+44 2032 864370</a> for further information.</li>
+                        </ol>
+                    </div>
+
+
+
+
+
+
+
+<div class="box-extra-light mgtop-20 bg-pink">
+                    <div class="row" id="accept_payment">
+                        <div class="d-flex flex-wrap">
+                            <div class="col-xs-12 col-md-6 text-xs-center inheight pdright-0">
+                                <img src="https://d2jtqfgkm0oeyk.cloudfront.net/uploads/sx-1595212956.svg" data-src="https://d2jtqfgkm0oeyk.cloudfront.net/uploads/processing-accept-payment-1581644164.png" alt="Accept Payment" title="Accept Payment" class="full-img lazyload mb-40 img-absolute"
+                                /></div>
+                            <div class="col-xs-12 col-md-6 inheight mgtb-xs-20">
+                                <div class="d-table">
+                                    <div class="d-cell pdlr-20">
+                                        <!-- //ANCHOR 4 -->
+                                        <h2 class="text-24 text-xs-18">STEP 4</h2>
+                                        <h3 class="text-24 text-xs-18 text-black-light">Accept Payment Online</h3>
+                                        <ul class="list-unstyled list-round-main">
+                                            <li>Get email confirmation for <span class="text-main">LIVE</span> account.</li>
+                                            <li>With <span class="text-main">LIVE</span> Account, keep track of daily transactions as well as your Payout details (date, amount, status, etc…).</li>
+                                            <li>By simple steps into Dashboard, payment comes to your business account within few days.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

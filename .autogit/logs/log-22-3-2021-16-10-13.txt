@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Thu Apr 22 2021 16:10:13 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-22-3-2021-15-39-50.txt
+* images/compressjpeg.zip
+
+
+Deleted files:
+* "images/TIN T\341\273\250C 4-20210422T080830Z-001.zip"
+* images/Thumbnail.jpg
+
+
+Renamed files:

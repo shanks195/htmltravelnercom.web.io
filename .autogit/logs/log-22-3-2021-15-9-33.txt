@@ -1,0 +1,26 @@
+-------------------- Auto-Git Log --------------------
+		Thu Apr 22 2021 15:09:33 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* homepage.html
+* scss/_class.scss
+* tour-homepage.html
+
+
+Created files:
+* "images/Banner Promotion-20210422T080147Z-001.zip"
+* "images/Banner Promotion-20210422T080147Z-001/Banner Promotion/750x1200.jpg"
+* "images/Banner Promotion-20210422T080147Z-001/Banner Promotion/900x900.jpg"
+* "images/Banner Promotion-20210422T080147Z-001/Banner Promotion/960x540.jpg"
+* "images/Banner Promotion-20210422T080147Z-001/Banner Promotion/The-Sol-City-m\341\273\237-b\303\241n-s\341\272\243n-ph\341\272\251m-\304\221\341\272\271p-nh\341\272\245t-d\341\273\261-\303\241n.jpg"
+* "images/TIN T\341\273\250C 4-20210422T080830Z-001.zip"
+* images/Thumbnail.jpg
+
+
+Deleted files:
+
+
+Renamed files:

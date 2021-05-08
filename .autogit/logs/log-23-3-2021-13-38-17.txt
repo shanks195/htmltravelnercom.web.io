@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 23 2021 13:38:17 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* hotel-homepage.html
+* scss/utilities/_spacing.scss
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

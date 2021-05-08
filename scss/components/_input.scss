@@ -82,7 +82,7 @@ input[type=number] {
 }
 
 .form-group .input-card{
-    padding-left: 35px !important;
+    padding-left: 40px !important;
 }
 .icon-card{
     position: absolute;
@@ -91,7 +91,7 @@ input[type=number] {
     left: 5px;
 }
 .input-name{
-    padding: 0 0 0 2px;
+    padding: 0 0 0 10px;
     font-size: 13px !important;
     border: none;
     height: 40px;
@@ -100,24 +100,27 @@ input[type=number] {
         box-shadow: none !important;
     }
 }
+.input-name:focus + .title-input{
+    top: 0;
+    transform: translateY(0);
+    font-size: 12px;
+    top: -8px;
+}
 .title-input{
     position: absolute;
     font-size: 16px;
     top: 50%;
-    left: 2px;
+    left: 10px;
     transform: translateY(-50%);
+    transition: all .3s;
+    background-color: $white;
     &.active{
-        top: 0 !important;
+        top: -8px !important;
         transform: translateY(0);
-        font-size: 10px !important;
+        font-size: 12px !important;
     }
 }
-.input-name:focus + .title-input{
-    transition: all .3s;
-    top: 0;
-    transform: translateY(0);
-    font-size: 10px;
-}
+
 .credit-card{
     background-image: url(../images/icon-credit-card.svg);
     background-repeat: no-repeat;
@@ -131,4 +134,78 @@ input[type=number] {
     &:focus{
         box-shadow: none !important;
     }
+}
+.input-contact:focus-visible, .input-contact:focus{
+    outline: none;
+    border-color: #F53941!important;
+    transition: all .3s;
+    @include media-breakpoint-down(md){
+        border:none;
+        outline: none;
+    }
+}
+input[type="file"]{
+    display: none;
+}
+.form-contact-us, .form-feedback{
+   @include media-breakpoint-down(md){
+        ::placeholder{
+            font-size: 14px
+        }
+        input[type="text"]{
+            font-size: 14px;
+        }
+        textarea{
+            font-size: 14px !important;
+        }
+   }
+}
+.info-full-name, .info-email, .info-content,.info-first-name,.info-middle-name,.info-last-name,.info-home-airport,.info-known-travelner,.info-mobile,.info-contact-phone,.info-zip,.info-city,.info-address-line-1,.info-address-line-2,.info-password{
+    .box-content{
+        font-size: 16px;
+    }
+    .input-contact{
+        height: 100%;
+        border: 1px solid #C8CACD;
+    }
+    @include media-breakpoint-down(md){
+        ::placeholder{
+            content: none;
+        }
+        position: relative;
+        .title-input-contact{
+            position: absolute;
+            font-size: 14px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            transition: all .3s;
+            background-color: $white;
+            &.active{
+                top: 5px !important;
+                transform: translateY(0);
+                font-size: 10px !important;
+            }
+        }
+        .input-contact{
+            border: none;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+.input-contact:focus + .title-input-contact, .box-content:focus + .title-input-contact{
+    transform: translateY(0);
+    font-size: 10px;
+    top: 5px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+    background-color: #FFFFFF !important;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    transition-delay: 3600s;
+    transition-property: background-color, color;
 }

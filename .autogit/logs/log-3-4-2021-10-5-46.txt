@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 03 2021 10:05:46 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* mytrip-desktop.html
+* scss/snippets/_flight.scss
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

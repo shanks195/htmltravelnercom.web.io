@@ -1,329 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Booking details payment</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="css/jquery-ui.min.css" />
-        <link rel="stylesheet" href="js/select2/select2.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-        <link rel="stylesheet" type="text/css" href="css/intlTelInput.min.css" />
-        <link rel="stylesheet" href="css/app.css?v=2" />
-    </head>
-    <body>
-        <header>
-            <div class="container d-flex justify-content-between align-items-center">
-                <a href="javascript:void(0)" target="_self" title="Menu" id="menu-header" class="d-block d-lg-none">
-                    <img src="./images/sx.svg" data-src="./images/icon-menu-hambuger-payment.svg" alt="Menu" title="Menu" class="lazyload" />
-                </a>
-                <div class="header-menu-wrapper d-lg-none">
-                    <div class="overlay d-lg-none"></div>
-                    <div class="header-menu">
-                        <div class="bg-secondary px-20 py-30 d-lg-none">
-                            <a href="#" target="_self" title="Sign In" class="text-white text-16">
-                                <img src="./images/icon-user-white.svg" data-src="./images/icon-user-white.svg" alt="User" title="User" class="mr-5 lazyload" />
-                                Sign In
-                            </a>
-                        </div>
-                        <ul class="header-menu-nav pb-xs-15 mb-0">
-                            <li>
-                                <a href="#" target="_self" title="Flight">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking details payment</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/app.css?v=2" />
+</head>
+
+<body>
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="javascript:void(0)" target="_self" title="Menu" id="menu-header" class="d-block d-lg-none">
+                <img src="./images/sx.svg" data-src="./images/icon-menu-hambuger-payment.svg" alt="Menu" title="Menu" class="lazyload" />
+            </a>
+            <div class="header-menu-wrapper d-lg-none">
+                <div class="overlay d-lg-none"></div>
+                <div class="header-menu">
+                    <div class="bg-secondary px-20 py-30 d-lg-none">
+                        <a href="#" target="_self" title="Sign In" class="text-white text-16">
+                            <img src="./images/icon-user-white.svg" data-src="./images/icon-user-white.svg" alt="User" title="User" class="mr-5 lazyload" /> Sign In
+                        </a>
+                    </div>
+                    <ul class="header-menu-nav pb-xs-15 mb-0">
+                        <li>
+                            <a href="#" target="_self" title="Flight">
                                     Flight
                                     <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span>
                                 </a>
-                            </li>
-                            <li class="active">
-                                <a href="#" target="_self" title="Hotels">Hotels <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="Tours">Tours <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="Deals">Deals <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="FAQs">FAQs <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="Contact">Contact <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
-                            </li>
-                        </ul>
-                        <ul class="d-block d-lg-none mb-50 header-menu-nav border-0">
-                            <li>
-                                <a href="#" target="_self" title="Settings">
+                        </li>
+                        <li class="active">
+                            <a href="#" target="_self" title="Hotels">Hotels <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Tours">Tours <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Deals">Deals <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="FAQs">FAQs <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Contact">Contact <span class="text-gray-light text-normal d-block d-lg-none">You can save even more on thousands</span></a>
+                        </li>
+                    </ul>
+                    <ul class="d-block d-lg-none mb-50 header-menu-nav border-0">
+                        <li>
+                            <a href="#" target="_self" title="Settings">
                                     Settings
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="Feedback">
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Feedback">
                                     Feedback
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="Term and Condition">
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Term and Condition">
                                     Term and Condition
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_self" title="Privacy Policy">
+                        </li>
+                        <li>
+                            <a href="#" target="_self" title="Privacy Policy">
                                     Privacy Policy
                                 </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="d-xs-flex justify-content-center w-xs-100 mt-10 mb-lg-25 mb-10">
-                    <a href="#" target="_self" title="Logo">
-                        <img src="./images/logo.svg" alt="Logo" title="Logo" class="d-none d-lg-block" />
-                        <img src="./images/logo-mobile.svg" alt="Logo" title="Logo" class="d-block d-lg-none" />
-                    </a>
-                </div>
-                <div class="list-step-payment hidden-xs">
-                    <div class="step-payment-item">
-                        <div class="d-flex w-100 justify-content-center">
-                            <div class="circle-payment active">1</div>
-                        </div>
-                        <p class="mt-5 active ">Customer information</p>
-                        <div class="line-step-payment"></div>
-                    </div>
-                    <div class="step-payment-item">
-                        <div class="d-flex w-100 justify-content-center">
-                            <div class="circle-payment">2</div>
-                        </div>
-                        <p class="mt-5">Payment information</p>
-                        <div class="line-step-payment"></div>
-                    </div>
-                    <div class="step-payment-item">
-                        <div class="d-flex w-100 justify-content-center">
-                            <div class="circle-payment">3</div>
-                        </div>
-                        <p class="mt-5">Booking is confirmed!</p>
-                    </div>
-                </div>
-                <div class="dropdown d-inline-block ml-20 hidden-xs">
-                        <a href="javascript:void(0)" id="signin-toggle" target="_self" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-bolder btn btn-outline-secondary btn-signin">
-                            Sign in
-                        </a>
-                        <div class="dropdown-box dropdown-menu dropdown-signin" aria-labelledby="signin-toggle">
-                            <button type="button" class="close" id="close-dropdown">
-                                <img src="./images/icon-close.svg" alt="Close" title="Close">
-                            </button>
-                            <h2>Sign In or Register</h2>
-                            <p class="mb-30">One click sign-in with</p>
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="#" class="btn btn-block btn-smaller btn-outline-facebook" title="Facebook" target="_self">
-                                        <img src="./images/sx.svg" data-src="./images/icon-btn-facebook.svg" alt="Facebook" title="Facebook" class="lazyload mr-10" />
-                                        <img src="./images/icon-btn-facebook-active.svg" alt="Facebook" title="Facebook" class="active mr-10" />
-                                        Facebook
-                                    </a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="btn btn-block btn-smaller btn-outline-google" title="Google" target="_self">
-                                        <img src="./images/sx.svg" data-src="./images/icon-btn-google.svg" alt="Google" title="Google" class="lazyload mr-10" />
-                                        <img src="./images/icon-btn-google-active.svg" alt="Google" title="Google" class="active mr-10" />
-                                        Google
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="divider-text my-20">Or</div>
-                            <div class="form-large form-group">
-                                <input type="text" placeholder="Enter Email Address" class="form-control" />
-                            </div>
-                            <a href="#" target="_self" title="Next" class="btn btn-block btn-outline-secondary">Next</a>
-                        </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </header>
-        <main>
-            <!-- Desktop -->
-            <div class="bg-light-gray padding-block d-none d-lg-block">
-                <div class="container">
-                    <!-- Title -->
-                    <div class="padding-block d-flex align-items-center pb-50">
-                        <a href="javascript:void(0)" target="_self" title="go back" class="text-16">
-                            <img src="./images/icon-arrow-left-blue-16.svg" alt="left" title="left" class="mr-5">
-                            <span class="text-secondary">Go back</span>
+            <div class="d-xs-flex justify-content-center w-xs-100 mt-10 mb-lg-25 mb-10">
+                <a href="#" target="_self" title="Logo">
+                    <img src="./images/logo.svg" alt="Logo" title="Logo" class="d-none d-lg-block" />
+                    <img src="./images/logo-mobile.svg" alt="Logo" title="Logo" class="d-block d-lg-none" />
+                </a>
+            </div>
+            <div class="list-step-payment hidden-xs">
+                <div class="step-payment-item">
+                    <div class="d-flex w-100 justify-content-center">
+                        <div class="circle-payment active">1</div>
+                    </div>
+                    <p class="mt-5 active ">Customer information</p>
+                    <div class="line-step-payment"></div>
+                </div>
+                <div class="step-payment-item">
+                    <div class="d-flex w-100 justify-content-center">
+                        <div class="circle-payment">2</div>
+                    </div>
+                    <p class="mt-5">Payment information</p>
+                    <div class="line-step-payment"></div>
+                </div>
+                <div class="step-payment-item">
+                    <div class="d-flex w-100 justify-content-center">
+                        <div class="circle-payment">3</div>
+                    </div>
+                    <p class="mt-5">Booking is confirmed!</p>
+                </div>
+            </div>
+            <div class="dropdown d-inline-block ml-20 hidden-xs">
+                <a href="javascript:void(0)" id="signin-toggle" target="_self" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="text-bolder btn btn-outline-secondary btn-signin">
+                            Sign in
                         </a>
-                        <div class="text-center mx-auto">
-                            <h1 class="text-24">Review Trip Details and Book</h1>
-                            <h2 class="mb-0 text-16 text-medium-light">Just one final step, then you're on your way to <span class="text-medium">Da Lat City !</span></h2>
+                <div class="dropdown-box dropdown-menu dropdown-signin" aria-labelledby="signin-toggle">
+                    <button type="button" class="close" id="close-dropdown">
+                                <img src="./images/icon-close.svg" alt="Close" title="Close">
+                            </button>
+                    <h2>Sign In or Register</h2>
+                    <p class="mb-30">One click sign-in with</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#" class="btn btn-block btn-smaller btn-outline-facebook" title="Facebook" target="_self">
+                                <img src="./images/sx.svg" data-src="./images/icon-btn-facebook.svg" alt="Facebook" title="Facebook" class="lazyload mr-10" />
+                                <img src="./images/icon-btn-facebook-active.svg" alt="Facebook" title="Facebook" class="active mr-10" /> Facebook
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="btn btn-block btn-smaller btn-outline-google" title="Google" target="_self">
+                                <img src="./images/sx.svg" data-src="./images/icon-btn-google.svg" alt="Google" title="Google" class="lazyload mr-10" />
+                                <img src="./images/icon-btn-google-active.svg" alt="Google" title="Google" class="active mr-10" /> Google
+                            </a>
                         </div>
                     </div>
-                    <!-- Flight Detail -->
-                    <div class="padding-block px-20 pb-5 bg-white rounded box-shadow-1">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <h2 class="mb-0 text-20">
-                                Flight Details
-                            </h2>
-                            <div class="text-right">
-                                <p class="text-28 text-medium mb-0">
-                                    <span>$303</span>
-                                    <sup class="text-12 text-medium-light sup-cus-1">.80</sup>
-                                </p>
-                                <span class="text-14 text-grey-3">
+                    <div class="divider-text my-20">Or</div>
+                    <div class="form-large form-group">
+                        <input type="text" placeholder="Enter Email Address" class="form-control" />
+                    </div>
+                    <a href="#" target="_self" title="Next" class="btn btn-block btn-outline-secondary">Next</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Desktop -->
+        <div class="bg-light-gray padding-block d-none d-lg-block">
+            <div class="container">
+                <!-- Title -->
+                <div class="padding-block d-flex align-items-center pb-50">
+                    <a href="javascript:void(0)" target="_self" title="go back" class="text-16">
+                        <img src="./images/icon-arrow-left-blue-16.svg" alt="left" title="left" class="mr-5">
+                        <span class="text-secondary">Go back</span>
+                    </a>
+                    <div class="text-center mx-auto">
+                        <h1 class="text-24">Review Trip Details and Book</h1>
+                        <h2 class="mb-0 text-16 text-medium-light">Just one final step, then you're on your way to <span class="text-medium">Da Lat City !</span></h2>
+                    </div>
+                </div>
+                <!-- Flight Detail -->
+                <div class="padding-block px-20 pb-5 bg-white rounded box-shadow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h2 class="mb-0 text-20">
+                            Flight Details
+                        </h2>
+                        <div class="text-right">
+                            <p class="text-28 text-medium mb-0">
+                                <span>$303</span>
+                                <sup class="text-12 text-medium-light sup-cus-1">.80</sup>
+                            </p>
+                            <span class="text-14 text-grey-3">
                                     Price per person (incl. taxes & fees)
                                 </span>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <p class="px-10 pt-10 pb-5 mt-30 rounded border-light-green text-green-2 text-14">
-                            <img src="./images/icon-thumb-up-green.svg" alt="thumb up" title="thumb up" class="mr-10">
-                            Book now with our 
-                            <span class="text-medium">Price Match Promise</span>
-                            <img src="./images/icon-info-circle-green.svg" alt="info" title="info" class="mx-10">
-                            and 24 hours cancellation
-                            <img src="./images/icon-info-circle-green.svg" alt="info" title="info" class="ml-10">
-                        </p>
-                        <!--  -->
-                        <!-- ticket -->
-                        <div class="ticket-wrap mt-20 pb-48 border-bottom-light-gray">
-                            <p class="text-14 mb-15 text-medium">Depart Thu, Feb 18</p>
-                            <div class="d-flex justify-content-between">
-                                <div class="item-content">
-                                    <div class="d-flex align-items-center">
-                                        <img src="./images/icon-united-airline-48.svg" alt="united airline" title="united airline" class="mr-15">
-                                        <div class="mb-0">
-                                            <span class="d-block text-13 mb-5">United Airlines</span>
-                                            <span class="d-block text-13">Flight 5391 | Aircraft E7W</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <p class="mb-5 text-12">Thu,</p>
-                                    <p class="mb-0 text-14">Feb 18</p>
-                                </div>
-                                <div class="item-content">
-                                    <p class="mb-5 text-12"><span class="text-16 text-medium">10:30</span> pm</p>
-                                    <p class="mb-0 text-12 text-green">Dallas Fort Worth, DFW</p>
-                                </div>
-                                <div class="item-content">
-                                    <p class="mb-5 text-12"><span class="text-16 text-medium">12:56</span> pm</p>
-                                    <p class="mb-0 text-12 text-grey-3">Chicago OHare, ORD</p>
-                                </div>
-                                <div class="item-content">
-                                    <p class="mb-5 text-12">Thu,</p>
-                                    <p class="mb-0 text-14">Feb 18</p>
-                                </div>
-                                <div class="item-content flex-basic-200">
-                                    <p class="mb-5 text-13"><span class="text-medium">Cabin:</span> Premium Economy</p>
-                                    <p class="mb-0 text-13">
-                                        <img src="./images/icon-flight-briefcase.svg" alt="brief case" title="brief case">
-                                        1 free bag
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="text-grey-3 mb-0 mt-15 text-13 pl-50">Flight Duration: 2h 26m</p>
-                        </div>
-                        <!-- ticket -->
-                        <div class="ticket-wrap border-bot-dash  mt-20 pb-48">
-                            <p class="text-14 mb-15 text-medium">Depart Thu, Feb 18</p>
-                            <div class="d-flex justify-content-between">
-                                <div class="item-content">
-                                    <div class="d-flex align-items-center">
-                                        <img src="./images/icon-united-airline-48.svg" alt="united airline" title="united airline" class="mr-15">
-                                        <div class="mb-0">
-                                            <span class="d-block text-13 mb-5">United Airlines</span>
-                                            <span class="d-block text-13">Flight 701 | Aircraft 333</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <p class="mb-5 text-12">Fri,</p>
-                                    <p class="mb-0 text-14">Feb 26</p>
-                                </div>
-                                <div class="item-content">
-                                    <p class="mb-5 text-12"><span class="text-16 text-medium">02:40</span> pm</p>
-                                    <p class="mb-0 text-12 text-grey-3">Newark Liberty, EWR</p>
-                                </div>
-                                <div class="item-content">
-                                    <p class="mb-5 text-12"><span class="text-16 text-medium">12:00</span> pm</p>
-                                    <p class="mb-0 text-12 text-grey-3">San Francisco, SFO</p>
-                                </div>
-                                <div class="item-content">
-                                    <p class="mb-5 text-12">Fri,</p>
-                                    <p class="mb-0 text-14">Feb 26</p>
-                                </div> 
-                                <div class="item-content flex-basic-200">
-                                    <p class="mb-5 text-13"><span class="text-medium">Cabin:</span> Econ</p>
-                                    <p class="mb-0 text-13">
-                                        <img src="./images/icon-flight-briefcase.svg" alt="brief case" title="brief case">
-                                        1 free bag
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="text-grey-3 mb-0 mt-15 text-13 pl-50">Flight Duration: 1h 54m</p>
-                        </div>
-                        <!-- links -->
-                        <div class="mt-10 text-right">
-                            <a href="javascript:void(0)" target="_self" title="Fare Rules" class="text-14 text-secondary text-decoration-underline mr-10">Fare Rules</a>
-                            <a href="javascript:void(0)" target="_self" title="Baggage Fees" class="text-14 text-secondary text-decoration-underline">Baggage Fees</a>
                         </div>
                     </div>
-                    <!-- Traveler Details -->
-                    <div class="padding-block mt-35 px-20 bg-white rounded box-shadow-1">
-                        <div class="d-flex align-items-center mb-17">
-                            <h2 class="mb-0 text-20">
-                                Traveler Details
-                            </h2>
-                            <p class="mb-0 ml-auto text-14 text-medium open-sign-in">
-                                Already a member?
-                                <a href="javascript:void(0)" target="_self" title="Sign in" class="text-secondary text-hover-inherit ml-10 btn-sign-in" data-toggle="modal" data-target="#exampleModal">
-                                    <img src="./images/icon-person-secondary.svg" alt="person" title="person" class="mr-5">
-                                    Sign in 
-                                    <img src="./images/icon-dropdown-secondary.svg" alt="dropdown" title="dropdown" class="ml-5">
-                                </a>
-                            </p>
+                    <!--  -->
+                    <p class="px-10 pt-10 pb-5 mt-30 rounded border-light-green text-green-2 text-14">
+                        <img src="./images/icon-thumb-up-green.svg" alt="thumb up" title="thumb up" class="mr-10"> Book now with our
+                        <span class="text-medium">Price Match Promise</span>
+                        <img src="./images/icon-info-circle-green.svg" alt="info" title="info" class="mx-10"> and 24 hours cancellation
+                        <img src="./images/icon-info-circle-green.svg" alt="info" title="info" class="ml-10">
+                    </p>
+                    <!--  -->
+                    <!-- ticket -->
+                    <div class="ticket-wrap mt-20 pb-48 border-bottom-light-gray">
+                        <p class="text-14 mb-15 text-medium">Depart Thu, Feb 18</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="item-content">
+                                <div class="d-flex align-items-center">
+                                    <img src="./images/icon-united-airline-48.svg" alt="united airline" title="united airline" class="mr-15">
+                                    <div class="mb-0">
+                                        <span class="d-block text-13 mb-5">United Airlines</span>
+                                        <span class="d-block text-13">Flight 5391 | Aircraft E7W</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <p class="mb-5 text-12">Thu,</p>
+                                <p class="mb-0 text-14">Feb 18</p>
+                            </div>
+                            <div class="item-content">
+                                <p class="mb-5 text-12"><span class="text-16 text-medium">10:30</span> pm</p>
+                                <p class="mb-0 text-12 text-green">Dallas Fort Worth, DFW</p>
+                            </div>
+                            <div class="item-content">
+                                <p class="mb-5 text-12"><span class="text-16 text-medium">12:56</span> pm</p>
+                                <p class="mb-0 text-12 text-grey-3">Chicago OHare, ORD</p>
+                            </div>
+                            <div class="item-content">
+                                <p class="mb-5 text-12">Thu,</p>
+                                <p class="mb-0 text-14">Feb 18</p>
+                            </div>
+                            <div class="item-content flex-basic-200">
+                                <p class="mb-5 text-13"><span class="text-medium">Cabin:</span> Premium Economy</p>
+                                <p class="mb-0 text-13">
+                                    <img src="./images/icon-flight-briefcase.svg" alt="brief case" title="brief case"> 1 free bag
+                                </p>
+                            </div>
                         </div>
-                        <p class="rounded border-blue text-14 px-20 py-10">
-                            Enter traveler name(s) and date(s) of birth exactly as shown on the passport or other government-issued photo ID to be used on this trip
+                        <p class="text-grey-3 mb-0 mt-15 text-13 pl-50">Flight Duration: 2h 26m</p>
+                    </div>
+                    <!-- ticket -->
+                    <div class="ticket-wrap border-bot-dash  mt-20 pb-48">
+                        <p class="text-14 mb-15 text-medium">Depart Thu, Feb 18</p>
+                        <div class="d-flex justify-content-between">
+                            <div class="item-content">
+                                <div class="d-flex align-items-center">
+                                    <img src="./images/icon-united-airline-48.svg" alt="united airline" title="united airline" class="mr-15">
+                                    <div class="mb-0">
+                                        <span class="d-block text-13 mb-5">United Airlines</span>
+                                        <span class="d-block text-13">Flight 701 | Aircraft 333</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <p class="mb-5 text-12">Fri,</p>
+                                <p class="mb-0 text-14">Feb 26</p>
+                            </div>
+                            <div class="item-content">
+                                <p class="mb-5 text-12"><span class="text-16 text-medium">02:40</span> pm</p>
+                                <p class="mb-0 text-12 text-grey-3">Newark Liberty, EWR</p>
+                            </div>
+                            <div class="item-content">
+                                <p class="mb-5 text-12"><span class="text-16 text-medium">12:00</span> pm</p>
+                                <p class="mb-0 text-12 text-grey-3">San Francisco, SFO</p>
+                            </div>
+                            <div class="item-content">
+                                <p class="mb-5 text-12">Fri,</p>
+                                <p class="mb-0 text-14">Feb 26</p>
+                            </div>
+                            <div class="item-content flex-basic-200">
+                                <p class="mb-5 text-13"><span class="text-medium">Cabin:</span> Econ</p>
+                                <p class="mb-0 text-13">
+                                    <img src="./images/icon-flight-briefcase.svg" alt="brief case" title="brief case"> 1 free bag
+                                </p>
+                            </div>
+                        </div>
+                        <p class="text-grey-3 mb-0 mt-15 text-13 pl-50">Flight Duration: 1h 54m</p>
+                    </div>
+                    <!-- links -->
+                    <div class="mt-10 text-right">
+                        <a href="javascript:void(0)" target="_self" title="Fare Rules" class="text-14 text-secondary text-decoration-underline mr-10">Fare Rules</a>
+                        <a href="javascript:void(0)" target="_self" title="Baggage Fees" class="text-14 text-secondary text-decoration-underline">Baggage Fees</a>
+                    </div>
+                </div>
+                <!-- Traveler Details -->
+                <div class="padding-block mt-35 px-20 bg-white rounded box-shadow-1">
+                    <div class="d-flex align-items-center mb-17">
+                        <h2 class="mb-0 text-20">
+                            Traveler Details
+                        </h2>
+                        <p class="mb-0 ml-auto text-14 text-medium open-sign-in">
+                            Already a member?
+                            <a href="javascript:void(0)" target="_self" title="Sign in" class="text-secondary text-hover-inherit ml-10 btn-sign-in" data-toggle="modal" data-target="#exampleModal">
+                                <img src="./images/icon-person-secondary.svg" alt="person" title="person" class="mr-5"> Sign in
+                                <img src="./images/icon-dropdown-secondary.svg" alt="dropdown" title="dropdown" class="ml-5">
+                            </a>
                         </p>
-                        <!-- <input type="text" value="Enter traveler name(s) and date(s) of birth exactly as shown on the passport or other government-issued photo ID to be used on this trip" class="form-control form-cus-1 pl-20 h-40" readonly> -->
-                        <div class="d-flex align-items-center mt-30">
-                            <label for="" class="form-group mb-0 mr-10 label-cus-1 flex-grow-1 w-auto">
+                    </div>
+                    <p class="rounded border-blue text-14 px-20 py-10">
+                        Enter traveler name(s) and date(s) of birth exactly as shown on the passport or other government-issued photo ID to be used on this trip
+                    </p>
+                    <!-- <input type="text" value="Enter traveler name(s) and date(s) of birth exactly as shown on the passport or other government-issued photo ID to be used on this trip" class="form-control form-cus-1 pl-20 h-40" readonly> -->
+                    <div class="d-flex align-items-center mt-30">
+                        <label for="" class="form-group mb-0 mr-10 label-cus-1 flex-grow-1 w-auto">
                                 <span class="text-14 text-grey-3 text-top">Email Address *</span>
                                 <input type="text" class="form-control form-cus-1 h-56" value="" placeholder="Email Address *">
                                 <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="img-success-right">
                             </label>
-                            <label class="mb-0 text-14 pl-10 flex-grow-1" role="button">
+                        <label class="mb-0 text-14 pl-10 flex-grow-1" role="button">
                                 <input type="checkbox" class="w-20 h-20 align-top mr-10" checked>
                                 Send me the latest travel deals, special offers, coupons.
                             </label>
-                        </div>
-                        <div class="d-flex mt-30">
-                            <p class="mb-0 text-16 h-56 w-150 line-h-56 flex-grow-1">
-                                <span class="text-medium">1</span>
-                                Adult
-                            </p>
-                            <div class="">
-                                <div class="d-flex">
-                                    <label for="" class="form-group mb-0 mr-10 label-cus-1">
+                    </div>
+                    <div class="d-flex mt-30">
+                        <p class="mb-0 text-16 h-56 w-150 line-h-56 flex-grow-1">
+                            <span class="text-medium">1</span> Adult
+                        </p>
+                        <div class="">
+                            <div class="d-flex">
+                                <label for="" class="form-group mb-0 mr-10 label-cus-1">
                                         <span class="text-14 text-grey-3 text-top">First Name *</span>
                                         <input type="text" placeholder="First Name *" class="form-control form-cus-1 h-56 w-150">
                                         <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="img-success-corner">
                                     </label>
-                                    <label for="" class="form-group mb-0 mr-10 label-cus-1">
+                                <label for="" class="form-group mb-0 mr-10 label-cus-1">
                                         <span class="text-14 text-grey-3 text-top">Middle Name</span>
                                         <input type="text" placeholder="Middle Name" class="form-control form-cus-1 h-56 w-150">
                                         <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="img-success-corner">
                                         <img src="./images/icon-info-outline-grey.svg" alt="info" title="info" class="img-info">
                                     </label>
-                                    <label for="" class="form-group mb-0 mr-10 label-cus-1">
+                                <label for="" class="form-group mb-0 mr-10 label-cus-1">
                                         <span class="text-14 text-grey-3 text-top">Last Name *</span>
                                         <input type="text" placeholder="Last Name *" class="form-control form-cus-1 h-56 w-150">
                                         <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="img-success-corner">
                                     </label>
-                                    <div class=" w-150 mr-10 rounded border-gray-1 px-20 pt-5 pb-5 label-cus-1">
-                                        <label for="date-of-birth-1" class="d-block mb-0 text-12 text-grey-3" role="button">
+                                <div class=" w-150 mr-10 rounded border-gray-1 px-20 pt-5 pb-5 label-cus-1">
+                                    <label for="date-of-birth-1" class="d-block mb-0 text-12 text-grey-3" role="button">
                                             Date of Birth*
-                                            <input type="text" id="date-of-birth-1" value="MM/DD/YYYY" class="form-control form-cus-2 p-0 h-auto text-14 text-grey-1 mt-5">
-                                        </label>
-                                        <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="img-success-corner">
-                                    </div>
-                                    <div class="w-150 rounded border-gray-1 pt-5">
-                                        <label for="atttt" class="d-flex flex-column h-100 mb-0 text-12 text-grey-3 position-relative" role="button">
+                                            <input type="text" id="date-of-birth-1" class="form-control form-cus-2 p-0 h-auto text-14 text-grey-1 mt-5">
+                                    </label>
+                                    <img src="./images/icon-check-success-green.svg" alt="check" title="check" class="img-success-corner">
+                                </div>
+                                <div class="w-150 rounded border-gray-1 pt-5">
+                                    <label for="atttt" class="d-flex flex-column h-100 mb-0 text-12 text-grey-3 position-relative" role="button">
                                             <span class="px-20">Gender*</span>
                                             <div class="form-selection-cus h-100 w-100">
                                                 <select class="gender-selection">
@@ -334,64 +327,60 @@
                                                 </select>
                                             </div>
                                         </label>
-                                    </div>
                                 </div>
-                                <div class="d-flex mt-20">
-                                    <!-- px-20 pt-5 pb-5 -->
-                                    <div class="form-group mr-10 rounded txt-phone-custom txt-phone-1 h-56 h-xs-40">
-                                            <input maxlength="20" class="form-control" id="text-phone" type="text" name="txtPhone" placeholder="Mobile number" autocomplete="off" />
-                                        <!-- </div> -->
-                                    </div>
+                            </div>
+                            <div class="d-flex mt-20">
+                                <!-- px-20 pt-5 pb-5 -->
+                                <div class="form-group mr-10 rounded txt-phone-custom txt-phone-1 h-56 h-xs-40">
+                                    <input maxlength="20" class="form-control" id="text-phone" type="text" name="txtPhone" placeholder="Mobile number" autocomplete="off" />
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Policies $ Review -->
-                    <div class="padding-block px-20 mt-30 bg-white rounded box-shadow-1">
-                        <h2 class="text-20 mb-17">Policies & Review</h2>
-                        <div class="d-flex align-items-center rounded py-20 px-10 mb-20 border-secondary-light">
-                            <img src="./images/icon-info-secondary.svg" alt="info secondary" title="info secondary" class="mr-20">
-                            <div>
-                                <p class="text-14 text-secondary mb-0">
-                                    Please confirm that the 
-                                    <span class="text-medium">date(s)</span>                                     
-                                    and 
-                                    <span class="text-medium">time(s)</span>                                      
-                                    of flights and 
-                                    <span class="text-medium">name(s)</span>                                    
-                                    of travelers are accurate.
-                                </p>
-                                <p class="mb-0 text-14 text-secondary text-medium">
-                                    Each traveler’s name and date of birth must be exactly as shown on the passport or other government-issued photo ID to be used on this trip.
-                                </p>
-                            </div>
+                </div>
+                <!-- Policies $ Review -->
+                <div class="padding-block px-20 mt-30 bg-white rounded box-shadow-1">
+                    <h2 class="text-20 mb-17">Policies & Review</h2>
+                    <div class="d-flex align-items-center rounded py-20 px-10 mb-20 border-secondary-light">
+                        <img src="./images/icon-info-secondary.svg" alt="info secondary" title="info secondary" class="mr-20">
+                        <div>
+                            <p class="text-14 text-secondary mb-0">
+                                Please confirm that the
+                                <span class="text-medium">date(s)</span> and
+                                <span class="text-medium">time(s)</span> of flights and
+                                <span class="text-medium">name(s)</span> of travelers are accurate.
+                            </p>
+                            <p class="mb-0 text-14 text-secondary text-medium">
+                                Each traveler’s name and date of birth must be exactly as shown on the passport or other government-issued photo ID to be used on this trip.
+                            </p>
                         </div>
-                        <p class="mb-20 text-14">
-                            Traveler 1:	
-                            <span class="text-medium">N/A</span>
-                            <a href="javascript:void(0)" target="_self" title="make changes" class="text-secondary ml-20">make changes</a>
-                        </p>
-                        <p class="mb-20 py-20 text-13 text-grey-3 border-top-dash border-bot-dash">
-                            Tickets are non-transferable and name changes are not permitted. Total price shown includes all applicable taxes & fees and our service fees. Some airlines may charge additional baggage fees or other fees. Fares are not guaranteed until ticketed. Tickets and our fees are non-refundable (see Fare Rules). Some taxes and government agency fees may be non-refundable. Tickets can be cancelled for a fee, if requested within twenty-four (24) hours from the time of purchase. Date and routing changes will be subject to airline penalties and our fees.
-                        </p>
-                        <p class="text-14 mb-20 text-center w-500">
-                            By clicking “Confirm & Book”, I agree that I have read and accepted the above policies and Travelner.com’s 
-                            <a href="javascript:void(0)" target="_self" title="Terms of Use " class="text-secondary">Terms of Use </a>
-                            and 
-                            <a href="javascript:void(0)" target="_self" title="Privacy Policy" class="text-secondary">Privacy Policy </a>
-                            .
-                        </p>
-                        <button class="btn btn-secondary d-block mx-auto mw-180 text-18 text-medium">
+                    </div>
+                    <p class="mb-20 text-14">
+                        Traveler 1:
+                        <span class="text-medium">N/A</span>
+                        <a href="javascript:void(0)" target="_self" title="make changes" class="text-secondary ml-20">make changes</a>
+                    </p>
+                    <p class="mb-20 py-20 text-13 text-grey-3 border-top-dash border-bot-dash">
+                        Tickets are non-transferable and name changes are not permitted. Total price shown includes all applicable taxes & fees and our service fees. Some airlines may charge additional baggage fees or other fees. Fares are not guaranteed until ticketed. Tickets
+                        and our fees are non-refundable (see Fare Rules). Some taxes and government agency fees may be non-refundable. Tickets can be cancelled for a fee, if requested within twenty-four (24) hours from the time of purchase. Date and routing
+                        changes will be subject to airline penalties and our fees.
+                    </p>
+                    <p class="text-14 mb-20 text-center w-500">
+                        By clicking “Confirm & Book”, I agree that I have read and accepted the above policies and Travelner.com’s
+                        <a href="javascript:void(0)" target="_self" title="Terms of Use " class="text-secondary">Terms of Use </a> and
+                        <a href="javascript:void(0)" target="_self" title="Privacy Policy" class="text-secondary">Privacy Policy </a> .
+                    </p>
+                    <button class="btn btn-secondary d-block mx-auto mw-180 text-18 text-medium">
                             Confirm & Book
                         </button>
-                        <p class="text-14 mb-0 mt-10 text-center w-500">
-                            <img src="./images/icon-check-circle-green.svg" alt="check circle" title="check circle" class="mr-10">
-                            Your transaction and personal information are secure
-                        </p>
-                    </div>
-                    <div class="modal modal-sign-in fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog w-100 h-100 d-flex justify-content-center align-items-center my-0">
-                          <div class="modal-content">
+                    <p class="text-14 mb-0 mt-10 text-center w-500">
+                        <img src="./images/icon-check-circle-green.svg" alt="check circle" title="check circle" class="mr-10"> Your transaction and personal information are secure
+                    </p>
+                </div>
+                <div class="modal modal-sign-in fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog w-100 h-100 d-flex justify-content-center align-items-center my-0">
+                        <div class="modal-content">
                             <div class="position-relative bg-white padding-block pt-20 px-30 rounded box-shadow-1">
                                 <div class="sign-in-step-1">
                                     <h2>Sign In or Register</h2>
@@ -451,93 +440,96 @@
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                               <button type="button" class="btn btn-primary">Save changes</button>
                             </div> -->
-                          </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
-        </main>
-        <script src="js/jquery-3.5.1.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        </div>
+    </main>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap-4.5.min.js"></script>
-        <script src="js/select2/select2.min.js"></script>
-        <script src="js/lazysizes.min.js"></script>
-        <script src="js/ls.bgset.min.js"></script>
-        <script src="js/typeahead.bundle.js"></script>
-        <script src="js/intlTelInput.min.js"></script>
-        <script src="js/jquery.plugin.min.js"></script>
-        <script src="js/jquery.datepick.js"></script>
-        <script src="js/style.js?v=1"></script>
-        <script type="text/javascript">
-            $(function () {
-                $('.btn-hotel').click(function(){
-                    window.location = 'http://localhost/htmltravelnercom/hotel-payment-step-2.html'
-                })
-                $(".selectAreacodes").select2({
-                    placeholder: "VN +84"
-                })
-                $(".selectTime").select2({
-                    placeholder: "I don't know"
-                })
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.5.min.js"></script>
+    <script src="js/select2/select2.min.js"></script>
+    <script src="js/lazysizes.min.js"></script>
+    <script src="js/ls.bgset.min.js"></script>
+    <script src="js/typeahead.bundle.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/jquery.plugin.min.js"></script>
+    <script src="js/jquery.datepick.js"></script>
+    <script src="js/style.js?v=1"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.btn-hotel').click(function() {
+                window.location = 'http://localhost/htmltravelnercom/hotel-payment-step-2.html'
+            })
+            $(".selectAreacodes").select2({
+                placeholder: "VN +84"
+            })
+            $(".selectTime").select2({
+                placeholder: "I don't know"
+            })
 
-                $('#date-of-birth-1').datepicker({
-                    "dateFormat": "MM/dd/yy"
-                });
-                var profileTel = $("input[name=txtPhone]");
-                profileTel.intlTelInput({
-                    autoPlaceholder: "on",
-                    initialCountry: "vn",
-                    formatOnDisplay: true,
-                    utilsScript: "js/utils.min.js",
-                }).then(function(){
-                    let ele = document.querySelector(".txt-phone-1 .selected-flag");
-                    let currentCountry = ele.getAttribute("title");
-                    currentCountry = currentCountry.slice(currentCountry.indexOf("+"));
-                    let span = document.createElement("span");
-                    span.classList.add("country-code", "text-16" , "text-grey-3")
-                    span.innerHTML = currentCountry;
-                    ele.append(span);
-                })
-                $("input[name=txtPhone]").on("countrychange", function(e, c){
-                    let ele = document.querySelector(".selected-flag");
-                    ele.querySelector(".country-code").innerHTML = "+" + c.dialCode;
-                })
-                $(".gender-selection").select2({
-                    placeholder: "Select",
-                });
-                // sigin modal 
-                $(".btn-sign-in").on("click", function(e){
-                    $(".sign-in-step-1").addClass("show");
-                    $(".sign-in-step-2").removeClass("show");
-                })
-                $(".back-step-1").on("click", function(e){
-                    $(".sign-in-step-1").addClass("show");
-                    $(".sign-in-step-2").removeClass("show");
-                })
-                $(".sign-in-step-1 .btn-step-1").on("click", function(e){
-                    $(".sign-in-step-1").removeClass("show");
-                    let email = $("#email-user-sign-in-input").val();
-                    console.log("ákdjfh", email)
-                    $(".sign-in-step-2 .email-user").html(email);
-                    $(".sign-in-step-2").addClass("show");
-                })
-                $(".sign-in-step-2 .btn-resgister").on("click", function(e){
-                    $(".sign-in-step-1").removeClass("show");
-                    $(".sign-in-step-2").removeClass("show");
-                    $(".open-sign-in").css("display", "none");
-                    filledInputSignIn();
-                })
-                function filledInputSignIn() {
-                    $(".label-cus-1").addClass("filled");
-                }
-                if(window.innerWidth >= 992){
-                    $(".btn-sign-in").click();
-                }
+            $('#date-of-birth-1').daterangepicker({
+                autoApply: true,
+                singleDatePicker: true
             });
-        </script>
-    </body>
+            var profileTel = $("input[name=txtPhone]");
+            profileTel.intlTelInput({
+                autoPlaceholder: "on",
+                initialCountry: "vn",
+                formatOnDisplay: true,
+                utilsScript: "js/utils.min.js",
+            }).then(function() {
+                let ele = document.querySelector(".txt-phone-1 .selected-flag");
+                let currentCountry = ele.getAttribute("title");
+                currentCountry = currentCountry.slice(currentCountry.indexOf("+"));
+                let span = document.createElement("span");
+                span.classList.add("country-code", "text-16", "text-grey-3")
+                span.innerHTML = currentCountry;
+                ele.append(span);
+            })
+            $("input[name=txtPhone]").on("countrychange", function(e, c) {
+                let ele = document.querySelector(".selected-flag");
+                ele.querySelector(".country-code").innerHTML = "+" + c.dialCode;
+            })
+            $(".gender-selection").select2({
+                placeholder: "Select",
+            });
+            // sigin modal 
+            $(".btn-sign-in").on("click", function(e) {
+                $(".sign-in-step-1").addClass("show");
+                $(".sign-in-step-2").removeClass("show");
+            })
+            $(".back-step-1").on("click", function(e) {
+                $(".sign-in-step-1").addClass("show");
+                $(".sign-in-step-2").removeClass("show");
+            })
+            $(".sign-in-step-1 .btn-step-1").on("click", function(e) {
+                $(".sign-in-step-1").removeClass("show");
+                let email = $("#email-user-sign-in-input").val();
+                console.log("ákdjfh", email)
+                $(".sign-in-step-2 .email-user").html(email);
+                $(".sign-in-step-2").addClass("show");
+            })
+            $(".sign-in-step-2 .btn-resgister").on("click", function(e) {
+                $(".sign-in-step-1").removeClass("show");
+                $(".sign-in-step-2").removeClass("show");
+                $(".open-sign-in").css("display", "none");
+                filledInputSignIn();
+            })
+
+            function filledInputSignIn() {
+                $(".label-cus-1").addClass("filled");
+            }
+            if (window.innerWidth >= 992) {
+                $(".btn-sign-in").click();
+            }
+        });
+    </script>
+</body>
+
 </html>

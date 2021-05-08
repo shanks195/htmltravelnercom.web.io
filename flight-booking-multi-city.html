@@ -185,23 +185,23 @@
                             <div class="w-xs-100 flex-fill position-relative">
                                 <!-- flight 1 -->
                                 <div class="flight-city-item d-flex align-items-center mb-10 text-14">
-                                    <span class="text-medium text-16 w-60px mr-10 text-white flex-shrink-0">Flight 1</span>
+                                    <span class="text-medium text-16 w-60px mr-10 text-white flex-shrink-0 flight-number">Flight 1</span>
                                     <div class="pr-5 px-xs-15 mb-xs-15 position-relative flex-fill">
-                                        <div id="selectFromLocation-1" class="w-100 h-48 selectFromLocation">
+                                        <div id="selectFromLocation" class="w-100 h-48 selectFromLocation">
                                             <input class="typeahead" type="text" placeholder="From where" />
                                         </div>
                                         <img src="./images/icon-from-to.svg" / style="position: absolute; top: 8px; right: -17px; z-index:1" class="d-none d-lg-block">
                                         <img src="./images/icon-from-to-mobile.svg" / style="position: absolute; top: 38px; right: 0px; z-index:1" class="d-block d-lg-none">
                                     </div>
                                     <div class="pl-5 px-xs-15 flex-fill">
-                                        <div id="selectToLocation-1" class="w-100 h-48 selectToLocation">
+                                        <div id="selectToLocation" class="w-100 h-48 selectToLocation">
                                             <input class="typeahead" type="text" placeholder="To where" />
                                         </div>
                                     </div>
                                     <div class="pl-10 pr-0 px-xs-15 mt-xs-15 position-relative text-14">
                                         <div class="d-flex align-items-center h-48 overflow-hidden rounded position-relative bg-white" style="border: 1px solid #a3a3a3;">
-                                            <label class="calendar-item position-relative h-100 w-100 pl-40 flex-basic-180" role="button" for="fromCalendar-1">
-                                                <input id="fromCalendar-1" class="calendar h-100 p-0 ml-0 mw-100 w-100 input-off-focus pl-15" type="text" value="01 May 2020" role="button" readonly />
+                                            <label class="calendar-item position-relative h-100 w-100 pl-40 flex-basic-180" role="button" for="fromCalendar">
+                                                <input id="fromCalendar" class="calendar h-100 p-0 ml-0 mw-100 w-100 input-off-focus pl-15" type="text" value="01 May 2020" role="button" readonly />
                                                 <div class="arrow-2-direction mr-10">
                                                     <img src="./images/icon-arrow-left-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
                                                     <img src="./images/icon-arrow-right-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
@@ -212,8 +212,38 @@
                                 </div>
                                 <div class="position-relative flight-add-filed-js">
                                     <!-- flight 1 -->
-                                    <div class="flight-city-item d-flex align-items-center mb-10 text-14">
-                                        <span class="text-medium text-16 w-60px mr-10 text-white flex-shrink-0">Flight 2</span>
+                                    <div class="flight-city-item position-relative d-flex align-items-center mb-10 text-14">
+                                        <span class="text-medium text-16 w-60px mr-10 text-white flex-shrink-0 flight-number">Flight 2</span>
+                                        <div class="pr-5 px-xs-15 mb-xs-15 position-relative flex-fill">
+                                            <div id="selectFromLocation-1" class="w-100 h-48 selectFromLocation">
+                                                <input class="typeahead" type="text" placeholder="From where" />
+                                            </div>
+                                            <img src="./images/icon-from-to.svg" / style="position: absolute; top: 8px; right: -17px; z-index:1" class="d-none d-lg-block">
+                                            <img src="./images/icon-from-to-mobile.svg" / style="position: absolute; top: 38px; right: 0px; z-index:1" class="d-block d-lg-none">
+                                        </div>
+                                        <div class="pl-5 px-xs-15 flex-fill">
+                                            <div id="selectToLocation-1" class="w-100 h-48 selectToLocation">
+                                                <input class="typeahead" type="text" placeholder="To where" />
+                                            </div>
+                                        </div>
+                                        <div class="pl-10 pr-0 px-xs-15 mt-xs-15">
+                                            <div class="d-flex align-items-center h-48 overflow-hidden position-relative rounded  bg-white" style="border: 1px solid #a3a3a3;">
+                                                <label class="calendar-item position-relative h-100 w-100 pl-40 flex-basic-180" role="button" for="fromCalendar-1">
+                                                    <input id="fromCalendar-1" class="calendar h-100 p-0 ml-0 mw-100 w-100 input-off-focus pl-15" type="text" value="01 May 2020" role="button" readonly />
+                                                    <div class="arrow-2-direction mr-10">
+                                                        <img src="./images/icon-arrow-left-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
+                                                        <img src="./images/icon-arrow-right-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="cancel-flight-search" role="button">
+                                            <img src="./images/icon-close-flight.svg" alt="close flight">
+                                        </div>
+                                    </div>
+                                    <!-- flight 1 -->
+                                    <div class="flight-city-item position-relative d-flex align-items-center mb-10 text-14">
+                                        <span class="text-medium text-16 w-60px mr-10 text-white flex-shrink-0 flight-number">Flight 3</span>
                                         <div class="pr-5 px-xs-15 mb-xs-15 position-relative flex-fill">
                                             <div id="selectFromLocation-2" class="w-100 h-48 selectFromLocation">
                                                 <input class="typeahead" type="text" placeholder="From where" />
@@ -226,37 +256,10 @@
                                                 <input class="typeahead" type="text" placeholder="To where" />
                                             </div>
                                         </div>
-                                        <div class="pl-10 pr-0 px-xs-15 mt-xs-15">
-                                            <div class="d-flex align-items-center h-48 overflow-hidden position-relative rounded  bg-white" style="border: 1px solid #a3a3a3;">
-                                                <label class="calendar-item position-relative h-100 w-100 pl-40 flex-basic-180" role="button" for="fromCalendar-2">
-                                                    <input id="fromCalendar-2" class="calendar h-100 p-0 ml-0 mw-100 w-100 input-off-focus pl-15" type="text" value="01 May 2020" role="button" readonly />
-                                                    <div class="arrow-2-direction mr-10">
-                                                        <img src="./images/icon-arrow-left-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
-                                                        <img src="./images/icon-arrow-right-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- flight 1 -->
-                                    <div class="flight-city-item d-flex align-items-center mb-10 text-14">
-                                        <span class="text-medium text-16 w-60px mr-10 text-white flex-shrink-0">Flight 3</span>
-                                        <div class="pr-5 px-xs-15 mb-xs-15 position-relative flex-fill">
-                                            <div id="selectFromLocation-3" class="w-100 h-48 selectFromLocation">
-                                                <input class="typeahead" type="text" placeholder="From where" />
-                                            </div>
-                                            <img src="./images/icon-from-to.svg" / style="position: absolute; top: 8px; right: -17px; z-index:1" class="d-none d-lg-block">
-                                            <img src="./images/icon-from-to-mobile.svg" / style="position: absolute; top: 38px; right: 0px; z-index:1" class="d-block d-lg-none">
-                                        </div>
-                                        <div class="pl-5 px-xs-15 flex-fill">
-                                            <div id="selectToLocation-3" class="w-100 h-48 selectToLocation">
-                                                <input class="typeahead" type="text" placeholder="To where" />
-                                            </div>
-                                        </div>
                                         <div class="pl-10 pr-0 px-xs-15 mt-xs-15 position-relative">
                                             <div class="d-flex align-items-center h-48 overflow-hidden rounded position-relative bg-xs-white bg-white" style="border: 1px solid #a3a3a3;">
-                                                <label class="calendar-item position-relative h-100 w-100 pl-40 flex-basic-180 bg-white" role="button" for="fromCalendar-3">
-                                                    <input id="fromCalendar-3" class="calendar h-100 p-0 ml-0 mw-100 w-100 input-off-focus pl-15" type="text" value="01 May 2020" role="button" readonly />
+                                                <label class="calendar-item position-relative h-100 w-100 pl-40 flex-basic-180 bg-white" role="button" for="fromCalendar-2">
+                                                    <input id="fromCalendar-2" class="calendar h-100 p-0 ml-0 mw-100 w-100 input-off-focus pl-15" type="text" value="01 May 2020" role="button" readonly />
                                                     <div class="arrow-2-direction mr-10">
                                                         <img src="./images/icon-arrow-left-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
                                                         <img src="./images/icon-arrow-right-input.svg" alt="arrow left" title="arrow left" class="d-inline-block">
@@ -265,10 +268,10 @@
                                             </div>
                                             
                                         </div>
+                                        <div class="cancel-flight-search" role="button">
+                                            <img src="./images/icon-close-flight.svg" alt="close flight">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="cancel-flight-search" role="button">
-                                    <img src="./images/icon-close-flight.svg" alt="close flight">
                                 </div>
                                 <!-- clear -->
                                 <div class="d-flex justify-content-end mt-20">
@@ -1837,18 +1840,18 @@
                                 </div>
                             </div>
                             <!-- pagination -->
-                            <div class="py-30">
-                                <ul class="pagination mb-0">
-                                    <li class="page-item"><a class="page-link" href="javascript:void(0);"></a></li>
-                                    <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">...</a></li>
-                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">12</a></li>
-                                    <li class="page-item"><a class="page-link" href="javascript:void(0);"></a></li>
-                                </ul>
-                            </div>
+                            <div class="d-flex py-30">
+                        <ul class="pagination mb-xs-0 mb-lg-0">
+                            <li class="page-item"><a class="page-link arrow-previous" href="javascript:void(0);"></a></li>
+                            <li class="page-item"><a class="page-link active" href="javascript:void(0);">1</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">...</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">50</a></li>
+                            <li class="page-item"><a class="page-link arrow-next" href="javascript:void(0);"></a></li>
+                        </ul>
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -1869,9 +1872,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Mobile -->
-            <div class="d-block d-lg-none">
             </div>
         </div>
     </main>
@@ -2149,14 +2149,16 @@
                 autoApply: true,
                 "dateFormat": "M d yy"
             });
+            let count = $(".flight-add-filed-js .flight-city-item").length;
             $(".add-more-flight").on("click", function(e) {
-                let numberFlights = $(".flight-city-item").length;
-                if(numberFlights == 1) {
-                    $(".cancel-flight-search").css("display", "");
-                } 
+                count++;
+                let numberFlights = count - 1;
+                console.log("count", count,numberFlights)
+                // let numberFlights = $(".flight-add-filed-js .flight-city-item").length;
+                // numberFlights = count >= numberFlights ? count : numberFlights;
                 let content = `
-                    <div class="flight-city-item d-flex align-items-center mb-10 text-14">
-                        <span class="text-medium text-16 w-60px mr-10 text-white flex-shrink-0">Flight ${numberFlights + 1}</span>
+                    <div class="flight-city-item flight-city-item-${numberFlights} position-relative d-flex align-items-center mb-10 text-14">
+                        <span class="text-medium text-16 w-60px mr-10 text-white flex-shrink-0 flight-number">Flight ${numberFlights + 1}</span>
                         <div class="pr-5 px-xs-15 mb-xs-15 position-relative flex-fill">
                             <div id="selectFromLocation-${numberFlights + 1}" class="w-100 h-48 selectFromLocation new-added-${numberFlights + 1}">
                                 <input class="typeahead" type="text" placeholder="From where" />
@@ -2181,9 +2183,11 @@
                             </div>
                             
                         </div>
+                        <div class="cancel-flight-search" role="button">
+                            <img src="./images/icon-close-flight.svg" alt="close flight">
+                        </div>
                     </div>
                 `;
-                
                 $(".flight-add-filed-js").append(content);
                 $('.calendar').daterangepicker({
                     minDate: new Date(),
@@ -2192,24 +2196,14 @@
                     autoApply: true,
                 });
                 selectLocationNewAdd(numberFlights + 1);
-            })
-            var substringMatcher = function(strs) {
-                return function findMatches(q, cb) {
-                    var matches, substringRegex;
-
-                    matches = [];
-
-                    substrRegex = new RegExp(q, "i");
-
-                    $.each(strs, function(i, str) {
-                        if (substrRegex.test(str)) {
-                            matches.push(str);
-                        }
-                    });
-
-                    cb(matches);
-                };
-            };
+                // 
+                reFreshNumberFlight()
+                $(".flight-city-item-" + numberFlights + " .cancel-flight-search").click(function(e){
+                    let parent = this.closest(".flight-city-item");
+                    $(parent).remove();
+                    reFreshNumberFlight()
+                })
+            });
             function selectLocationNewAdd(counterNew) {
                 var locations = ["Alabama Alabama Alabama Alabama Alabama Alabama Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
     
@@ -2245,8 +2239,44 @@
                 $(`.selectToLocation.new-added-${counterNew} .typeahead`).bind('typeahead:render', function(ev, suggestion) {
                     $(`.selectToLocation.new-added-${counterNew} .typeahead-title`).html('Matching With ' + $(`.selectToLocation.new-added-${counterNew} .tt-input`).next().html())
                 });
+                // 
             };
-            
+            // delete flight
+            $(".cancel-flight-search").click(function(e){
+                let parent = this.closest(".flight-city-item");
+                $(parent).remove();
+                reFreshNumberFlight();
+            })
+            //  refresh number flight text
+            function reFreshNumberFlight() {
+                let length = $(".flight-add-filed-js .flight-city-item").length;
+                for(let i = 0; i < length; i++) {
+                    $(".flight-add-filed-js .flight-city-item")[i].querySelector(".flight-number").innerHTML = "Flight " + (i+2);
+                }
+            }
+            // clear all filghts
+            $(".clear-all-flights").on("click", function(e){
+                $(".flight-add-filed-js").html("");
+                $(".cancel-flight-search").css("display", "none");
+            })
+            // 
+            var substringMatcher = function(strs) {
+                return function findMatches(q, cb) {
+                    var matches, substringRegex;
+
+                    matches = [];
+
+                    substrRegex = new RegExp(q, "i");
+
+                    $.each(strs, function(i, str) {
+                        if (substrRegex.test(str)) {
+                            matches.push(str);
+                        }
+                    });
+
+                    cb(matches);
+                };
+            };
             var locations = ["Alabama Alabama Alabama Alabama Alabama Alabama Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
 
             $(".selectFromLocation .typeahead").typeahead({
@@ -2279,21 +2309,6 @@
             $('.selectToLocation .typeahead').bind('typeahead:render', function(ev, suggestion) {
                 $(".selectToLocation .typeahead-title").html('Matching With ' + $(".selectToLocation .tt-input").next().html())
             });
-            // delete flight
-            if($(".flight-city-item").length == 1) 
-                $(".cancel-flight-search").css("display", "none"); 
-            
-            $(".cancel-flight-search").on("click", function(e){
-                let numberFlights = $(".flight-city-item").length;
-                $(".flight-city-item")[numberFlights - 1].remove();
-                if(numberFlights === 2) $(this).css("display", "none"); 
-
-            }) 
-            // clear all filghts
-            $(".clear-all-flights").on("click", function(e){
-                $(".flight-add-filed-js").html("");
-                $(".cancel-flight-search").css("display", "none");
-            })
             // expand content
             $(".btn-expand-brief").on("click", function(e) {
                 let childEle = $($(this).data("target"));

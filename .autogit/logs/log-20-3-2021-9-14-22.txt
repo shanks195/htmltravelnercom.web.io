@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Tue Apr 20 2021 09:14:22 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* homepage-flight.html
+* homepage.html
+* scss/_variables.scss
+* scss/utilities/_shadow.scss
+
+
+Created files:
+* .autogit/logs/log-20-3-2021-8-43-44.txt
+
+
+Deleted files:
+
+
+Renamed files:

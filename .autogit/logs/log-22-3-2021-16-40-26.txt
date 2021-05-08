@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Apr 22 2021 16:40:26 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-22-3-2021-16-10-13.txt
+* "images/The-Sol-City-m\341\273\237-b\303\241n-s\341\272\243n-ph\341\272\251m-\304\221\341\272\271p-nh\341\272\245t-d\341\273\261-\303\241n.jpg"
+
+
+Deleted files:
+
+
+Renamed files:

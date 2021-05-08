@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 03 2021 14:47:07 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* general-faqs.html
+* mytrip-desktop.html
+
+
+Created files:
+* images/icon-black-right.svg
+* images/icon-left-right.svg
+
+
+Deleted files:
+* "images/Travelner.com (Mobile) (1).zip"
+* "images/Travelner.com (Mobile) (2).zip"
+* "images/Travelner.com (Mobile).zip"
+
+
+Renamed files:

@@ -1,0 +1,29 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 23 2021 08:48:17 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* homepage.html
+* scss/_class.scss
+* scss/bootstrap-4.5/_buttons.scss
+* scss/components/_box.scss
+* tour-homepage.html
+
+
+Created files:
+* import/header.html
+
+
+Deleted files:
+* "images/1617949868-title (1).png"
+* images/1617949868-title.png
+* "images/Banner Promotion-20210422T080147Z-001/Banner Promotion/750x1200.jpg"
+* "images/Banner Promotion-20210422T080147Z-001/Banner Promotion/900x900.jpg"
+* "images/Banner Promotion-20210422T080147Z-001/Banner Promotion/960x540.jpg"
+* "images/Banner Promotion-20210422T080147Z-001/Banner Promotion/The-Sol-City-m\341\273\237-b\303\241n-s\341\272\243n-ph\341\272\251m-\304\221\341\272\271p-nh\341\272\245t-d\341\273\261-\303\241n.jpg"
+* images/best-of-viet-nam-15-days.jpg
+
+
+Renamed files:

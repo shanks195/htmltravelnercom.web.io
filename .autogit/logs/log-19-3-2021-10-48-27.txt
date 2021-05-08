@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Mon Apr 19 2021 10:48:27 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* package-homepage.html
+* scss/_class.scss
+* scss/prepros.config
+
+
+Created files:
+* images/icon-rating-empty.svg
+* images/icon-rating-stars.svg
+
+
+Deleted files:
+
+
+Renamed files:

@@ -21,7 +21,12 @@ $btn-height: 48px;
         }
     }
 }
-
+.border-5 {
+    border:1px solid #C8CACD;
+}
+.border-bottom-none {
+    border-bottom:none;
+}
 .btn-pill {
     border-radius: 1000px;
 }
@@ -66,7 +71,10 @@ $btn-height: 48px;
         }
     }
 }
-
+.btn-gradient{
+    background: linear-gradient(90deg,#BE1E2D 0%,#EC1C24 100%);
+    color: #ffffff;
+}
 .btn-secondary-secondary {
     background-color: $secondary-color;
 }
@@ -395,90 +403,206 @@ button .icon {
     display: inline-block;
     width: 60px;
     height: 26px;
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .text-checked {
+        position: absolute;
+        font-size: 10px;
+        font-weight: 500;
+        color: #fff;
+        right: 60%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+        opacity: 0;
+    }
+    .text-un-checked {
+        position: absolute;
+        font-size: 10px;
+        font-weight: 500;
+        color: #828282;
+        left: 60%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 3px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }   
+        &.round {
+            border-radius: 34px;
+        }
+        &.round:before {
+            border-radius: 50%;
+        }
+    }
+    input:checked+.slider .text-un-checked {
+        opacity: 0;
+    }
+    
+    input:checked+.slider .text-checked {
+        opacity: 1;
+    }
+    
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+    
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked+.slider:before {
+        -webkit-transform: translateX(32px);
+        -ms-transform: translateX(32px);
+        transform: translateX(32px);
+    }
+    &.small-20 {
+        width: 40px;
+        height: 20px;
+        .slider {
+            &::before {
+                height: 14px;
+                width: 14px;
+            }
+        }
+        input:checked+.slider:before {
+            -webkit-transform: translateX(18px);
+            -ms-transform: translateX(18px);
+            transform: translateX(18px);
+        }
+    }
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+// .switch input {
+//     opacity: 0;
+//     width: 0;
+//     height: 0;
+// }
+
+// .slider {
+//     position: absolute;
+//     cursor: pointer;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: #ccc;
+//     -webkit-transition: .4s;
+//     transition: .4s;
+// }
+
+// .slider:before {
+//     position: absolute;
+//     content: "";
+//     height: 20px;
+//     width: 20px;
+//     left: 4px;
+//     bottom: 3px;
+//     background-color: white;
+//     -webkit-transition: .4s;
+//     transition: .4s;
+// }
+
+// .switch .text-checked {
+//     position: absolute;
+//     font-size: 10px;
+//     font-weight: 500;
+//     color: #fff;
+//     right: 60%;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     transition: all 0.3s;
+//     opacity: 0;
+// }
+
+// .switch .text-un-checked {
+//     position: absolute;
+//     font-size: 10px;
+//     font-weight: 500;
+//     color: #828282;
+//     left: 60%;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     transition: all 0.3s;
+// }
+
+// input:checked+.slider .text-un-checked {
+//     opacity: 0;
+// }
+
+// input:checked+.slider .text-checked {
+//     opacity: 1;
+// }
+
+// input:checked+.slider {
+//     background-color: #2196F3;
+// }
+
+// input:focus+.slider {
+//     box-shadow: 0 0 1px #2196F3;
+// }
+
+// input:checked+.slider:before {
+//     -webkit-transform: translateX(32px);
+//     -ms-transform: translateX(32px);
+//     transform: translateX(32px);
+// }
+
+
+// /* Rounded sliders */
+
+// .slider.round {
+//     border-radius: 34px;
+// }
+
+// .slider.round:before {
+//     border-radius: 50%;
+// }
+.choose-file{
+    padding: 5px 15px;
+    background-color: #E6E6E6;
+    margin-right: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    &:hover{
+        color: inherit;
+    }
+    @include media-breakpoint-down(md){
+        padding: 6px 0;
+        min-width: 150px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 3px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.switch .text-checked {
-    position: absolute;
-    font-size: 10px;
-    font-weight: 500;
-    color: #fff;
-    right: 60%;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s;
-    opacity: 0;
-}
-
-.switch .text-un-checked {
-    position: absolute;
-    font-size: 10px;
-    font-weight: 500;
-    color: #828282;
-    left: 60%;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s;
-}
-
-input:checked+.slider .text-un-checked {
-    opacity: 0;
-}
-
-input:checked+.slider .text-checked {
-    opacity: 1;
-}
-
-input:checked+.slider {
-    background-color: #2196F3;
-}
-
-input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked+.slider:before {
-    -webkit-transform: translateX(32px);
-    -ms-transform: translateX(32px);
-    transform: translateX(32px);
-}
-
-
-/* Rounded sliders */
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
+.btn-gradient {
+    background: linear-gradient(90deg,#BE1E2D 0%,#EC1C24 100%);
+    color: #FFF;
+    &:hover {
+        color: #FFF;
+    }
 }

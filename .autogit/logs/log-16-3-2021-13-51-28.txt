@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 16 2021 13:51:28 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* homepage-flight.html
+* hotel-processing.html
+* package-homepage.html
+
+
+Created files:
+* .autogit/logs/log-16-3-2021-13-21-9.txt
+* images/gata-away.png
+* images/icon-star.svg
+
+
+Deleted files:
+* "images/Travelner.com (Desktop) (1).zip"
+* "images/Travelner.com (Desktop).zip"
+
+
+Renamed files:

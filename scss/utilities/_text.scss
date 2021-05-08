@@ -1,6 +1,7 @@
 .text-secondary {
     color: $secondary-color !important;
 }
+
 .text-secondary-dark {
     color: $secondary-dark !important;
 }
@@ -8,9 +9,12 @@
 a.text-hover-inherit:hover {
     color: darken($secondary-color, 10%) !important;
 }
-a.text-secondary:focus, a.text-secondary:hover {
+
+a.text-secondary:focus,
+a.text-secondary:hover {
     color: $secondary-color !important;
 }
+
 a {
     &:hover {
         color: #0046b8;
@@ -31,11 +35,15 @@ a {
 .text-green {
     color: $green !important;
 }
-
+.text-cursor-pointer {
+    cursor: pointer;
+}
 .text-green-1 {
     color: #219653;
 }
-
+.eye-open {
+    display: block;
+}
 .text-green-2 {
     color: #008009 !important;
 }
@@ -59,6 +67,7 @@ a {
 .text-gray-2 {
     color: $gray;
 }
+
 .text-gray-4 {
     color: $form-border;
 }
@@ -95,16 +104,16 @@ a {
     color: #002D75
 }
 
+.text-black-33 {
+    color: $black-33;
+}
+
 .text-white {
     color: #ffffff;
 }
 
 .text-access {
     color: $three-color;
-}
-
-.text-red {
-    color: $red;
 }
 
 .text-dark-blue {
@@ -150,9 +159,11 @@ a {
 .text-time {
     color: #4F4F4F !important;
 }
+
 .text-8 {
     font-size: 8px !important;
 }
+
 .text-48 {
     font-size: 48px !important;
 }
@@ -234,6 +245,9 @@ a {
 }
 
 @include media-breakpoint-down(md) {
+    .font-weight-xs-bold {
+        font-weight: 700!important;
+    }
     .text-gray-2-xs {
         color: $gray;
     }
@@ -373,4 +387,7 @@ a.text-link {
     @include media-breakpoint-down(md) {
         text-decoration: none;
     }
+}
+.text-red-1{
+    color: #BE1E2D;
 }

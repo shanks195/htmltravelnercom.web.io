@@ -1,0 +1,32 @@
+-------------------- Auto-Git Log --------------------
+		Tue Apr 13 2021 10:53:17 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* homepage.html
+* js/slick-1.8.1/slick/slick-theme.css
+* js/slick-1.8.1/slick/slick.css
+* scss/bootstrap-4.5/bootstrap-reboot.css
+* scss/components/_box.scss
+
+
+Created files:
+* .autogit/logs/log-13-3-2021-10-22-54.txt
+* "images/fill information.png"
+* images/flight.png
+* "images/make the payment.png"
+* "images/reveive the ticket.png"
+* "images/search flight.png"
+* js/slick-1.8.1/slick/slick-theme.css.map
+* js/slick-1.8.1/slick/slick.css.map
+* scss/bootstrap-4.5/bootstrap-grid.css
+* scss/bootstrap-4.5/bootstrap-grid.css.map
+* scss/bootstrap-4.5/bootstrap-reboot.css.map
+* scss/bootstrap-4.5/bootstrap.css
+* scss/bootstrap-4.5/bootstrap.css.map
+
+
+Deleted files:
+
+
+Renamed files:

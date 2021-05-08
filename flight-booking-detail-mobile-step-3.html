@@ -186,7 +186,7 @@
                             <div class="bg-secondary d-flex align-items-center rounded-top px-10 py-8">
                                 <p class="mb-0 text-white text-13 text-medium">Payment Options</p>
                                 <p class="mb-0 ml-auto d-flex align-items-center text-white text-8 text-medium">
-                                    <img src="/images/icon-lock-10.svg" alt="lock" title="lock" class="mr-5">
+                                    <img src="./images/icon-lock-10.svg" alt="lock" title="lock" class="mr-5">
                                     <span>Secured Encrypted Transaction</span>
                                 </p>
                             </div>
@@ -221,7 +221,7 @@
                                         >
                                         <span class="cvv-text text-14">
                                             CVV
-                                            <span class="text-main">*</span>
+                                            <span class="text-danger">*</span>
                                         </span>
                                         <div class="cvv-img">
                                             <img src="./images/icon-cvv-card.svg" alt="cvv" title="cvv">
@@ -235,12 +235,12 @@
                             </p>
                             <div class="mb-0 form-group px-10">
                                 <input type="text" class="form-control h-40" placeholder="Contact Phone Number*">
-                                <div class="mt-10 d-flex align-items-start">
-                                    <input type="checkbox" class="checkbox-20 flex-shrink-0 mr-10">
+                                <label class="mt-10 d-flex align-items-start" for="check-box-argree">
+                                    <input id="check-box-argree" type="checkbox" class="checkbox-20 flex-shrink-0 mr-10">
                                     <p class="mb-0 text-12 text-grey-3">
                                         I agree to receive texts and calls at this number, and also to share this contact information with the airline(s) associated with this booking.
                                     </p>
-                                </div>
+                                </label>
                                 <input type="text" class="form-control mb-10 h-40" placeholder="Email Address*" >
                                 <p class="mb-0 text-12 text-grey-3">Booking confirmation will be sent to this email address</p>
                             </div>
@@ -435,7 +435,7 @@
                                    </p>
                                </li>
                            </ul>
-                           <div class="d-flex align-items-center px-10 mb-10">
+                           <div class="d-flex align-items-center px-10 mb-10 form-group">
                                <input type="text" class="form-control form-cus-3 h-27 text-12 text-grey-2" placeholder="Enter promo code or gift card number">
                                <button class="btn btn-outline-secondary h-27 ml-5 text-12">
                                    Apply

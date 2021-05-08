@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 16 2021 15:22:22 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-16-3-2021-14-52-5.txt
+* images/beach.png
+
+
+Deleted files:
+
+
+Renamed files:

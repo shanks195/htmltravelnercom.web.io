@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Thu Apr 15 2021 13:54:12 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css.map
+* homepage.html
+* scss/_class.scss
+
+
+Created files:
+* "images/Travelner.com (Desktop) (6).zip"
+* "images/Travelner.com (Desktop) (8).zip"
+* images/fire.png
+* images/fire.svg
+
+
+Deleted files:
+
+
+Renamed files:

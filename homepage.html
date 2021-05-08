@@ -921,7 +921,7 @@
                 e.stopPropagation();
             });
 
-            $(".from-date-wrapper .calendar").html(moment(new Date()).format("DD MMM YYYY"));
+            let b = $(".from-date-wrapper .calendar").html(moment(new Date()).format("DD MMM YYYY"));
             $(".to-date-wrapper .calendar").html(moment(new Date().setDate(new Date().getDate() + 1)).format("DD MMM YYYY"));
             $(".from-date-wrapper .append-date-picker").html(moment(new Date()).format("dddd"));
             $(".to-date-wrapper .append-date-picker").html(moment(new Date().setDate(new Date().getDate() + 1)).format("dddd"));
@@ -933,6 +933,7 @@
             function () {
                 let date = $(".drp-selected").html();
                 let from = date.split("- ")[0];
+                console.log(from)
                 let to = date.split("- ")[1];
                 $(".from-date-wrapper .calendar").html(moment(new Date(from)).format("DD MMM YYYY"));
                 $(".to-date-wrapper .calendar").html(moment(new Date(to)).format("DD MMM YYYY"));
@@ -966,17 +967,20 @@
             };
             var locations = ["Alabama Alabama Alabama Alabama Alabama Alabama Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
 
-            $("#selectFromLocation .typeahead").typeahead({
-                hint: true,
-                highlight: true,
-                minLength: 1
-            }, {
-                name: "locations",
-                source: substringMatcher(locations),
-                templates: {
-                    header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
+            $("#selectFromLocation .typeahead").typeahead
+            (
+                {
+                    hint: true,
+                    highlight: true,
+                    minLength: 1
+                }, {
+                    name: "locations",
+                    source: substringMatcher(locations),
+                    templates: {
+                        header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
+                    }
                 }
-            });
+            );
 
             $("#selectToLocation .typeahead").typeahead({
                 hint: true,

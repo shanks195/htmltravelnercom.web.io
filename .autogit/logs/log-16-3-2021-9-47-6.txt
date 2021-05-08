@@ -1,0 +1,29 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 16 2021 09:47:06 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* hotel-homepage.html
+* scss/_class.scss
+* scss/_variables.scss
+
+
+Created files:
+* .autogit/logs/log-16-3-2021-9-16-43.txt
+
+
+Deleted files:
+* "images/Travelner.com (Desktop) (1).zip"
+* "images/Travelner.com (Desktop) (2).zip"
+* "images/Travelner.com (Desktop) (3).zip"
+* "images/Travelner.com (Desktop) (4).zip"
+* "images/Travelner.com (Desktop) (5).zip"
+* "images/Travelner.com (Desktop) (6).zip"
+* "images/Travelner.com (Desktop) (7).zip"
+* "images/Travelner.com (Desktop) (8).zip"
+* "images/Travelner.com (Desktop).zip"
+
+
+Renamed files:

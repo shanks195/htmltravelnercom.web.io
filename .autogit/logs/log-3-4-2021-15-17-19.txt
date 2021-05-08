@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 03 2021 15:17:19 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* general-faqs.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

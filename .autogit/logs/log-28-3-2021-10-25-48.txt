@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Apr 28 2021 10:25:48 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* mytrip-desktop.html
+* scss/_class.scss
+* scss/prepros.config
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

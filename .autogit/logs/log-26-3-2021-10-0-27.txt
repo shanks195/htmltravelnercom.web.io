@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon Apr 26 2021 10:00:27 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* mytrip-desktop.html
+* scss/_variables.scss
+* tour-confirm-book.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

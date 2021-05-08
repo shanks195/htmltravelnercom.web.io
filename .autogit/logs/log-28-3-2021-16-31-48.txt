@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Apr 28 2021 16:31:48 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* "mytrip-desktop copy 4.html"
+* "mytrip-desktop copy.html"
+* scss/prepros.config
+
+
+Created files:
+* .autogit/logs/log-28-3-2021-16-1-32.txt
+
+
+Deleted files:
+
+
+Renamed files:

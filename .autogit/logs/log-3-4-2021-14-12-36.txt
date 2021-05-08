@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 03 2021 14:12:36 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* mytrip-desktop.html
+* scss/prepros.config
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

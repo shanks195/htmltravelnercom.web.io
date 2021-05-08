@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 03 2021 16:48:14 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* general-faqs.html
+* mytrip-desktop.html
+* scss/utilities/_spacing.scss
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

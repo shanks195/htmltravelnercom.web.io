@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Tue Apr 27 2021 16:10:31 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* images/icon-star-vote-empty.svg
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

@@ -70,3 +70,22 @@
 		}
 	}
 }
+.list-circle-black {
+    li {
+        position: relative;
+        padding-left: 20px;
+        &::before {
+            content: "";
+            display: inline-block;
+            border-radius: 100%;
+            border-width: 4px;
+            background: #404040;
+            border-color: #404040;
+            border-style: solid;
+            position: absolute;
+            left: 0;
+            top: 0.65em;
+            transform: translateY(-50%);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 16 2021 16:23:01 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* package-homepage.html
+* scss/_class.scss
+
+
+Created files:
+* .autogit/logs/log-16-3-2021-15-52-40.txt
+
+
+Deleted files:
+
+
+Renamed files:

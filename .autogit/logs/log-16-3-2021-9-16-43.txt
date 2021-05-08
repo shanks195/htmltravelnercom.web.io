@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 16 2021 09:16:43 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* hotel-homepage.html
+
+
+Deleted files:
+
+
+Renamed files:
