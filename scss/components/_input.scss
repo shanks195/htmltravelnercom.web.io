@@ -101,7 +101,6 @@ input[type=number] {
     }
 }
 .input-name:focus + .title-input{
-    top: 0;
     transform: translateY(0);
     font-size: 12px;
     top: -8px;
@@ -160,7 +159,7 @@ input[type="file"]{
         }
    }
 }
-.info-full-name, .info-email, .info-content,.info-first-name,.info-middle-name,.info-last-name,.info-home-airport,.info-known-travelner,.info-mobile,.info-contact-phone,.info-zip,.info-city,.info-address-line-1,.info-address-line-2,.info-password{
+.info-full-name, .info-email-address, .info-content,.info-first-name,.info-middle-name,.info-last-name,.info-home-airport,.info-known-travelner,.info-mobile,.info-contact-phone,.info-zip,.info-city,.info-address-line-1,.info-address-line-2,.info-password{
     .box-content{
         font-size: 16px;
     }
@@ -188,6 +187,7 @@ input[type="file"]{
             }
         }
         .input-contact{
+            height: 80%;
             border: none;
             padding-left: 0;
             padding-right: 0;
@@ -208,4 +208,108 @@ input:-webkit-autofill:active
     -webkit-box-shadow: 0 0 0 30px white inset !important;
     transition-delay: 3600s;
     transition-property: background-color, color;
+}
+.txt-phone-login {
+    flex-grow: 1;
+    .intl-tel-input {
+        display: flex;
+        height: 100%;
+        .flag-container {
+            position: static;
+            flex: 0 0 125px;
+            border: 1px solid #C8CACD;
+            border-radius: 0.25rem;
+            margin-right: 10px;
+            .selected-flag {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 0;
+                width: 100%;
+                .iti-flag
+                {
+                    position: static;
+                    transform: none;
+                    margin-top: 0;
+                    margin-right: 10px;
+                }
+                .iti-arrow {
+                    display: block;
+                    right: 14px;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 7px solid #999;
+                    position: absolute;
+                    transform: translateY(-30%);
+                }
+                &::after {
+                    content: none;
+                }
+                &::before {
+                    $text-change: "sadkjfhd";
+                    // $text-count : str-index($text-change, "+");
+                    content: attr(country-code) + "";
+                }
+            }
+        }
+        input {
+            position: static;
+            border: none;
+            height: 100%;
+            padding-left: 10px !important;
+            border: 1px solid #C8CACD;
+            width: 310px;
+        }
+    }
+    @include media-breakpoint-down(md){
+        border: 1px solid #C8CACD;
+        .intl-tel-input {
+            display: flex;
+            height: 27px;
+            .flag-container {
+                position: static;
+                flex: 0 0 105px;
+                border: none;
+                margin-right: 0 !important;
+                .selected-flag {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start !important;
+                    padding-left: 10px !important;
+                    width: 100%;
+                    .iti-flag
+                    {
+                        position: static;
+                        transform: none;
+                        margin-top: 0;
+                        margin-right: 10px;
+                    }
+                    .iti-arrow {
+                        display: block;
+                        right: 0!important;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 7px solid #999;
+                        position: absolute;
+                        transform: translateY(-30%);
+                    }
+                    &::after {
+                        content: none;
+                    }
+                    &::before {
+                        $text-change: "sadkjfhd";
+                        // $text-count : str-index($text-change, "+");
+                        content: attr(country-code) + "";
+                    }
+                }
+            }
+        }
+        #text-phone{
+            border:none;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    
 }

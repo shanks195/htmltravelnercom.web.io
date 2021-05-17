@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Tue May 11 2021 13:10:10 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* email-template.html
+
+
+Created files:
+* .autogit/logs/log-11-4-2021-12-17-26.txt
+
+
+Deleted files:
+
+
+Renamed files:

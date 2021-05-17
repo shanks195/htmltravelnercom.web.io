@@ -739,24 +739,17 @@
                     let ele = document.querySelector(".selected-flag");
                     ele.querySelector(".country-code").innerHTML = "+" + c.dialCode;
                 })
+                let Daybegin = new Date();
+                let DayEnd = Daybegin.setDate(Daybegin.getDate()+1);
                 $('#fromCalendar').daterangepicker({
                     singleDatePicker: true,
                     autoApply: true,
                     minDate: new Date()
                 });
-                let datepickerBegin = null;
-                let Daybegin = null; 
                 $('#fromCalendar').on('hide.daterangepicker', function(ev, picker) {
                     Daybegin = picker.startDate.format('YYYY-MM-DD');
-                    datepickerBegin = new Date('"'+Daybegin+'"');
-                    let d = new Date('"'+Daybegin+'"').getDay();
-                    let arrd = ["Sunday", "Monday", "Tuesday", "Wednesday" ,"Thursday", "Friday", "Saturday"];
-                    let drpt = arrd.find((item, index) => index == d);
-                    let drptE = arrd.find((item, index) => index == d+1);
-                    $("#lb-from-day").html(drpt);
-                    $("#lb-to-day").html(drptE);
-                    console.log(datepickerBegin);
-                    console.log(Daybegin);
+                    $("#lb-from-day").html(moment(new Date(picker.startDate)).format('dddd'));
+                    $('#lb-to-day').html(moment(new Date(picker.startDate).setDate(new Date(picker.startDate).getDate()+1)).format('dddd'))
                     let d1 = new Date(Daybegin);
                     d1.setDate(d1.getDate()+1);
                     $('#toCalendar').daterangepicker({
@@ -765,39 +758,8 @@
                         minDate: new Date(d1)
                     });
                     $('#toCalendar').on('hide.daterangepicker', function(ev, picker) {
-                        var Dayend = picker.startDate.format('YYYY-MM-DD');
-                        console.log(Dayend)
-                        let datepickerEnd = new Date('"'+Dayend+'"');
-                        let d = new Date('"'+Dayend+'"').getDay();
-                        let arrd = ["Sunday", "Monday", "Tuesday", "Wednesday" ,"Thursday", "Friday", "Saturday"];
-                        let drpt = arrd.find((item, index) => index == d);
-                        $("#lb-to-day").html(drpt);
-                        var diffrence = (datepickerEnd - datepickerBegin) / 86400000
-                        let setBegin = new Date(Daybegin);
-                        let dateformat = ((setBegin.getMonth() + 1 < 10 ) ? "0" + (1 + setBegin.getMonth()) : setBegin.getMonth() + 1) + "/" + (setBegin.getDate()) + "/" + setBegin.getFullYear();
+                        $("#lb-to-day").html(moment(new Date(picker.startDate)).format('dddd'));
                     });
-                });
-                var substringMatcher = function (strs) {
-                    return function findMatches(q, cb) {
-                        var matches, substringRegex;
-
-                        matches = [];
-
-                        substrRegex = new RegExp(q, "i");
-
-                        $.each(strs, function (i, str) {
-                            if (substrRegex.test(str)) {
-                                matches.push(str);
-                            }
-                        });
-
-                        cb(matches);
-                    };
-                };
-                var drp = $()
-                $('#fromCalendar-mobile').daterangepicker({
-                    autoApply: true,
-                    minDate: new Date()
                 });
                 var substringMatcher = function (strs) {
                     return function findMatches(q, cb) {
@@ -819,8 +781,25 @@
                 $('#toCalendar').daterangepicker({
                     singleDatePicker: true,
                     autoApply: true,
-                    minDate: new Date()
+                    minDate: new Date(DayEnd)
                 });
+                var substringMatcher = function (strs) {
+                    return function findMatches(q, cb) {
+                        var matches, substringRegex;
+
+                        matches = [];
+
+                        substrRegex = new RegExp(q, "i");
+
+                        $.each(strs, function (i, str) {
+                            if (substrRegex.test(str)) {
+                                matches.push(str);
+                            }
+                        });
+
+                        cb(matches);
+                    };
+                };
                 var locations = ["Alabama Alabama Alabama Alabama Alabama Alabama Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"];
 
                 $("#selectFromLocation .typeahead").typeahead({

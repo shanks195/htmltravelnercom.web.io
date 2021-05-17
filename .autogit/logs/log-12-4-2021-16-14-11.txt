@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Wed May 12 2021 16:14:11 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* email-template.html
+* homepage.html
+* mydeal-flight.html
+* mytrip.html
+* scss/_class.scss
+
+
+Created files:
+* .autogit/logs/log-12-4-2021-15-43-48.txt
+
+
+Deleted files:
+
+
+Renamed files:

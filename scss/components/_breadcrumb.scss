@@ -15,7 +15,7 @@
         &.active {
             color: $text-base;
         }
-        & + .breadcrumb-item:before {
+        &+.breadcrumb-item:before {
             content: url("../images/icon-arrow-right-white.svg");
             color: $text-base;
         }
@@ -27,6 +27,11 @@
         display: none;
     }
 }
+
+.bg-breadcrumb-banner {
+    background-color: rgba(0, 36, 60, 0.4);
+}
+
 .breadcrumb-gray {
     background: transparent;
     padding: 6px 0;
@@ -63,26 +68,27 @@
         display: none;
     }
 }
+
 .breadcrumb-bg {
     background-color: rgba(0, 36, 60, 0.4);
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
         background-color: #F0F0F0;
     }
 }
-.bd-contact-us{
-    @include media-breakpoint-down(md){
+
+.bd-contact-us {
+    @include media-breakpoint-down(md) {
         background-color: #F0F0F0 !important;
-    .breadcrumb{
+        .breadcrumb {
             display: flex !important;
             .breadcrumb-item {
-                &+.breadcrumb-item::before{
+                &+.breadcrumb-item::before {
                     content: url("../images/icon-arrow-right-small.svg") !important;
                 }
-                a{
+                a {
                     color: $black;
                 }
             }
-            
         }
     }
 }

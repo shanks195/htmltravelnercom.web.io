@@ -82,115 +82,115 @@
                             <li><a class="btn btn-smaller">Multi-city</a></li>
                         </ul>
                         <form action="#" class="mt-15 d-flex flex-wrap form-search-flight">
-                                    <div class="w-40 w-xs-100">
-                                        <div class="row">
-                                            <div class="col-lg-6 pr-5 px-xs-15 mb-xs-15">
-                                                <div id="selectFromLocation" class="w-100 h-48">
-                                                    <input class="typeahead" type="text" placeholder="From where" />
-                                                </div>
-                                                <img src="./images/icon-from-to.svg" class="position-absolute d-none d-lg-block" style="top: 8px; right: -17px; z-index:1">
-                                                <img src="./images/icon-from-to-mobile.svg" class="position-absolute d-block d-lg-none" style="top: 38px; right: 0px; z-index:1">
-                                            </div>
-                                            <div class="col-lg-6 pl-5 px-xs-15">
-                                                <div id="selectToLocation" class="w-100 h-48">
-                                                    <input class="typeahead" type="text" placeholder="To where" />
-                                                </div>
-                                            </div>
+                            <div class="w-40 w-xs-100">
+                                <div class="row">
+                                    <div class="col-lg-6 pr-5 px-xs-15 mb-xs-15">
+                                        <div id="selectFromLocation" class="w-100 h-48">
+                                            <input class="typeahead" type="text" placeholder="From where" />
+                                        </div>
+                                        <img src="./images/icon-from-to.svg" class="position-absolute d-none d-lg-block" style="top: 8px; right: -17px; z-index:1">
+                                        <img src="./images/icon-from-to-mobile.svg" class="position-absolute d-block d-lg-none" style="top: 38px; right: 0px; z-index:1">
+                                    </div>
+                                    <div class="col-lg-6 pl-5 px-xs-15">
+                                        <div id="selectToLocation" class="w-100 h-48">
+                                            <input class="typeahead" type="text" placeholder="To where" />
                                         </div>
                                     </div>
-                                    <div class="w-60 w-xs-100">
-                                        <div class="row m-lg-0">
-                                            <div class="col-lg-6 pl-10 pr-0 px-xs-15 mt-xs-15 h-48">
-                                                <div class="d-flex align-items-center h-100 overflow-hidden rounded position-relative bg-xs-white border-form">
-                                                    <input id="fromCalendar" class="calendar p-0 pt-5" type="text" readonly style="visibility: hidden; height: 0; width: 0;" />
-                                                    <label class="calendar-item h-100 w-50" for="fromCalendar">
+                                </div>
+                            </div>
+                            <div class="w-60 w-xs-100">
+                                <div class="row m-lg-0">
+                                    <div class="col-lg-6 pl-10 pr-0 px-xs-15 mt-xs-15 h-48">
+                                        <div class="d-flex align-items-center h-100 overflow-hidden rounded position-relative bg-xs-white border-form">
+                                            <input id="fromCalendar" class="calendar p-0 pt-5" type="text" readonly style="visibility: hidden; height: 0; width: 0;" />
+                                            <label class="calendar-item h-100 w-50" for="fromCalendar">
                                                             <div class="from-date-wrapper w-100">
                                                                 <div class="calendar"></div>
                                                                 <div class="append-date-picker">Sunday</div>
                                                             </div>
                                                             <img src="./images/icon-horizontal-line.svg" class="position-absolute" style="top: 11px; left: 50%; z-index: 1;" />
                                                         </label>
-                                                    <label class="calendar-item h-100 w-50 d-flex" for="fromCalendar">
+                                            <label class="calendar-item h-100 w-50 d-flex" for="fromCalendar">
                                                             <div class="to-date-wrapper w-100">
                                                                 <div class="calendar"></div>
                                                                 <div class="append-date-picker">Sunday</div>
                                                             </div>
                                                         </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mt-xs-15">
+                                        <div class="row">
+                                            <div class="col-lg-6 pl-10 pr-0 px-xs-15">
+                                                <div class="bg-white box-date h-48 d-flex align-items-center px-10 text-14 border-form" id="traveller">
+                                                    <a href="#" title="" target="_self"><img src="./images/icon-traveller.svg" alt="Travellers" title="Travellers" /></a>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-medium ml-5" id="total-travel">1 Traveller (s)</span>
+                                                        <span id="info-class" class="text-accent ml-5 text-medium"></span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-6 mt-xs-15">
-                                                <div class="row">
-                                                    <div class="col-lg-6 pl-10 pr-0 px-xs-15">
-                                                        <div class="bg-white box-date h-48 d-flex align-items-center px-10 text-14 border-form" id="traveller">
-                                                            <a href="#" title="" target="_self"><img src="./images/icon-traveller.svg" alt="Travellers" title="Travellers" /></a>
-                                                            <div class="d-flex flex-column">
-                                                                <span class="text-medium ml-5" id="total-travel">1 Traveller (s)</span>
-                                                                <span id="info-class" class="text-accent ml-5 text-medium"></span>
-                                                            </div>
+                                                <div class="box-traveller" id="box-traveller" style="top: 55px;">
+                                                    <div class="d-flex align-items-center w-100 justify-content-between">
+                                                        <p class="mb-0 text-medium">Adults</p>
+                                                        <div class="input-number-wrapper" id="adults">
+                                                            <div class="sub"></div>
+                                                            <input type="number" value="1" class="form-control" readonly />
+                                                            <div class="plus"></div>
                                                         </div>
-                                                        <div class="box-traveller" id="box-traveller" style="top: 55px;">
-                                                            <div class="d-flex align-items-center w-100 justify-content-between">
-                                                                <p class="mb-0 text-medium">Adults</p>
-                                                                <div class="input-number-wrapper" id="adults">
-                                                                    <div class="sub"></div>
-                                                                    <input type="number" value="1" class="form-control" readonly />
-                                                                    <div class="plus"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="d-flex align-items-center w-100 justify-content-between mt-10">
-                                                                <div>
-                                                                    <p class="mb-0 text-medium">Children</p>
-                                                                    <p class="mb-0 text-12 text-grey-3">Age 2 to 17</p>
-                                                                </div>
-                                                                <div class="input-number-wrapper" id="children">
-                                                                    <div class="sub"></div>
-                                                                    <input type="number" value="1" class="form-control" readonly />
-                                                                    <div class="plus"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="d-flex align-items-center w-100 justify-content-between mt-10">
-                                                                <div>
-                                                                    <p class="mb-0 text-medium">Infants</p>
-                                                                    <p class="mb-0 text-12 text-grey-3">Younger than 2</p>
-                                                                </div>
-                                                                <div class="input-number-wrapper" id="infants">
-                                                                    <div class="sub"></div>
-                                                                    <input type="number" value="1" class="form-control" readonly />
-                                                                    <div class="plus"></div>
-                                                                </div>
-                                                            </div>
-                                                            <hr class="bg-white-light" />
-                                                            <div>
-                                                                <div class="class-flight">
-                                                                    <p class="text-medium">Class</p>
-                                                                    <div class="form-group w-100">
-                                                                        <div class="position-relative h-48">
-                                                                            <select class="selectCategory">
+                                                    </div>
+                                                    <div class="d-flex align-items-center w-100 justify-content-between mt-10">
+                                                        <div>
+                                                            <p class="mb-0 text-medium">Children</p>
+                                                            <p class="mb-0 text-12 text-grey-3">Age 2 to 17</p>
+                                                        </div>
+                                                        <div class="input-number-wrapper" id="children">
+                                                            <div class="sub"></div>
+                                                            <input type="number" value="1" class="form-control" readonly />
+                                                            <div class="plus"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center w-100 justify-content-between mt-10">
+                                                        <div>
+                                                            <p class="mb-0 text-medium">Infants</p>
+                                                            <p class="mb-0 text-12 text-grey-3">Younger than 2</p>
+                                                        </div>
+                                                        <div class="input-number-wrapper" id="infants">
+                                                            <div class="sub"></div>
+                                                            <input type="number" value="1" class="form-control" readonly />
+                                                            <div class="plus"></div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="bg-white-light" />
+                                                    <div>
+                                                        <div class="class-flight">
+                                                            <p class="text-medium">Class</p>
+                                                            <div class="form-group w-100">
+                                                                <div class="position-relative h-48">
+                                                                    <select class="selectCategory">
                                                                                     <option></option>
                                                                                     <option value="Economy">Economy</option>
                                                                                     <option value="Bussiness">Bussiness</option>
                                                                                     <option value="Normal">Normal</option>
                                                                                 </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="d-flex justify-content-end mt-50">
-                                                                    <a href="#" title="" target="_self" class="text-medium text-accent text-16" id="done">Done</a>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-lg-6 mt-xs-20 pl-10 px-xs-15">
-                                                        <button type="submit" class="btn btn-block w-xs-100 btn-secondary">
-                                                                <img src="./images/icon-search-white.svg" alt="Search Flights" title="Search Flights" class="d-block d-lg-none mr-10" />
-                                                                Search Flights
-                                                            </button>
+                                                        <div class="d-flex justify-content-end mt-50">
+                                                            <a href="#" title="" target="_self" class="text-medium text-accent text-16" id="done">Done</a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-6 mt-xs-20 pl-10 px-xs-15">
+                                                <button type="submit" class="btn btn-block w-xs-100 btn-secondary">
+                                                                <img src="./images/icon-search-white.svg" alt="Search Flights" title="Search Flights" class="d-block d-lg-none mr-10" />
+                                                                Search Flights
+                                                            </button>
+                                            </div>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="fluid-width">
@@ -898,8 +898,8 @@
                     }
                 }]
             });
-                
-                
+
+
             $('.slider-brand').slick({
                 infinite: true,
                 speed: 300,
@@ -927,19 +927,19 @@
             $(".to-date-wrapper .append-date-picker").html(moment(new Date().setDate(new Date().getDate() + 1)).format("dddd"));
 
             $("#fromCalendar").daterangepicker({
-                minDate: new Date(),
-                autoApply: $(window).width() < 992 ? false : true
-            },
-            function () {
-                let date = $(".drp-selected").html();
-                let from = date.split("- ")[0];
-                console.log(from)
-                let to = date.split("- ")[1];
-                $(".from-date-wrapper .calendar").html(moment(new Date(from)).format("DD MMM YYYY"));
-                $(".to-date-wrapper .calendar").html(moment(new Date(to)).format("DD MMM YYYY"));
-                $(".from-date-wrapper .append-date-picker").html(moment(new Date(from)).format("dddd"));
-                $(".to-date-wrapper .append-date-picker").html(moment(new Date(to)).format("dddd"));
-            });
+                    minDate: new Date(),
+                    autoApply: $(window).width() < 992 ? false : true
+                },
+                function() {
+                    let date = $(".drp-selected").html();
+                    let from = date.split("- ")[0];
+                    console.log(from)
+                    let to = date.split("- ")[1];
+                    $(".from-date-wrapper .calendar").html(moment(new Date(from)).format("DD MMM YYYY"));
+                    $(".to-date-wrapper .calendar").html(moment(new Date(to)).format("DD MMM YYYY"));
+                    $(".from-date-wrapper .append-date-picker").html(moment(new Date(from)).format("dddd"));
+                    $(".to-date-wrapper .append-date-picker").html(moment(new Date(to)).format("dddd"));
+                });
 
             $(".daterangepicker").addClass('main-homepage');
             $(".drp-buttons .applyBtn").addClass("btn-secondary").html("Confirm Dates");
@@ -967,20 +967,17 @@
             };
             var locations = ["Alabama Alabama Alabama Alabama Alabama Alabama Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
 
-            $("#selectFromLocation .typeahead").typeahead
-            (
-                {
-                    hint: true,
-                    highlight: true,
-                    minLength: 1
-                }, {
-                    name: "locations",
-                    source: substringMatcher(locations),
-                    templates: {
-                        header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
-                    }
+            $("#selectFromLocation .typeahead").typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1
+            }, {
+                name: "locations",
+                source: substringMatcher(locations),
+                templates: {
+                    header: `<h3 class="typeahead-title ml-10 mr-25 pl-10 pt-20 pb-10 border-bottom"></h3>`
                 }
-            );
+            });
 
             $("#selectToLocation .typeahead").typeahead({
                 hint: true,
@@ -1003,48 +1000,53 @@
 
         });
         $(".selectCategory").select2({
-        placeholder: "Please select",
+            placeholder: "Please select",
         });
-        $('#traveller').click(function(){
+        $('#traveller').click(function() {
             $('.box-traveller').toggle();
         })
-        $('#done').click(function(){
+        $(document).on('click', function(e) {
+            if ($(e.target).closest("#traveller").length === 0 && $(e.target).closest("#box-traveller").length === 0) {
+                $("#box-traveller").hide();
+            }
+        });
+        $('#done').click(function() {
             $('.box-traveller').hide();
-                    let sum = 0;
-                    $('.input-number-wrapper input[type=number]').each(function(index, ele){
-                        $(ele).val(function(index, currentValue){
-                            sum += +currentValue;
-                            return currentValue;
-                        })
-                    })
-                    $("#total-travel").html(sum+" Traveller (s)");
-
-                    event.preventDefault();
-                    var title = $(".select2-selection__rendered").attr('title');
-                    $('#info-class').text(title)
-
+            let sum = 0;
+            $('.input-number-wrapper input[type=number]').each(function(index, ele) {
+                $(ele).val(function(index, currentValue) {
+                    sum += +currentValue;
+                    return currentValue;
                 })
+            })
+            $("#total-travel").html(sum + " Traveller (s)");
+
+            event.preventDefault();
+            var title = $(".select2-selection__rendered").attr('title');
+            $('#info-class').text(title)
+
+        })
 
         $(".input-number-wrapper").not(".disabled")
-                    .find(".sub")
-                    .click(function () {
-                        $(this)
-                            .next("input")
-                            .val(function (index, currentValue) {
-                                if (parseInt(currentValue) > 0) {
-                                    return parseInt(currentValue) - 1;
-                                } else return currentValue;
-                            });
+            .find(".sub")
+            .click(function() {
+                $(this)
+                    .next("input")
+                    .val(function(index, currentValue) {
+                        if (parseInt(currentValue) > 0) {
+                            return parseInt(currentValue) - 1;
+                        } else return currentValue;
                     });
-                $(".input-number-wrapper").not(".disabled")
-                    .find(".plus")
-                    .click(function () {
-                        $(this)
-                            .prev("input")
-                            .val(function (index, currentValue) {
-                                return parseInt(currentValue) + 1;
-                            });
+            });
+        $(".input-number-wrapper").not(".disabled")
+            .find(".plus")
+            .click(function() {
+                $(this)
+                    .prev("input")
+                    .val(function(index, currentValue) {
+                        return parseInt(currentValue) + 1;
                     });
+            });
 
         $(function() {
             $("#import_travel").load("import/travel.html");
@@ -1053,4 +1055,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -269,7 +269,7 @@
                                    <!-- set your own budget -->
                                    <div class="d-flex align-items-center my-20">
                                         <label class="switch small-20 mb-0 mr-20">
-                                            <input type="checkbox" id="set-budget">
+                                            <input type="checkbox" id="set-budget" checked>
                                             <span class="slider round pr-1">
                                             </span>
                                         </label>
@@ -2072,7 +2072,7 @@
                 range: true,
                 min: 800,
                 max: 4900,
-                values: [1100, 4600],
+                values: [1100, 4100],
                 create : function(event, ui) {
                     let hanldes = document.querySelectorAll("#filter-price-range .ui-slider-handle");
                     let val0 = $("#filter-price-range").slider("values", 0);
@@ -2085,30 +2085,67 @@
                     // value of merge
                     document.querySelector("#filter-price-range .merge-run .left-value").innerHTML = "VND "+val0+"000";
                     document.querySelector("#filter-price-range .merge-run .right-value").innerHTML = "VND "+val1+"000";
+                    let lrw = document.querySelector("#filter-price-range .left-run").clientWidth;
+                    let rrw = document.querySelector("#filter-price-range .right-run").clientWidth;
+                    document.querySelector("#filter-price-range .merge-run").style.width = lrw + rrw + "px";
                     // check if 2 side is overlay each other
                     if(checkPosition()) {
                         document.querySelector("#filter-price-range .filter-text-run").classList.add("merge");
+                        let lp =getComputedStyle(document.querySelector("#filter-price-range .left-run"));
+                        document.querySelector("#filter-price-range .filter-text-run .merge-run").style.left = lp.left;
+                        // this is the first merge
+                        document.querySelector("#filter-price-range .filter-text-run .merge-run").checkmerge = true;
                     } else {
                         document.querySelector("#filter-price-range .filter-text-run").classList.remove("merge");
+                        // chedc is it merge or nỏ
+                        document.querySelector("#filter-price-range .filter-text-run .merge-run").checkmerge = false;
                     }
 
                 },
                 slide: function(event, ui) {
                     let leftHanlde = ui.handle.style.left;
                     let hanldes = document.querySelectorAll("#filter-price-range .ui-slider-handle")
-                    if(checkPosition()) {
-                        document.querySelector("#filter-price-range .filter-text-run").classList.add("merge");
-                    } else {
-                        document.querySelector("#filter-price-range .filter-text-run").classList.remove("merge");
-                    }
+                    // check which handle is selected
                     if(hanldes[0].classList.contains("ui-state-focus")) {
                         document.querySelector("#filter-price-range .left-run").style.left = leftHanlde;
                         document.querySelector("#filter-price-range .left-run").innerHTML = "VND "+ui.values[0]+"000";
                         document.querySelector("#filter-price-range .merge-run .left-value").innerHTML = "VND "+ui.values[0]+"000";
-                    } else if(hanldes[1].classList.contains("ui-state-focus")) {
+                    } 
+                    else if(hanldes[1].classList.contains("ui-state-focus")) {
                         document.querySelector("#filter-price-range .right-run").style.left = leftHanlde;
                         document.querySelector("#filter-price-range .right-run").innerHTML = "VND "+ui.values[1]+"000";
                         document.querySelector("#filter-price-range .merge-run .right-value").innerHTML = "VND "+ui.values[1]+"000";
+                    }
+                    // if 2 side is merged
+                    if(checkPosition()) {
+                        document.querySelector("#filter-price-range .filter-text-run").classList.add("merge");
+                        let lp = document.querySelector("#filter-price-range .left-run").getBoundingClientRect().left;
+                        let lmr = document.querySelector("#filter-price-range .filter-text-run .merge-run").getBoundingClientRect().left;
+                        let rp = document.querySelector("#filter-price-range .right-run").getBoundingClientRect().right;
+                        let rmr = document.querySelector("#filter-price-range .filter-text-run .merge-run").getBoundingClientRect().right;
+                        // check if it goes left
+                        if( lmr > lp) {
+                            let t = lmr - lp;
+                            let lmr1 = getComputedStyle(document.querySelector("#filter-price-range .filter-text-run .merge-run"));
+                            lmr1 = Number.parseFloat(lmr1.left);
+                            document.querySelector("#filter-price-range .filter-text-run .merge-run").style.left =  lmr1 - t + "px";
+                        }
+                        // check if it goes right
+                        if(rp > rmr) {
+                            let t = rp - rmr;
+                            let lmr = getComputedStyle(document.querySelector("#filter-price-range .filter-text-run .merge-run"));
+                            lmr = Number.parseFloat(lmr.left);
+                            document.querySelector("#filter-price-range .filter-text-run .merge-run").style.left = t + lmr + 'px';
+                        }
+                        // oncly change left of merge-run when it first merge
+                        if(!document.querySelector("#filter-price-range .filter-text-run .merge-run").checkmerge) {
+                            document.querySelector("#filter-price-range .filter-text-run .merge-run").style.left = lp.left;
+                            document.querySelector("#filter-price-range .filter-text-run .merge-run").checkmerge = true;
+                        }
+                    } 
+                    else {
+                        document.querySelector("#filter-price-range .filter-text-run").classList.remove("merge");
+                        document.querySelector("#filter-price-range .filter-text-run .merge-run").checkmerge = false;
                     }
                 },
                 stop: function(event, ui) {
@@ -2119,6 +2156,35 @@
                     } else if(hanldes[1].classList.contains("ui-state-focus")) {
                         document.querySelector("#filter-price-range .right-run").style.left = leftHanlde;
                     }
+                    if(checkPosition()) {
+                        document.querySelector("#filter-price-range .filter-text-run").classList.add("merge");
+                        let lp = document.querySelector("#filter-price-range .left-run").getBoundingClientRect().left;
+                        let lmr = document.querySelector("#filter-price-range .filter-text-run .merge-run").getBoundingClientRect().left;
+                        let rp = document.querySelector("#filter-price-range .right-run").getBoundingClientRect().right;
+                        let rmr = document.querySelector("#filter-price-range .filter-text-run .merge-run").getBoundingClientRect().right;
+                        // check if it goes left
+                        if( lmr > lp) {
+                            let t = lmr - lp;
+                            let lmr1 = getComputedStyle(document.querySelector("#filter-price-range .filter-text-run .merge-run"));
+                            lmr1 = Number.parseFloat(lmr1.left);
+                            document.querySelector("#filter-price-range .filter-text-run .merge-run").style.left =  lmr1 - t + "px";
+                        }
+                        // check if it goes right
+                        if(rp > rmr) {
+                            let t = rp - rmr;
+                            let lmr = getComputedStyle(document.querySelector("#filter-price-range .filter-text-run .merge-run"));
+                            lmr = Number.parseFloat(lmr.left);
+                            document.querySelector("#filter-price-range .filter-text-run .merge-run").style.left = t + lmr + 'px';
+                        }
+                        // oncly change left of merge-run when it first merge
+                        if(!document.querySelector("#filter-price-range .filter-text-run .merge-run").checkmerge) {
+                            document.querySelector("#filter-price-range .filter-text-run .merge-run").checkmerge = true;
+                        }
+                    } 
+                    else {
+                        document.querySelector("#filter-price-range .filter-text-run").classList.remove("merge");
+                        document.querySelector("#filter-price-range .filter-text-run .merge-run").checkmerge = false;
+                    }
                 }
             });
             function checkPosition() {
@@ -2126,7 +2192,6 @@
                 let right = document.querySelector("#filter-price-range .right-run");
                 let leftRec = left.getBoundingClientRect();
                 let rightRec = right.getBoundingClientRect();
-                // console.log(rightRec.left - leftRec.right)
                 return (rightRec.left - leftRec.right) > 0 ? false : true;  
             }
             // 
@@ -2134,11 +2199,10 @@
                 $(".options-budgets").hide()
                 $(".filter-range-price").show()
             } else {
-                $(".options-budgets").show()
-                $(".filter-range-price").hide()
+                $(".options-budgets").hide()
+                $(".filter-range-price").show()
             }
             $("#set-budget").on("click", function(e) {
-                console.log("ádkfhsd", typeof e.currentTarget.checked)
                 if(this.checked) {
                     $(".options-budgets").hide()
                     $(".filter-range-price").show()

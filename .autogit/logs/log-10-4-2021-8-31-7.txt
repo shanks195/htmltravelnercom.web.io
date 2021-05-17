@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 10 2021 08:31:07 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* mytrip.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

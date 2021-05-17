@@ -21,6 +21,9 @@
     .bg-green {
         background: $green!important;
     }
+    .bg-light-green-1 {
+        background: $green-3!important;
+    }
     .ab-top-right-10 {
         position: absolute;
         top: 10px;
@@ -35,6 +38,9 @@
     
     .bg-gray-f1 {
         background: #F1F1F1!important;
+    }
+    .bg-grey-1 {
+        background-color: #e3e3e3 !important;
     }
     
     .bg-transparent {
@@ -82,10 +88,6 @@
     
     .bg-blue-dark {
         background-color: #002D75!important;
-    }
-    
-    .bg-light-gray {
-        background-color: $light-gray;
     }
     
     .bg-gray-light-2 {

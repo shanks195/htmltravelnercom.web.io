@@ -241,7 +241,7 @@
                                     <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex flex-column px-xs-10">
                                         <label class="text-medium hidden-xs">Full name <span class="text-red">*</span></label>
                                         <label class="d-block mb-0 text-12 text-grey-3 h-xs-100 h-56 position-relative info-full-name">
-                                            <input type="text" class="form-control input-contact" id="full-name">
+                                            <input type="text" class="form-control input-contact mt-xs-10" id="full-name" placeholder="Please enter full name">
                                             <span class="title-input-contact d-lg-none">Full name <span class="text-red">*</span></span>
                                         </label>
                                     </div>
@@ -260,13 +260,13 @@
                                         <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex flex-column px-xs-10">
                                             <label class="text-medium hidden-xs">Email address <span class="text-red">*</span></label>
                                             <label class="d-block mb-0 text-12 text-grey-3 h-xs-100 h-56 position-relative info-email">
-                                                <input type="text" class="form-control input-contact" id="email-address">
+                                                <input type="text" class="form-control input-contact mt-xs-10" id="email-address" placeholder="Please enter your email address">
                                                 <span class="title-input-contact d-lg-none">Email <span class="text-red">*</span></span>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="mt-20">
-                                        <label class="text-14 text-medium hidden-xs">What can we help you with? <span class="text-red">*</span></label>
+                                        <label class="text-medium hidden-xs">What can we help you with? <span class="text-red">*</span></label>
                                         <div class="can-help">
                                             <div class="form-group w-100 border-gray-1 rounded d-flex flex-column px-xs-10 h-xs-56 py-xs-10 border-lg-0">
                                                 <label class="text-10 text-grey-3 mb-0 d-lg-none d-block">What can we help you with <span class="text-red">*</span></label>
@@ -282,9 +282,9 @@
                                         </div>
                                     </div>
                                     <div class="w-100 mt-20 border-gray-1 border-lg-0 px-xs-10 rounded-xs">
-                                        <label class="text-medium hidden-xs text-14">Content</label>
+                                        <label class="text-medium hidden-xs">Content</label>
                                         <label class="d-block mb-0 text-12 text-grey-3 h-xs-100 position-relative info-content">
-                                            <textarea name="" rows="2" class="box-content border-gray w-100 mt-xs-10" id="box-content"></textarea>
+                                            <textarea name="" rows="2" class="box-content border-gray w-100 mt-xs-20" id="box-content" placeholder="Please enter your content"></textarea>
                                             <span class="title-input-contact d-lg-none">Content <span class="text-red">*</span></span>
                                         </label>
                                     </div>
@@ -741,11 +741,6 @@
                     }
                 })
             })
-            if($(window).width() > 992){
-                $('#full-name').attr("placeholder","Please enter your name");
-                $('#email-address').attr("placeholder","Please enter your email")
-                $('#box-content').attr("placeholder","Please enter your email")
-            }
         });
     </script>
 </body>

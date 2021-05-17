@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Account my Infor</title>
+    <title>Account travel preferences</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/jquery-ui.min.css" />
@@ -326,8 +326,8 @@
         <div class="padding-block bg-trip pt-xs-0">
             <!-- //ANCHOR select -->
 
-            <div class="container">
-                <div class="row ">
+            <div class="container-fluid">
+                <div class="row pl-20 pl-xs-0">
                     <div class="col-md-12 col-lg-4 px-0">
                         <div class="padding-block bg-xs-gray-light-2 bg-white p-xs-0">
                             <div class="pt-xs-50 pb-xs-30">
@@ -385,19 +385,19 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-8  px-xs-0">
-                        <div class="recommend  overflow-x-auto hide-scrollbar box-shadow-none bg-white  box-shadow-1 rounded  py-xs-10 px-xs-15 d-flex">
+                    <div class="col-lg-8  px-xs-0 pl-30">
+                        <div class="recommend  overflow-x-auto hide-scrollbar box-shadow-none bg-white rounded  py-xs-10 px-xs-15 d-flex">
                             <ul class="d-flex m-0">
-                                <li class="recommend-item-trip active">
-                                    <a href="#tabs-1" target="_self" title=" Upcoming" class=" text-center     font-weight-bold">
+                                <li class="recommend-item-trip active px-xs-15">
+                                    <a href="#tabs-1" target="_self" title=" Upcoming" class=" text-center font-weight-bold white-space-nowrap">
                                        
                                         My Details
                                        
                                     </a>
 
                                 </li>
-                                <li class="recommend-item-trip">
-                                    <a href="#tabs-1" target="_self" title=" Upcoming" class=" text-center     font-weight-bold">
+                                <li class="recommend-item-trip  px-xs-15">
+                                    <a href="#tabs-1" target="_self" title=" Upcoming" class=" text-center     font-weight-bold white-space-nowrap">
                                        
                                         Payment Method
                                        
@@ -405,8 +405,8 @@
 
                                 </li>
 
-                                <li class="recommend-item-trip">
-                                    <a href="#tabs-1" target="_self" title=" Upcoming" class=" text-center     font-weight-bold">
+                                <li class="recommend-item-trip  px-xs-15">
+                                    <a href="#tabs-1" target="_self" title=" Upcoming" class=" text-center font-weight-bold white-space-nowrap">
                                        
                                         Travel Preferences
                                       
@@ -414,8 +414,8 @@
 
                                 </li>
 
-                                <li class="recommend-item-trip recomend-none">
-                                    <a href="#tabs-1" target="_self" title=" Upcoming" class=" text-center     font-weight-bold">
+                                <li class="recommend-item-trip recomend-none  px-xs-15">
+                                    <a href="#tabs-1" target="_self" title=" Upcoming" class=" text-center font-weight-bold white-space-nowrap">
                                        
                                         My Travelners
                                      
@@ -433,7 +433,7 @@
                         </div>
                         <form action="">
                             <div class="mx-xs-15">
-                                <div class="padding-block w-100 bg-white py-20 px-25 mt-40 rounded px-xs-15">
+                                <div class="padding-block w-100 bg-white py-20 px-25 mt-40 rounded px-xs-15 box-shadow-1">
                                     <div > 
                                         <h2 class="text-18 mb-20">Flight Preferences</h2> 
                                         
@@ -441,12 +441,29 @@
                                    
                                    
                                     <div class="row">
-                                       <div class="col-md-12 col-lg-6 mb-20">
-                                        <div class="input-group input-group-lg mb-20  d-none d-lg-block">
-                                            <div class="d-flex w-100">
-                                                <span class="input-group-text text-16 border" id="inputGroup-sizing-lg">Special Services</span>
-                                                <div class="row mx-0 h-10 mb-0 flex-grow-1">
-                                                    <select class="custom-select col-12 h-10  border">
+                                       <div class="col-md-12 col-lg-6 mb-20 pr-0 pr-xs-15">
+                                            <div class="input-group input-group-lg  d-none d-lg-block">
+                                                <div class="d-flex w-100">
+                                                    <span class="input-group-text text-16 border border-radius-right-none " id="inputGroup-sizing-lg">Special Services</span>
+                                                    <div class="row mx-0 h-10 mb-0 flex-grow-1">
+                                                        <select class="custom-select col-12 h-10  border border-radius-left-none">
+                                                            <option selected>Not Specified</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                        
+                                                    </div>
+                                                </div>
+                                            
+                                                
+                                                
+                                            </div>
+                                            <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex d-lg-none flex-column px-xs-10 py-xs-10">
+                                                
+                                                <label class="d-lg-none text-10 text-grey-3 mb-0 d-lg-none">Special Services</label>
+                                                <div class="row mx-0  mb-0  flex-grow-1">
+                                                    <select class="custom-select h-0 col-12 h-0 border-none p-0 ">
                                                         <option selected>Not Specified</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -455,19 +472,84 @@
                                                     
                                                 </div>
                                             </div>
-                                          
-                                            
-                                            
                                         </div>
-                                        </div>
-                                        <div class="col-md-12 col-lg-6 px-0 px-15  mb-20">
+                                        <div class="col-md-12 col-lg-6 px-0 px-15">
                                                                       
                                         </div>
-                                        <div class="col-md-12 col-lg-6 px-0 px-15  mb-20">
-                                            <div class="d-flex w-100">
-                                                <span class="input-group-text text-16 border" id="inputGroup-sizing-lg">Seat Preferences</span>
+                                        <div class="col-md-12 col-lg-6  pl-15 pr-0 mb-20 pr-xs-15">
+                                            <div class="w-100 d-none d-lg-flex">
+                                                <span class="input-group-text text-16 border border-radius-right-none " id="inputGroup-sizing-lg">Seat Preferences</span>
                                                 <div class="row mx-0 h-10 mb-0 flex-grow-1">
-                                                    <select class="custom-select col-12 h-10  border">
+                                                    <select class="custom-select col-12 h-10  border border-radius-left-none">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div> 
+                                            <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex d-lg-none flex-column px-xs-10 py-xs-10">
+                                                
+                                                <label class="d-lg-none text-10 text-grey-3 mb-0 d-lg-none">Seat Preferences</label>
+                                                <div class="row mx-0  mb-0  flex-grow-1">
+                                                    <select class="custom-select h-0 col-12 h-0 border-none p-0 ">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>                           
+                                        </div>
+                                        
+                                        <div class="col-md-12 col-lg-6 px-15  mb-20">
+                                            <div class="w-100 d-none d-lg-flex">
+                                                <span class="input-group-text text-16 border border-radius-right-none " id="inputGroup-sizing-lg"> Meal Preferences</span>
+                                                <div class="row mx-0 h-10 mb-0 flex-grow-1">
+                                                    <select class="custom-select col-12 h-10  border border-radius-left-none">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>  
+                                            <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex d-lg-none flex-column px-xs-10 py-xs-10">
+                                                
+                                                <label class="d-lg-none text-10 text-grey-3 mb-0 d-lg-none">Meal Preferences</label>
+                                                <div class="row mx-0  mb-0  flex-grow-1">
+                                                    <select class="custom-select h-0 col-12 h-0 border-none p-0 ">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>                        
+                                        </div>
+                                        
+                                        <div class="col-md-12 col-lg-6 pr-0 mb-xs-20 pr-xs-15">
+                                            <div class="w-100 d-none d-lg-flex">
+                                                <span class="input-group-text text-16 border border-radius-right-none " id="inputGroup-sizing-lg"> Airline</span>
+                                                <div class="row mx-0 h-10 mb-0 flex-grow-1">
+                                                    <select class="custom-select col-12 h-10  border border-radius-left-none">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div> 
+                                            <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex d-lg-none flex-column px-xs-10 py-xs-10">
+                                                
+                                                <label class="d-lg-none text-10 text-grey-3 mb-0 d-lg-none"> Airline</label>
+                                                <div class="row mx-0  mb-0  flex-grow-1">
+                                                    <select class="custom-select h-0 col-12 h-0 border-none p-0 ">
                                                         <option selected>Not Specified</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -477,11 +559,11 @@
                                                 </div>
                                             </div>                      
                                         </div>
-                                        <div class="col-md-12 col-lg-6 px-0 px-15  mb-20">
-                                            <div class="d-flex w-100">
-                                                <span class="input-group-text text-16 border" id="inputGroup-sizing-lg"> Meal Preferences</span>
+                                        <div class="col-md-12 col-lg-6 px-0 px-15 ">
+                                            <div class="w-100 d-none d-lg-flex">
+                                                <span class="input-group-text text-16 border border-radius-right-none " id="inputGroup-sizing-lg"> Frequent Flyer #</span>
                                                 <div class="row mx-0 h-10 mb-0 flex-grow-1">
-                                                    <select class="custom-select col-12 h-10  border">
+                                                    <select class="custom-select col-12 h-10  border border-radius-left-none">
                                                         <option selected>Not Specified</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -489,49 +571,80 @@
                                                     </select>
                                                     
                                                 </div>
-                                            </div>                      
+                                            </div>  
+                                            <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex d-lg-none flex-column px-xs-10 py-xs-10">
+                                                
+                                                <label class="d-lg-none text-10 text-grey-3 mb-0 d-lg-none">Frequent Flyer #</label>
+                                                <div class="row mx-0  mb-0  flex-grow-1">
+                                                    <select class="custom-select h-0 col-12 h-0 border-none p-0 ">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>                          
                                         </div>
-                                        <div class="col-md-12 col-lg-6 px-0 px-15 mb-20">
-                                            <div class="d-flex w-100">
-                                                <span class="input-group-text text-16 border" id="inputGroup-sizing-lg"> Airline</span>
-                                                <div class="row mx-0 h-10 mb-0 flex-grow-1">
-                                                    <select class="custom-select col-12 h-10  border">
-                                                        <option selected>Not Specified</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                    </select>
-                                                    
-                                                </div>
-                                            </div>                      
-                                        </div>
-                                        <div class="col-md-12 col-lg-6 px-0 px-15  mb-20">
-                                            <div class="d-flex w-100">
-                                                <span class="input-group-text text-16 border" id="inputGroup-sizing-lg"> Frequent Flyer #</span>
-                                                <div class="row mx-0 h-10 mb-0 flex-grow-1">
-                                                    <select class="custom-select col-12 h-10  border">
-                                                        <option selected>Not Specified</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                    </select>
-                                                    
-                                                </div>
-                                            </div>                      
+                                        <div class="text-center w-100">
+                                            <button title="Add New" class="mw-184 btn btn-large btn-outline-secondary text-normal text-18 text-center mt-30 mr-20">
+                                                Add New</button>
+                                            <button href="#" target="_self " title=" Save Information" class="btn btn-large btn-secondary text-normal text-18 text-center mt-30">
+                                                Save Information</button>
                                         </div>
                                     </div>
                                 </div>
         
-                                <div class="padding-block w-100 bg-white py-20 px-25 mt-30 rounded px-xs-15">
+                                <div class="padding-block w-100 bg-white py-20 px-25 mt-30 rounded px-xs-15 box-shadow-1">
                                     <div> 
                                         <h2 class="text-18 mb-20">Hotel Preferences</h2> 
                                     </div>                         
                                     <div class="row mx-0">
-                                        <div class="col-md-12 col-lg-6 px-0 px-15  mb-20">
-                                            <div class="d-flex w-100">
-                                                <span class="input-group-text text-16 border" id="inputGroup-sizing-lg"> Hotel Name</span>
+                                        <div class="col-md-12 col-lg-6 px-0 mb-20">
+                                            <div class="w-100 d-none d-lg-flex">
+                                                <span class="input-group-text text-16 border border-radius-right-none " id="inputGroup-sizing-lg">Hotel Name</span>
                                                 <div class="row mx-0 h-10 mb-0 flex-grow-1">
-                                                    <select class="custom-select col-12 h-10  border">
+                                                    <select class="custom-select col-12 h-10  border border-radius-left-none">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>  
+                                            <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex d-lg-none flex-column px-xs-10 py-xs-10">
+                                                
+                                                <label class="d-lg-none text-10 text-grey-3 mb-0 d-lg-none">Hotel Name</label>
+                                                <div class="row mx-0  mb-0  flex-grow-1">
+                                                    <select class="custom-select h-0 col-12 h-0 border-none p-0 ">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>                       
+                                        </div>
+                                        <div class="col-md-12 col-lg-6 pr-0  mb-20 pl-xs-0">
+                                            <div class="w-100 d-none d-lg-flex">
+                                                <span class="input-group-text text-16 border border-radius-right-none " id="inputGroup-sizing-lg">Hotel Rating</span>
+                                                <div class="row mx-0 h-10 mb-0 flex-grow-1">
+                                                    <select class="custom-select col-12 h-10  border border-radius-left-none">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>  
+                                            <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex d-lg-none flex-column px-xs-10 py-xs-10">
+                                                
+                                                <label class="d-lg-none text-10 text-grey-3 mb-0 d-lg-none">Hotel Rating</label>
+                                                <div class="row mx-0  mb-0  flex-grow-1">
+                                                    <select class="custom-select h-0 col-12 h-0 border-none p-0 ">
                                                         <option selected>Not Specified</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -541,11 +654,11 @@
                                                 </div>
                                             </div>                      
                                         </div>
-                                        <div class="col-md-12 col-lg-6 px-0 px-15  mb-20">
-                                            <div class="d-flex w-100">
-                                                <span class="input-group-text text-16 border" id="inputGroup-sizing-lg"> Hotel Rating</span>
+                                        <div class="col-md-12 col-lg-6 px-0  mb-20">
+                                            <div class="w-100 d-none d-lg-flex">
+                                                <span class="input-group-text text-16 border border-radius-right-none " id="inputGroup-sizing-lg">Hotel</span>
                                                 <div class="row mx-0 h-10 mb-0 flex-grow-1">
-                                                    <select class="custom-select col-12 h-10  border">
+                                                    <select class="custom-select col-12 h-10  border border-radius-left-none">
                                                         <option selected>Not Specified</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -553,13 +666,12 @@
                                                     </select>
                                                     
                                                 </div>
-                                            </div>                      
-                                        </div>
-                                        <div class="col-md-12 col-lg-6 px-0 px-15  mb-20">
-                                            <div class="d-flex w-100">
-                                                <span class="input-group-text text-16 border" id="inputGroup-sizing-lg"> Hotel</span>
-                                                <div class="row mx-0 h-10 mb-0 flex-grow-1">
-                                                    <select class="custom-select col-12 h-10  border">
+                                            </div>  
+                                            <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex d-lg-none flex-column px-xs-10 py-xs-10">
+                                                
+                                                <label class="d-lg-none text-10 text-grey-3 mb-0 d-lg-none">Hotel</label>
+                                                <div class="row mx-0  mb-0  flex-grow-1">
+                                                    <select class="custom-select h-0 col-12 h-0 border-none p-0 ">
                                                         <option selected>Not Specified</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -567,13 +679,26 @@
                                                     </select>
                                                     
                                                 </div>
-                                            </div>                      
+                                            </div>                     
                                         </div>
-                                        <div class="col-md-12 col-lg-6 px-0 px-15  mb-20">
-                                            <div class="d-flex w-100">
-                                                <span class="input-group-text text-16 border" id="inputGroup-sizing-lg">Membership #</span>
+                                        <div class="col-md-12 col-lg-6 pr-0 mb-20 pl-xs-0">
+                                            <div class="w-100 d-none d-lg-flex">
+                                                <span class="input-group-text text-16 border border-radius-right-none " id="inputGroup-sizing-lg">Membership #</span>
                                                 <div class="row mx-0 h-10 mb-0 flex-grow-1">
-                                                    <select class="custom-select col-12 h-10  border">
+                                                    <select class="custom-select col-12 h-10  border border-radius-left-none">
+                                                        <option selected>Not Specified</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div> 
+                                            <div class="form-group mb-0 h-xs-56 rounded border-gray-1 border-lg-0 d-flex d-lg-none flex-column px-xs-10 py-xs-10">
+                                                
+                                                <label class="d-lg-none text-10 text-grey-3 mb-0 d-lg-none">Membership #</label>
+                                                <div class="row mx-0  mb-0  flex-grow-1">
+                                                    <select class="custom-select h-0 col-12 h-0 border-none p-0 ">
                                                         <option selected>Not Specified</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -588,9 +713,11 @@
                                             <span><strong>traveler's full name</strong></span>
                                             , date of birth and gender that <span><strong>matches exactly</strong></span>with the Passsport or <span><strong> Goverment Issued photo ID</strong></span>   that will be shown at the airport.
                                         </p>
-                                        <div class="text-center">
-                                            <a href="#" target="_self " title="Refund Request " class="btn btn-secondary border text-normal text-18 text-center mt-30">
-                                                Save Information</a>
+                                        <div class="text-center w-100">
+                                            <button title="Add New" class="mw-184 btn btn-large btn-outline-secondary text-normal text-18 text-center mt-30 mr-20">
+                                                Add New</button>
+                                            <button title=" Save Information" class="btn btn-large btn-secondary text-normal text-18 text-center mt-30">
+                                                Save Information</button>
                                         </div>
                                     </div>
                                 </div>

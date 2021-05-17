@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Thu May 13 2021 08:39:16 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* css/app.css
+* css/app.css.map
+* email-template.html
+* mydeal-flight.html
+* scss/components/_pagination.scss
+
+
+Created files:
+* .autogit/logs/log-12-4-2021-16-44-30.txt
+* images/796da0d5-4f61-4e01-810f-3cd4081a506a.tmp
+* "images/Travelner.com (Desktop).zip"
+* images/icon-arrow-blue.svg
+* images/icon-arrow-left-gray-16.svg
+* images/icon-arrow-right-gray-16.zip
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed May 12 2021 14:12:27 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* email-template.html
+
+
+Created files:
+* images/icon-mail-email.svg
+
+
+Deleted files:
+
+
+Renamed files:

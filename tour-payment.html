@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/intlTelInput.min.css" />
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/app.css?v=2" />
+    <link rel="stylesheet" href="css/app.css?v=1" />
 </head>
 
 <body>
@@ -215,7 +215,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <span class="text-30 text-grey-3 mb-2 mr-10 ml-10">/</span>
+                                                <span class="text-30 text-grey-3 mb-2 mr-10 ml-10 mb-10">/</span>
                                                 <div class="form-group w-100">
                                                     <input type="text" class="form-control h-56 h-xs-40 w-35 border-gray px-20" placeholder="" value="2021">
                                                 </div>
@@ -336,7 +336,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" title="" target="_self" class="mt-10 d-flex w-30" id="add-card-mobile">
+            <a href="#" title="" target="_self" class="mt-10 d-flex w-50" id="add-card-mobile">
                 <img src="./images/sx.svg" data-src="./images/icon-add-card.svg" alt="" title="" class="lazyload mr-5" />
                 <span class="text-blue-5">Add new Card</span>
             </a>
@@ -1152,44 +1152,43 @@
                 </div>
             </div>`;
             $('.box-info-card').append(clone)
+<<<<<<< HEAD
+            
             $(`#first-name-${minName}`).on('focus',function(){
-                $(this).blur(function(){
-                    if($(this).val().length != 0){
-                        $(`.info-first-name-${minName} .title-input`).addClass("active");
-                    }else{
-                        $(`.info-first-name-${minName} .title-input`).removeClass("active");
-                    }
-                })
-            })
-            $(`#last-name-${minName}`).on('focus',function(){
-                $(this).blur(function(){
-                    if($(this).val().length != 0){
-                        $(`.info-last-name-${minName} .title-input`).addClass("active");
-                    }else{
-                        $(`.info-last-name-${minName} .title-input`).removeClass("active");
-                    }
-                })
-            })
-            $(`#card-name-${minName}`).on('focus',function(){
-                $(this).blur(function(){
-                    if($(this).val().length != 0){
-                        $(`.info-card-${minName} .title-input`).addClass("active");
-                    }else{
-                        $(`.info-card-${minName} .title-input`).removeClass("active");
-                    }
-                })
-            })
-            $(`#cvv-inut-${minName}`).on('focus',function(){
-                $(this).blur(function(){
-                    if($(this).val().length != 0){
-                        $(`.info-cvv-${minName} .title-input`).addClass("active");
-                    }else{
-                        $(`.info-cvv-${minName} .title-input`).removeClass("active");
-                    }
-                })
+                console.log('sadsadas')
             })
         })
+        function reCount(e){
+        }
         
+        $(`#last-name-${minName}`).blur(function(){
+            if($(this).val().length != 0){
+                $('.info-last-name .title-input').addClass("active");
+            }else{
+                $('.info-last-name .title-input').removeClass("active");
+            }
+        })
+        $(`#card-name-${minName}`).blur(function(){
+            if($(this).val().length != 0){
+                $('.info-card .title-input').addClass("active");
+            }else{
+                $('.info-card .title-input').removeClass("active");
+            }
+=======
+            count ++;
+            minName ++;
+        })
+
+        $(document).on("focus", ".input-name", function() {
+            $(this).blur(function(){
+                if($(this).val().length != 0){
+                    $(this).next().addClass("active");
+                }else{
+                    $(this).next().removeClass("active");
+                }
+            })
+>>>>>>> 222a15e098fa8760755d40a60163c7ae4a77b3cc
+        })
     });
     //
 </script>

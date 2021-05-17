@@ -154,12 +154,48 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
+                    <nav class="bg-breadcrumb-banner w-100 z-index-999 custom-breadcumb-xs position-absolute hidden-xs">
+                        <div class="container">
+                            <ol class="breadcrumb d-flex ">
+                                <li class="breadcrumb-item">
+                                    <a href="#Home" target="_self" title="Home">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#" target="_self" title="Fight">Fight</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </nav>
                     <img class="d-block w-100" src="./images/banner-home.jpg" alt="First slide" />
                 </div>
                 <div class="carousel-item">
+                    <nav class="bg-breadcrumb-banner w-100 z-index-999 custom-breadcumb-xs position-absolute hidden-xs">
+                        <div class="container">
+                            <ol class="breadcrumb d-flex ">
+                                <li class="breadcrumb-item">
+                                    <a href="#Home" target="_self" title="Home">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#" target="_self" title="Fight">Fight</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </nav>
                     <img class="d-block w-100" src="./images/banner-home.jpg" alt="Second slide" />
                 </div>
                 <div class="carousel-item">
+                    <nav class="bg-breadcrumb-banner w-100 z-index-999 custom-breadcumb-xs position-absolute hidden-xs">
+                        <div class="container">
+                            <ol class="breadcrumb d-flex ">
+                                <li class="breadcrumb-item">
+                                    <a href="#Home" target="_self" title="Home">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#" target="_self" title="Fight">Fight</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </nav>
                     <img class="d-block w-100" src="./images/banner-home.jpg" alt="Third slide" />
                 </div>
             </div>
@@ -345,67 +381,66 @@
 
         <!-- main content -->
 
+        <nav class="breadcrumb-bg bg-xs-white w-100 z-index-999 custom-breadcumb-xs d-block d-lg-none">
+            <div class="container">
+                <ol class="breadcrumb d-flex ">
+                    <li class="breadcrumb-item text-14">
+                        <a href="#Home" target="_self" title="Home">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-14">
+                        <a href="#" target="_self" title="Deals">Deals</a>
+                    </li>
+                </ol>
+            </div>
+        </nav>
         <!-- ANCHOR flight -->
-        <div class="padding-block">
+        <div class="padding-block pt-xs-60">
             <div class="container ">
-                <div class="d-flex d-lg-block flex-row-reverse justify-content-between">
-                    <div class="text-right hidden-xs">
-                        <a href="#" target="_self" title="Filters" class=" box-border-filter hidden-xs">
+                <div class="pt-30 pt-xs-0 d-flex d-lg-block flex-row-reverse justify-content-between mb-30 mb-xs-10">
+                    <div class="text-right ">
+                        <a href="#dropdown01" target="_self" class="dropdown d-lg-none d-block" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="./images/three-dots.svg" title="dropdown" alt="dropdown">
+                        </a>
+                        <a href="#" target="_self" title="Filters" class="none-hover box-border-filter hidden-xs">
                         Filters
                     </a>
-                        <a href="#" class=" hidden-xs box-border-all dropdown" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" class="  box-border-all dropdown hidden-xs" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="text-16  pr-50 pl-10 pl-xs-0 pr-xs-0 ">All</span>
                             <img src="images/icon-down-up.svg" alt="icon-down-up" title="icon-down-up">
                         </a>
-                        <div class="dropdown-menu menu-desktop" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#" target="flight-menu" title="flight-menu">
-                                <img src="images/icon-flight-menu.svg" alt="icon-flight-menu">
-                                <span class="mr-4">Flight</span>
+                        <div class="dropdown-menu rounded " aria-labelledby="dropdownMenuButton">
+                            <a href="#" title="All" target="_blank" class="p-10 d-flex align-items-center">
+                                <span class="d-lg-none d-block text-12 ml-1 text-gray-2">Flights by:  </span>
+                                <strong class="text-secondary text-14 text-decoration-underline ml-1 ml-lg-4 ">All</strong>
                             </a>
-                            <a class="dropdown-item" href="#" target="tour-menu" title="tour-menu">
-                                <img src="images/tour.svg" alt="icon-tour-menu">
-                                <span class="mr-4">Tours</span>
-                            </a>
-                            <a class="dropdown-item" href="#" target="hotel" title="hotel">
-                                <img src="images/icon-0hotel.svg" alt="icon-hotel">
-                                <span class="mr-4">Tours</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="dropdown three-dots mytrip  text-right ml-auto d-lg-none d-block">
+                            <a href="#" title="Flight" target="_blank" class="p-10 item-menu-dropdown d-flex align-items-center">
 
-                        <a href="#dropdown01" target="_self" data-toggle="collapse" class="" aria-expanded="true">
-                            <img src="./images/three-dots.svg" title="dropdown" alt="dropdown" aria-expanded="false" aria-controls="dropdown01" role="button"></a>
-                        <div class="dropdown-content rounded collapse show" id="dropdown01" style="right: 7px;">
-                            <a href="#" title="tour details" target="_blank" class="p-10">
-                                <span class="text-12 ml-1 text-gray-2">Flights by:  <strong class="text-secondary text-14 text-decoration-underline">All</strong></span>
-                            </a>
-                            <a href="#" title="tour details" target="_blank" class="p-10">
-
-                                <img src="images/icon-flight-menu.svg" alt="icon-flight" title="icon-flight">
+                                <img src="images/icon-flight-menu.svg" alt="icon-flight" title="icon-flight" class=" change-icon gray">
+                                <img src="images/icon-flight-menu-blue.svg" alt="icon-flight" title="icon-flight" class=" change-icon blue">
                                 <span class="text-12 ml-1 text-gray-2">Flights</span>
                             </a>
-                            <a href="#" title="tour details" target="_blank" class="p-10">
-                                <img src="images/tour.svg" alt="icon-tour" title="icon-tour">
+                            <a href="#" title="Tours" target="_blank" class="p-10  item-menu-dropdown d-flex align-items-center">
+                                <img src="images/tour.svg" alt="icon-tour" title="icon-tour" class=" change-icon gray">
+                                <img src="images/tour-blue.svg" alt="icon-tour" title="icon-tour" class=" change-icon blue">
                                 <span class="text-12 ml-1 text-gray-2">Tours</span>
                             </a>
-                            <a href="#" title="tour details" target="_blank" class="p-10">
-                                <img src="images/icon-0hotel.svg" alt="icon-hotel" title="icon-hotel">
+                            <a href="#" title="Hotel" target="_blank" class="p-10 item-menu-dropdown d-flex align-items-center">
+                                <img src="images/icon-hotel.svg" alt="icon-hotel" title="icon-hotel" class="change-icon gray">
+                                <img src="images/icon-hotel-blue.svg" alt="icon-hotel" title="icon-hotel" class="change-icon blue">
                                 <span class="text-12 ml-1 text-gray-2">Hotel</span>
                             </a>
                         </div>
 
                     </div>
                     <div class="d-flex flex-column">
-                        <h2>
-                            Today’s Top Deals
+                        <h2 class="mb-0 mt-10 mt-xs-0">
+                            Flight Deals
                         </h2>
-                        <p class="d-lg-none d-block text-gray">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis aliquam, nihil </p>
+                        <p class="d-lg-none d-block text-gray text-14 mt-xs-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis aliquam, nihil </p>
                     </div>
-
                 </div>
                 <div class="row ">
-                    <div class="col-12  box-click flight-box position-relative pr-xs-0 mt-lg-30 mt-10">
+                    <div class="col-12  box-click flight-box position-relative pr-xs-0  ">
                         <div class="click-slide-prev hidden-xs" style="transform:translate(-2px,-135%)">
                             <img class="prev_flight" src="./images/slide-left.png" title="icon-prev" alt="icon-prev">
                         </div>
@@ -584,7 +619,7 @@
                         <h2>
                             Hotel Deals
                         </h2>
-                        <p class="d-lg-none d-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis aliquam, nihil </p>
+                        <p class="d-lg-none d-block text-xs-14">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis aliquam, nihil </p>
                     </div>
                     <div class="col-12 px-12 box-click flight-box position-relative pr-xs-0 mt-lg-30 mt-10">
                         <div class="click-slide-prev hidden-xs" style="transform:translate(-2px,-73%)">
