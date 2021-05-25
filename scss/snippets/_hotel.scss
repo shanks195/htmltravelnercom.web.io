@@ -259,3 +259,114 @@
     left: 25px;
     right: 15px;
 }
+<<<<<<< HEAD
+.img-191-round{
+    height: 191px;
+    width: 191px;
+    img{
+        height: 191px;
+        width: 191px;
+    }
+=======
+.line-height-1 {
+    line-height: 1;
+}
+.flex-basic-163 {
+    flex-basis: 163px;
+}
+.text-truncation-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.border-bottom-secondary {
+    border-bottom: 1px solid #005AEB;
+}
+.no-radius-bot-right {
+    border-bottom-right-radius: 0 !important;
+}
+.flex-basic-252 {
+    flex-basis: 252px;
+}
+
+.hotel-room {
+    display: flex;
+    justify-content: space-between;
+    .room-left {
+        flex: 0 1 252px;
+        margin-right: 10px;
+        .img-room {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+    .room-right {
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .detail-item:not(:last-child) {
+            border-right: 1px solid #c8cacd ;
+        }
+        .head {
+            background-color: #ebebec;
+        }
+        .content {
+            height: 100%;
+        }
+        .benefit {
+        }
+        .sleep {
+            flex: 0 0 120px;
+        }
+        .price {
+            flex: 0 1 187px;
+        }
+        .rooms {
+            select {
+                width: 74px;
+            }
+        }
+        .book-now {
+            // flex-basis: 0 1 234px;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .hotel-room {
+        flex-wrap: wrap;
+        .room-left {
+            flex: 0 1 auto;
+            width: 100%;
+            margin-right: 0px;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            // border-bottom: 1px solid #828282;
+            display: flex; 
+            align-items: center;
+            .img-room {
+                width: 252px;
+                height: 100%;
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+        .room-right {
+            width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    }
+}
+.box-sale-cus-1 {
+    top: 10px;
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+>>>>>>> 7b110112a0c57b08c85d0ad59fbcef2fabea7013
+}

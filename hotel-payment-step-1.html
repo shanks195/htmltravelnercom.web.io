@@ -85,7 +85,7 @@
                         <div class="d-flex w-100 justify-content-center">
                             <div class="circle-payment active">1</div>
                         </div>
-                        <p class="mt-5 active ">Customer information</p>
+                        <p class="mt-5 active">Customer information</p>
                         <div class="line-step-payment"></div>
                     </div>
                     <div class="step-payment-item">
@@ -138,9 +138,35 @@
             </div>
         </header>
         <main>
+            <div class="px-15">
+                <div class="py-15 d-lg-none">
+                    <div class="list-step-payment">
+                        <div class="step-payment-item">
+                            <p class="mb-5 text-12">Your Selection</p>
+                            <div class="d-flex w-100 justify-content-center">
+                                <div class="circle-payment active"></div>
+                            </div>
+                            <div class="line-step-payment active"></div>
+                        </div>
+                        <div class="step-payment-item">
+                            <p class="mb-5 text-12 active">Your Details</p>
+                            <div class="d-flex w-100 justify-content-center">
+                                <div class="circle-payment non-active-step"></div>
+                            </div>
+                            <div class="line-step-payment"></div>
+                        </div>
+                        <div class="step-payment-item">
+                            <p class="mb-5 text-12">Final Step</p>
+                            <div class="d-flex w-100 justify-content-center">
+                                <div class="circle-payment non-active"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
            <div class="container mt-lg-60 pb-lg-60">
-               <div class="d-flex justify-content-between hidden-xs">
-                   <div class="w-30 pl-0 mr-25 box-content-left">
+               <div class="d-flex justify-content-between">
+                   <div class="w-30 pl-0 mr-25 box-content-left hidden-xs">
                       <div class="border-secondary-light rounded">
                           <div class="box-payment-title border-secondary-light-bottom">
                             <h3 class="mb-0 text-16">Your booking details</h3>
@@ -220,10 +246,19 @@
                                 <h3 class="mb-0 text-16">Your booking includes</h3>
                             </div>
                             <div class="px-10 pt-10">
-                                <div class="d-flex flex-column text-green-1 text-14">
-                                    <span class="mb-10">Free WiFi</span>
-                                    <span class="mb-10">Free Parking</span>
-                                    <span class="mb-10">Free Breakfast</span>
+                                <div class="d-flex flex-column text-green-1 text-14 book-includes">
+                                    <div class="option-room">
+                                        <img src="./images/sx.svg" data-src="./images/icon-check-black-small.svg" alt="" title="" class="lazyload mr-5" />
+                                        <span class="text-medium text-12 text-grey-1 mb-0">Free WiFi</span>
+                                    </div>
+                                    <div class="option-room">
+                                        <img src="./images/sx.svg" data-src="./images/icon-check-black-small.svg" alt="" title="" class="lazyload mr-5" />
+                                        <span class="text-medium text-12 text-grey-1 mb-0">Free Parking</span>
+                                    </div>
+                                    <div class="option-room">
+                                        <img src="./images/sx.svg" data-src="./images/icon-check-black-small.svg" alt="" title="" class="lazyload mr-5" />
+                                        <span class="text-medium text-12 text-grey-1 mb-0">Free Breakfast</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -246,22 +281,30 @@
                             </div>
                         </div>
                    </div>
-                   <div class="w-70">
-                       <div class="row mx-0">
-                           <div class="col-lg-3 pl-0">
-                                <img src="./images/sx.svg" data-src="./images/detail-room-hotel.jpg" alt="" title="" class="lazyload mr-10" />
+                   <div class="w-70 w-xs-100">
+                       <div class="row mx-lg-0">
+                           <div class="col-lg-3 pl-0 px-xs-0">
+                            <img src="./images/sx.svg" data-src="./images/detail-room-hotel.jpg" alt="" title="" class="lazyload hidden-xs" />
+                            <img src="./images/sx.svg" data-src="./images/img-hotel-booking.jpg" alt="" title="" class="lazyload w-100 mx-auto d-lg-none" />
                            </div>
-                           <div class="col-lg-9">
+                           <div class="col-lg-9 mt-xs-10">
                                <div class="d-flex align-items-center">
-                                    <p class="mb-0 py-1 px-15 d-inline-block text-16 bg-blue-payment rounded text-white">Hotel</p>
-                                    <h1 class="ml-10 mb-0 text-24 text-secondary">Vanke Narada Grand Hotel Wuhan</h1>
+                                    <p class="mb-0 py-1 px-15 d-inline-block text-16 bg-blue-payment rounded text-white hidden-xs">Hotel</p>
+                                    <h1 class="ml-lg-10 mb-0 text-24 text-secondary text-xs-black">Vanke Narada Grand Hotel Wuhan</h1>
                                </div>
-                               <div class="rating-wrapper-large mt-2" >
-                                    <div class="rating-fill" style="width: 86%;"></div>
-                                </div>
-                               <div class="d-flex align-items-center mt-10">
-                                    <img src="./images/sx.svg" data-src="./images/icon-location.svg" alt="" title="" class="lazyload" />
-                                    <p class="text-14 text-grey-2 mb-0">No.177 Chang qing Road, Hankou Railway Station, Wuhan, China, 430024</p>
+                               <div class="d-xs-flex flex-xs-column">
+                                    <div class="order-xs-2 box-rate">
+                                        <div class="rating-wrapper-large mt-2 hidden-xs" >
+                                            <div class="rating-fill" style="width: 80%;"></div>
+                                        </div>
+                                        <div class="rating-circle mt-2 d-lg-none" >
+                                            <div class="rating-fill" style="width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-10 order-xs-1">
+                                        <img src="./images/sx.svg" data-src="./images/icon-location.svg" alt="" title="" class="lazyload hidden-xs" />
+                                        <p class="text-14 text-grey-2 mb-0">No.177 Chang qing Road, Hankou Railway Station, Wuhan, China, 430024</p>
+                                    </div>
                                </div>
                                <p class="text-14 text-green-1 mt-10"><span class="text-medium">FREE cancellation</span> before 11:59 PM on October 26, 2020</p>
                            </div>
@@ -393,7 +436,7 @@
                </div>
            </div>
             <!-- Page mobile -->
-            <div class="container d-lg-none px-0 pb-50 bg-white-light">
+            <!-- <div class="container d-lg-none px-0 pb-50 bg-white-light">
                 <div class="bg-white pb-15">
                     <div class="px-15">
                         <div class="py-15 d-lg-none">
@@ -740,7 +783,7 @@
                      </button>
                      <p class="text-13 text-medium text-center">Review your details and secure your booking</p>
                 </div>
-            </div>
+            </div> -->
         </main>
         <div class="modal fade" id="ChangeDate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog" role="document" style="max-width: 650px;">

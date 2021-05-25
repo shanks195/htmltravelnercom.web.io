@@ -490,12 +490,15 @@ input.form-control.lich {
 }
 
 .option-room {
-    display: flex;
-    border: 0.5px solid #2E2E2E;
-    padding: 4px;
-    border-radius: 1px;
+    margin-top: 10px;
+    @include media-breakpoint-down(md){
+        display: flex;
+        border: 0.5px solid #2E2E2E;
+        padding: 4px;
+        border-radius: 1px;
+        margin-left: 5px;
+    }
 }
-
 .room-review {
     background-color: #002D75;
     font-weight: 900;
@@ -511,7 +514,7 @@ input.form-control.lich {
     cursor: pointer;
 }
 
-.box-traveller {
+.box-traveller, .box-class {
     display: none;
     background-color: $white;
     padding: 20px 30px;
@@ -634,7 +637,7 @@ input.form-control.lich {
     background-color: $white;
     border: 1px solid #E1E1E1;
     resize: none;
-    padding: 10px 20px !important;
+    padding: 10px !important;
     outline: none;
     border-radius: 4px;
     &:focus-visible{
@@ -669,4 +672,11 @@ input.form-control.lich {
             margin-bottom: 10px;
         }
     }
+}
+.box-evaluate{
+    background-color: #008009;
+    border-radius: 1000px;
+    padding: 4px 12px;
+    color: white;
+    font-size: 14px;
 }

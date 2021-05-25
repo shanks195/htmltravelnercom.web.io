@@ -165,7 +165,9 @@ a:focus {
 .mw-auto {
     min-width: auto !important;
 }
-
+.max-w-280 {
+    max-width: 280px !important;
+}
 .max-w-auto {
     max-width: auto !important;
 }
@@ -343,11 +345,13 @@ a:focus {
     margin: 0;
 }
 
-.dropdown-menu.show {
-    z-index: 2;
+.down-menu.show {
+    z-index: 9999;
     left: -50px !important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     @include media-breakpoint-down(lg) {
         left: -16px !important;
+        z-index: 2;
     }
 }
 
@@ -369,6 +373,7 @@ a.none-hover:hover {
         span {
             color: #005AEB;
             text-decoration: underline;
+            font-weight: bold;
         }
         .change-icon {
             &.blue {
@@ -1446,6 +1451,37 @@ time {
     height: 2px;
     background-color: #2E2E2E;
 }
+<<<<<<< HEAD
+@media only screen
+and (min-device-width : 50px)
+and (max-device-width : 992px) {
+      ::-webkit-input-placeholder {
+         color: transparent !important; 
+      }
+      :-moz-placeholder { /* Firefox 18- */
+         color: transparent !important;  
+      }
+
+      ::-moz-placeholder {  /* Firefox 19+ */
+         color: transparent !important;  
+      }
+
+      :-ms-input-placeholder {  
+         color: transparent !important;  
+      }
+}
+.border-bottom-secondary{
+    border-bottom: 2px solid $secondary-color;
+}
+#choose-class{
+    min-width: 110px;
+}
+.link-hotel-detail{
+    text-decoration: underline !important;
+    font-size: 13px;
+    color: $secondary-color;
+}
+=======
 
 @media only screen and (min-device-width: 50px) and (max-device-width: 992px) {
      ::-webkit-input-placeholder {
@@ -1463,3 +1499,10 @@ time {
         color: transparent !important;
     }
 }
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+>>>>>>> 7b110112a0c57b08c85d0ad59fbcef2fabea7013
